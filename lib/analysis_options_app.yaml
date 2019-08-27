@@ -1,0 +1,8 @@
+##
+# Lint rules to be used for apps without developer facing API. i.e. command line tools and flutter applications
+##
+include: package:lint/common.yaml
+
+# Lint rules and documentation, see http://dart-lang.github.io/linter/lints
+linter:
+  rules:

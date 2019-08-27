@@ -1,0 +1,16 @@
+##
+# Lint rules to be used for packages, which provider a dart API for developers
+##
+
+include: package:lint/common.yaml
+
+# Lint rules and documentation, see http://dart-lang.github.io/linter/lints
+linter:
+  rules:
+    # Good for libraries to prevent unnecessary code paths.
+    # https://dart-lang.github.io/linter/lints/literal_only_boolean_expressions.html
+    - literal_only_boolean_expressions
+
+    # One of the most important rules. Docs make a good package
+    # https://dart-lang.github.io/linter/lints/public_member_api_docs.html
+    - public_member_api_docs
