@@ -1,5 +1,5 @@
 ##
-# Common lint rules which should be activated for any dart code
+# Lint rules to be used for apps without developer facing API. i.e. command line tools and Flutter applications
 ##
 analyzer:
   strong-mode:
@@ -31,7 +31,7 @@ linter:
 
     # All non nullable named parameters should be and annotated with @required.
     # This allows API consumers to get warnings via lint rather than a crash a runtime.
-    # Might become obsolete with Non-Nullable types in dart 2.5
+    # Might become obsolete with Non-Nullable types in dart 2.6
     # http://dart-lang.github.io/linter/lints/always_require_non_null_named_parameters.html
     - always_require_non_null_named_parameters
 
@@ -131,7 +131,7 @@ linter:
     # - avoid_returning_null
 
     # Don't use `Future?`, therefore never return null instead of a Future.
-    # Will become obsolete one Non-Nullable types land in dart 2.5
+    # Will become obsolete one Non-Nullable types land in dart 2.6
     # https://dart-lang.github.io/linter/lints/avoid_returning_null_for_future.html
     - avoid_returning_null_for_future
 
@@ -144,16 +144,16 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_returning_this.html
     # - avoid_returning_this
 
-    #
-    #
+    # Prevents logical inconsistencies. It's good practice to define getters for all existing setters.
+    # https://dart-lang.github.io/linter/lints/avoid_setters_without_getters.html
     - avoid_setters_without_getters
 
-    #
-    #
+    # Don't reuse a type parameter when on with the same name already exists in the same scope
+    # https://dart-lang.github.io/linter/lints/avoid_shadowing_type_parameters.html
     - avoid_shadowing_type_parameters
 
-    #
-    #
+    # A single cascade operator can be replaced with a normal method call
+    # https://dart-lang.github.io/linter/lints/avoid_single_cascade_in_expression_statements.html
     - avoid_single_cascade_in_expression_statements
 
     # Might cause frame drops because of synchronous file access on mobile, especially on older phones with slow storage.
@@ -161,32 +161,33 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_slow_async_io.html
     # - avoid_slow_async_io
 
-    #
-    #
+    # Don't use a parameter names which can be confused with a types (i.e. int, bool, num, ...)
+    # https://dart-lang.github.io/linter/lints/avoid_types_as_parameter_names.html
     - avoid_types_as_parameter_names
 
     # Adding the type is not required, but sometimes improves readability. Therefore removing it doesn't always help
     # https://dart-lang.github.io/linter/lints/avoid_types_on_closure_parameters.html
     # - avoid_types_on_closure_parameters
 
-    #
-    #
+    # Unused parameters should be removed
+    # https://dart-lang.github.io/linter/lints/avoid_unused_constructor_parameters.html
     - avoid_unused_constructor_parameters
 
-    #
-    #
+    # For async functions use `Future<void>` as return value, not `void`
+    # This allows usage of the await keyword and prevents operations from running in parallel.
+    # https://dart-lang.github.io/linter/lints/avoid_void_async.html
     - avoid_void_async
 
-    #
-    #
+    # Use the await keyword only for futures. There is nothing to await in synchronous code
+    # https://dart-lang.github.io/linter/lints/await_only_futures.html
     - await_only_futures
 
-    #
-    #
+    # Follow the style guide and use UpperCamelCase for class names and typedefs
+    # https://dart-lang.github.io/linter/lints/camel_case_types.html
     - camel_case_types
 
-    #
-    #
+    # Prevents leaks and code executing after their lifecycle.
+    # https://dart-lang.github.io/linter/lints/cancel_subscriptions.html
     - cancel_subscriptions
 
     # The cascade syntax is weird and you shouldn't be forced to use it.
@@ -212,48 +213,51 @@ linter:
     # https://dart-lang.github.io/linter/lints/constant_identifier_names.html
     - constant_identifier_names
 
-    #
-    #
+    # Prevents hard to debug code
+    # https://dart-lang.github.io/linter/lints/control_flow_in_finally.html
     - control_flow_in_finally
 
-    #
-    #
+    # Single line `if`s are fine, but when a new line splits the bool expression and body curly braces
+    # are recommended. It prevents the danging else problem and easily allows the addition of more lines inside
+    # the if body
+    # https://dart-lang.github.io/linter/lints/curly_braces_in_flow_control_structures.html
     - curly_braces_in_flow_control_structures
 
     # Still experimental and pretty much work when enforced
     # https://dart-lang.github.io/linter/lints/diagnostic_describe_all_properties.html
     # - diagnostic_describe_all_properties
 
-    #
-    #
+    # Follows dart style. Fully supported by IDEs and no manual effort for a consistent style
+    # https://dart-lang.github.io/linter/lints/directives_ordering.html
     - directives_ordering
 
-    #
-    #
+    # Add a comment why no further error handling is required
+    # https://dart-lang.github.io/linter/lints/empty_catches.html
     - empty_catches
 
-    #
-    #
+    # Removed empty constructor bodies
+    # https://dart-lang.github.io/linter/lints/empty_constructor_bodies.html
     - empty_constructor_bodies
 
-    #
-    #
+    # Don't allow empty if bodies. Works together with curly_braces_in_flow_control_structures
+    # https://dart-lang.github.io/linter/lints/empty_statements.html
     - empty_statements
 
-    #
-    #
+    # Follow dart file naming schema
+    # https://dart-lang.github.io/linter/lints/file_names.html
     - file_names
 
     # Very flutter specific, not applicable for all projects
     # https://dart-lang.github.io/linter/lints/flutter_style_todos.html
     # - flutter_style_todos # not all todos require a ticket
 
-    #
-    #
+    # hashCode and equals need to be consistent. One can't live without another.
+    # https://dart-lang.github.io/linter/lints/hash_and_equals.html
     - hash_and_equals
 
-    #
-    #
+    # DON'T import implementation files from another package.
+    # If you need access to some internal code, create an issue
+    # https://dart-lang.github.io/linter/lints/implementation_imports.html
     - implementation_imports
 
     # Although there are some false positives, this lint generally catches unnecessary checks
@@ -262,28 +266,39 @@ linter:
     # https://dart-lang.github.io/linter/lints/invariant_booleans.html
     - invariant_booleans
 
-    #
-    #
+    # Type check for Iterable<T>.contains(other) where other is! T
+    # otherwise contains will always report false. Those errors are usually very hard to catch.
+    # https://dart-lang.github.io/linter/lints/iterable_contains_unrelated_type.html
     - iterable_contains_unrelated_type
 
-    #
-    #
+    # Hint to join return and assignment.
+    # https://dart-lang.github.io/linter/lints/join_return_with_assignment.html
     - join_return_with_assignment
 
+    # Makes sure a library name is a valid dart identifier.
+    # This comes in handy for test files combining multiple tests where the file name can be used as identifier
     #
+    # ```
+    # import src/some_test.dart as some_test;
     #
+    # main() {
+    #   some_test.main();
+    # }
+    # ```
+    # https://dart-lang.github.io/linter/lints/library_names.html
     - library_names
 
-    #
-    #
+    # Follow dart style
+    # https://dart-lang.github.io/linter/lints/library_prefixes.html
     - library_prefixes
 
     # Nobody wants to manually wrap lines when changing a few words. This rule is too hard to be a "general" rule
     # https://dart-lang.github.io/linter/lints/lines_longer_than_80_chars.html
     # - lines_longer_than_80_chars
 
-    #
-    #
+    # Type check for List<T>.remove(item) where item is! T
+    # The list can't contain item. Those errors are not directly obvious especially when refactoring.
+    # https://dart-lang.github.io/linter/lints/list_remove_unrelated_type.html
     - list_remove_unrelated_type
 
     # Good for libraries to prevent unnecessary code paths.
@@ -295,12 +310,12 @@ linter:
     # https://dart-lang.github.io/linter/lints/literal_only_boolean_expressions.html
     # literal_only_boolean_expressions
 
-    #
-    #
+    # Concat Strings obviously with `+` inside a list.
+    # https://dart-lang.github.io/linter/lints/no_adjacent_strings_in_list.html
     - no_adjacent_strings_in_list
 
-    #
-    #
+    # Second case is basically dead code which will never be reached.
+    # https://dart-lang.github.io/linter/lints/no_duplicate_case_values.html
     - no_duplicate_case_values
 
     #
