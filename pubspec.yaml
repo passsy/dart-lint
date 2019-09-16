@@ -1,8 +1,8 @@
 name: lint
 version: 0.1.0
-description: An opiniated set of lint rules for Dart and Flutter projects, like pedantic but with more rules
+description: An opiniated, community-driven set of lint rules for Dart and Flutter projects. Like pedantic but stricter
 author: Pascal Welsch <pascal@welsch.dev>
 homepage: https://github.com/passsy/lint
 
 environment:
-  sdk: '>=2.3.0 <3.0.0'
+  sdk: '>=2.2.0 <3.0.0'
