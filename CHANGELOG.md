@@ -1,8 +1,15 @@
 # Changlog
 
+## 0.2.2
+
+- Release for Dart 2.4 enables
+  - `prefer_if_null_operators`
+  - `sort_child_properties_last`
+  - `unsafe_html`
+
 ## 0.2.1
 
-- Release for Dart 2.3. Enables 
+- Release for Dart 2.3 enables 
   - `prefer_for_elements_to_map_fromIterable`
   - `prefer_if_elements_to_conditional_expressions`
   - `prefer_inlined_adds`

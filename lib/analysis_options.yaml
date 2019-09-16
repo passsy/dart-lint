@@ -115,7 +115,7 @@ linter:
 
     # Don't call print in production code
     # https://dart-lang.github.io/linter/lints/avoid_print.html
-    # dart 2.3 incompatible
+    # dart 2.4 incompatible
     #- avoid_print
 
     # Always prefer function references over typedefs.
@@ -467,8 +467,7 @@ linter:
 
     # Dart has a special operator for this, use it
     # https://dart-lang.github.io/linter/lints/prefer_if_null_operators.html
-    # dart 2.3 incompatible
-    #- prefer_if_null_operators
+    - prefer_if_null_operators
 
     # Terser code
     # https://dart-lang.github.io/linter/lints/prefer_initializing_formals.html
@@ -541,8 +540,7 @@ linter:
 
     # Flutter only, always put child last
     # https://dart-lang.github.io/linter/lints/sort_child_properties_last.html
-    # dart 2.3 incompatible
-    #- sort_child_properties_last
+    - sort_child_properties_last
 
     # Might not be perfect but results in consistent code
     # https://dart-lang.github.io/linter/lints/sort_constructors_first.html
@@ -644,8 +642,7 @@ linter:
 
     # Web only
     # https://dart-lang.github.io/linter/lints/unsafe_html.html
-    # dart 2.3 incompatible
-    #- unsafe_html
+    - unsafe_html
 
     # Use rethrow to preserve the original stacktrace.
     # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception
