@@ -539,20 +539,20 @@ linter:
     # https://dart-lang.github.io/linter/lints/sort_unnamed_constructors_first.html
     - sort_unnamed_constructors_first
 
-    #
-    #
+    # First test, then cast
+    # https://dart-lang.github.io/linter/lints/test_types_in_equals.html
     - test_types_in_equals
 
-    #
-    #
+    # Hard to debug and bad style
+    # https://dart-lang.github.io/linter/lints/throw_in_finally.html
     - throw_in_finally
 
-    #
-    #
+    # Type annotations make the compiler intelligent, use them
+    # https://dart-lang.github.io/linter/lints/type_annotate_public_apis.html
     - type_annotate_public_apis
 
-    #
-    #
+    # Don't add types for already typed constructor parameters.
+    # https://dart-lang.github.io/linter/lints/type_init_formals.html
     - type_init_formals
 
     # Too many false positives.
@@ -561,20 +561,20 @@ linter:
     # https://dart-lang.github.io/linter/lints/unawaited_futures.html
     # - unawaited_futures
 
-    #
-    #
+    # Remove async/await clutter when not required
+    # https://dart-lang.github.io/linter/lints/unnecessary_await_in_return.html
     - unnecessary_await_in_return
 
-    #
-    #
+    # Remove unnecessary braces
+    # https://dart-lang.github.io/linter/lints/unnecessary_brace_in_string_interps.html
     - unnecessary_brace_in_string_interps
 
-    #
-    #
+    # Yes, const everywhere. But not in an already const scope
+    # https://dart-lang.github.io/linter/lints/unnecessary_const.html
     - unnecessary_const
 
-    #
-    #
+    # Getter/setters can be added later on in a non API breaking manner
+    # https://dart-lang.github.io/linter/lints/unnecessary_getters_setters.html
     - unnecessary_getters_setters
 
     # Flutter setState is a good example where a lambda should always be used.
@@ -585,39 +585,39 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_lambdas.html
     # - unnecessary_lambdas
 
-    #
-    #
+    # Remove the optional `new` keyword
+    # https://dart-lang.github.io/linter/lints/unnecessary_new.html
     - unnecessary_new
 
-    #
-    #
+    # Don't assign `null` when value is already `null`.
+    # https://dart-lang.github.io/linter/lints/unnecessary_null_aware_assignments.html
     - unnecessary_null_aware_assignments
 
-    #
-    #
+    #  Don't assign `null` when value is already `null`.
+    # https://dart-lang.github.io/linter/lints/unnecessary_null_in_if_null_operators.html
     - unnecessary_null_in_if_null_operators
 
-    #
-    #
+    # Remove overrides which simply call super
+    # https://dart-lang.github.io/linter/lints/unnecessary_overrides.html
     - unnecessary_overrides
 
-    #
-    #
+    # Remove clutter where possible
+    # https://dart-lang.github.io/linter/lints/unnecessary_parenthesis.html
     - unnecessary_parenthesis
 
-    #
-    #
+    # Avoid magic overloads of + operators
+    # https://dart-lang.github.io/linter/lints/unnecessary_statements.html
     - unnecessary_statements
 
-    #
-    #
+    # The variable is clear, remove clutter
+    # https://dart-lang.github.io/linter/lints/unnecessary_this.html
     - unnecessary_this
 
-    #
-    #
+    # Highlights potential bugs where unrelated types are compared with another. (always *not* equal).
+    # https://dart-lang.github.io/linter/lints/unrelated_type_equality_checks.html
     - unrelated_type_equality_checks
 
-    # Always use hex syntax Color(0x00000001), never Color(1).
+    # Always use hex syntax Color(0x00000001), never Color(1)
     # https://dart-lang.github.io/linter/lints/use_full_hex_values_for_flutter_colors.html
     - use_full_hex_values_for_flutter_colors
 
@@ -629,12 +629,14 @@ linter:
     # https://dart-lang.github.io/linter/lints/unsafe_html.html
     # - unsafe_html
 
+    # Use rethrow to preserve the original stacktrace.
+    # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception
     #
-    #
+    # https://dart-lang.github.io/linter/lints/use_rethrow_when_possible.html
     - use_rethrow_when_possible
 
-    #
-    #
+    # Use the setter syntax
+    # https://dart-lang.github.io/linter/lints/use_setters_to_change_properties.html
     - use_setters_to_change_properties
 
     # In most cases, using a string buffer is preferred for composing strings due to its improved performance.
@@ -645,10 +647,10 @@ linter:
     # https://dart-lang.github.io/linter/lints/use_to_and_as_if_applicable.html
     # - use_to_and_as_if_applicable
 
-    #
-    #
+    # Catches invalid regular expressions.
+    # https://dart-lang.github.io/linter/lints/valid_regexps.html
     - valid_regexps
 
-    #
-    #
+    # Don't assign anything to void
+    # https://dart-lang.github.io/linter/lints/void_checks.html
     - void_checks
