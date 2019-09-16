@@ -1,5 +1,10 @@
 # Changlog
 
+## 0.2.3
+
+- Release for Dart 2.5 enables
+  - `avoid_print`
+
 ## 0.2.2
 
 - Release for Dart 2.4 enables
