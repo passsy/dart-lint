@@ -115,7 +115,8 @@ linter:
 
     # Don't call print in production code
     # https://dart-lang.github.io/linter/lints/avoid_print.html
-    - avoid_print
+    # dart 2.2 incompatible
+    #- avoid_print
 
     # Always prefer function references over typedefs.
     # Jumping twice in code to see the signature of a lambda sucks. This is different from the flutter analysis_options
@@ -192,8 +193,9 @@ linter:
     - await_only_futures
 
     # Follow the style guide and use UpperCamelCase for extensions
+    # Wait for dart 2.6 release
     # https://dart-lang.github.io/linter/lints/camel_case_extensions.html
-    - camel_case_extensions
+    # - camel_case_extensions
 
     # Follow the style guide and use UpperCamelCase for class names and typedefs
     # https://dart-lang.github.io/linter/lints/camel_case_types.html
@@ -445,7 +447,8 @@ linter:
 
     # Saves lot of code
     # https://dart-lang.github.io/linter/lints/prefer_for_elements_to_map_fromIterable.html
-    - prefer_for_elements_to_map_fromIterable
+    # dart 2.2 incompatible
+    #- prefer_for_elements_to_map_fromIterable
 
     # Dense code isn't necessarily better code
     # https://dart-lang.github.io/linter/lints/prefer_foreach.html
@@ -461,11 +464,13 @@ linter:
 
     # Allows potential usage of const
     # https://dart-lang.github.io/linter/lints/prefer_if_elements_to_conditional_expressions.html
-    - prefer_if_elements_to_conditional_expressions
+    # dart 2.2 incompatible
+    #- prefer_if_elements_to_conditional_expressions
 
     # Dart has a special operator for this, use it
     # https://dart-lang.github.io/linter/lints/prefer_if_null_operators.html
-    - prefer_if_null_operators
+    # dart 2.2 incompatible
+    #- prefer_if_null_operators
 
     # Terser code
     # https://dart-lang.github.io/linter/lints/prefer_initializing_formals.html
@@ -473,7 +478,8 @@ linter:
 
     # Easier move towards const, and way easier to read
     # https://dart-lang.github.io/linter/lints/prefer_inlined_adds.html
-    - prefer_inlined_adds
+    # dart 2.2 incompatible
+    #- prefer_inlined_adds
 
     # There is no argument which makes int literals better than double literals for doubles.
     # https://dart-lang.github.io/linter/lints/prefer_int_literals.html
@@ -510,7 +516,8 @@ linter:
 
     # Allows potential usage of const
     # https://dart-lang.github.io/linter/lints/prefer_spread_collections.html
-    - prefer_spread_collections
+    # dart 2.2 incompatible
+    #- prefer_spread_collections
 
     # Define types
     # https://dart-lang.github.io/linter/lints/prefer_typing_uninitialized_variables.html
@@ -538,7 +545,8 @@ linter:
 
     # Flutter only, always put child last
     # https://dart-lang.github.io/linter/lints/sort_child_properties_last.html
-    - sort_child_properties_last
+    # dart 2.2 incompatible
+    #- sort_child_properties_last
 
     # Might not be perfect but results in consistent code
     # https://dart-lang.github.io/linter/lints/sort_constructors_first.html
@@ -640,7 +648,8 @@ linter:
 
     # Web only
     # https://dart-lang.github.io/linter/lints/unsafe_html.html
-    - unsafe_html
+    # dart 2.2 incompatible
+    #- unsafe_html
 
     # Use rethrow to preserve the original stacktrace.
     # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception
