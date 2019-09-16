@@ -1,8 +1,8 @@
 name: lint
-version: 0.1.0
+version: 0.1.1
 description: An opiniated, community-driven set of lint rules for Dart and Flutter projects. Like pedantic but stricter
 author: Pascal Welsch <pascal@welsch.dev>
-homepage: https://github.com/passsy/lint
+homepage: https://github.com/passsy/dart-lint
 
 environment:
   sdk: '>=2.2.0 <3.0.0'
