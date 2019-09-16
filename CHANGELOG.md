@@ -1,5 +1,13 @@
 # Changlog
 
+## 0.2.1
+
+- Release for Dart 2.3. Enables 
+  - `prefer_for_elements_to_map_fromIterable`
+  - `prefer_if_elements_to_conditional_expressions`
+  - `prefer_inlined_adds`
+  - `prefer_spread_collections`
+
 ## 0.2.0
 
 - Fix `analysis_options_package.yaml` (wrong import)

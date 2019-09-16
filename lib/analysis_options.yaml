@@ -115,7 +115,7 @@ linter:
 
     # Don't call print in production code
     # https://dart-lang.github.io/linter/lints/avoid_print.html
-    # dart 2.2 incompatible
+    # dart 2.3 incompatible
     #- avoid_print
 
     # Always prefer function references over typedefs.
@@ -447,8 +447,7 @@ linter:
 
     # Saves lot of code
     # https://dart-lang.github.io/linter/lints/prefer_for_elements_to_map_fromIterable.html
-    # dart 2.2 incompatible
-    #- prefer_for_elements_to_map_fromIterable
+    - prefer_for_elements_to_map_fromIterable
 
     # Dense code isn't necessarily better code
     # https://dart-lang.github.io/linter/lints/prefer_foreach.html
@@ -464,12 +463,11 @@ linter:
 
     # Allows potential usage of const
     # https://dart-lang.github.io/linter/lints/prefer_if_elements_to_conditional_expressions.html
-    # dart 2.2 incompatible
-    #- prefer_if_elements_to_conditional_expressions
+    - prefer_if_elements_to_conditional_expressions
 
     # Dart has a special operator for this, use it
     # https://dart-lang.github.io/linter/lints/prefer_if_null_operators.html
-    # dart 2.2 incompatible
+    # dart 2.3 incompatible
     #- prefer_if_null_operators
 
     # Terser code
@@ -478,8 +476,7 @@ linter:
 
     # Easier move towards const, and way easier to read
     # https://dart-lang.github.io/linter/lints/prefer_inlined_adds.html
-    # dart 2.2 incompatible
-    #- prefer_inlined_adds
+    - prefer_inlined_adds
 
     # There is no argument which makes int literals better than double literals for doubles.
     # https://dart-lang.github.io/linter/lints/prefer_int_literals.html
@@ -516,8 +513,7 @@ linter:
 
     # Allows potential usage of const
     # https://dart-lang.github.io/linter/lints/prefer_spread_collections.html
-    # dart 2.2 incompatible
-    #- prefer_spread_collections
+    - prefer_spread_collections
 
     # Define types
     # https://dart-lang.github.io/linter/lints/prefer_typing_uninitialized_variables.html
@@ -545,7 +541,7 @@ linter:
 
     # Flutter only, always put child last
     # https://dart-lang.github.io/linter/lints/sort_child_properties_last.html
-    # dart 2.2 incompatible
+    # dart 2.3 incompatible
     #- sort_child_properties_last
 
     # Might not be perfect but results in consistent code
@@ -648,7 +644,7 @@ linter:
 
     # Web only
     # https://dart-lang.github.io/linter/lints/unsafe_html.html
-    # dart 2.2 incompatible
+    # dart 2.3 incompatible
     #- unsafe_html
 
     # Use rethrow to preserve the original stacktrace.
