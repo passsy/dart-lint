@@ -79,6 +79,11 @@ linter:
     # http://dart-lang.github.io/linter/lints/avoid_empty_else.html
     - avoid_empty_else
 
+    # It is expected that mutable objects which override hash & equals shouldn't be used as keys for hashmaps.
+    # This one use case doesn't make all hash & equals implementations for mutable classes bad.
+    # https://dart-lang.github.io/linter/lints/avoid_equals_and_hash_code_on_mutable_classes.html
+    # - avoid_equals_and_hash_code_on_mutable_classes
+
     # Prevents unnecessary allocation of a field
     # http://dart-lang.github.io/linter/lints/avoid_field_initializers_in_const_classes.html
     - avoid_field_initializers_in_const_classes
@@ -107,6 +112,10 @@ linter:
     # Good APIs don't use ambiguous boolean parameters. Instead use named parameters
     # https://dart-lang.github.io/linter/lints/avoid_positional_boolean_parameters.html
     - avoid_positional_boolean_parameters
+
+    # Don't call print in production code
+    # https://dart-lang.github.io/linter/lints/avoid_print.html
+    - avoid_print
 
     # Always prefer function references over typedefs.
     # Jumping twice in code to see the signature of a lambda sucks. This is different from the flutter analysis_options
@@ -181,6 +190,10 @@ linter:
     # Use the await keyword only for futures. There is nothing to await in synchronous code
     # https://dart-lang.github.io/linter/lints/await_only_futures.html
     - await_only_futures
+
+    # Follow the style guide and use UpperCamelCase for extensions
+    # https://dart-lang.github.io/linter/lints/camel_case_extensions.html
+    - camel_case_extensions
 
     # Follow the style guide and use UpperCamelCase for class names and typedefs
     # https://dart-lang.github.io/linter/lints/camel_case_types.html
@@ -627,7 +640,7 @@ linter:
 
     # Web only
     # https://dart-lang.github.io/linter/lints/unsafe_html.html
-    # - unsafe_html
+    - unsafe_html
 
     # Use rethrow to preserve the original stacktrace.
     # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception
