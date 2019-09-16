@@ -318,12 +318,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/no_duplicate_case_values.html
     - no_duplicate_case_values
 
-    #
-    #
+    # Follow dart style naming conventions
+    # https://dart-lang.github.io/linter/lints/non_constant_identifier_names.html
     - non_constant_identifier_names
 
-    #
-    #
+    # Might become irrelevant when non-nullable types land in dart. Until then use this lint check which checks for
+    # non null arguments for specific dart sdk methods.
+    # https://dart-lang.github.io/linter/lints/null_closures.html
     - null_closures
 
     # Types for local variables may improve readability.
@@ -339,76 +340,77 @@ linter:
     # https://dart-lang.github.io/linter/lints/only_throw_errors.html
     # - only_throw_errors
 
-    #
-    #
+    # Highlights unintentionally overridden fields.
+    # https://dart-lang.github.io/linter/lints/overridden_fields.html
     - overridden_fields
 
-    #
-    #
-    - package_api_docs
+    # Only relevant for packages, not applications or general dart code
+    # https://dart-lang.github.io/linter/lints/package_api_docs.html
+    # - package_api_docs
 
-    #
-    #
+    # Follow dart style package naming convention
+    # https://dart-lang.github.io/linter/lints/package_names.html
     - package_names
 
-    #
-    #
+    # Seems very rare, especially for applications.
+    # https://dart-lang.github.io/linter/lints/package_prefixed_library_names.html
     - package_prefixed_library_names
 
-    #
-    #
+    # Most likely a mistake, if not: bad practice
+    # https://dart-lang.github.io/linter/lints/parameter_assignments.html
     - parameter_assignments
 
-    #
-    #
-    - prefer_adjacent_string_concatenation
+    # Is contradictory to `no_adjacent_strings_in_list`
+    # https://dart-lang.github.io/linter/lints/prefer_adjacent_string_concatenation.html
+    # - prefer_adjacent_string_concatenation
 
-    #
-    #
+    # Makes it easier to migrate to const constructors
+    # https://dart-lang.github.io/linter/lints/prefer_asserts_in_initializer_lists.html
     - prefer_asserts_in_initializer_lists
 
-    #
-    #
+    # Collection literals are shorter. They exists, use them.
+    # https://dart-lang.github.io/linter/lints/prefer_collection_literals.html
     - prefer_collection_literals
 
     # Assertions blocks don't require a message because they throw simple to understand errors
     # https://dart-lang.github.io/linter/lints/prefer_asserts_with_message.html
     # - prefer_asserts_with_message
 
-    #
-    #
+    # Use the ??= operator when possible
+    # https://dart-lang.github.io/linter/lints/prefer_conditional_assignment.html
     - prefer_conditional_assignment
 
-    #
-    #
+    # Always use const when possible, make runtime faster
+    # https://dart-lang.github.io/linter/lints/prefer_const_constructors.html
     - prefer_const_constructors
 
-    #
-    #
+    # Add a const constructor when possible
+    # https://dart-lang.github.io/linter/lints/prefer_const_constructors_in_immutables.html
     - prefer_const_constructors_in_immutables
 
-    #
-    #
+    # final is good, const is better
+    # https://dart-lang.github.io/linter/lints/prefer_const_declarations.html
     - prefer_const_declarations
 
-    #
-    #
+    # Always use const when possible, make runtime faster
+    # https://dart-lang.github.io/linter/lints/prefer_const_literals_to_create_immutables.html
     - prefer_const_literals_to_create_immutables
 
-    #
-    #
+    # Dart has named constructors. Static methods in other languages (java) are a workaround which don't have
+    # named constructors.
+    # https://dart-lang.github.io/linter/lints/prefer_constructors_over_static_methods.html
     - prefer_constructors_over_static_methods
 
-    #
-    #
+    # Contains may be faster and is easier to read
+    # https://dart-lang.github.io/linter/lints/prefer_contains.html
     - prefer_contains
 
     # Use whatever makes you happy. lint doesn't define a style
     # https://dart-lang.github.io/linter/lints/prefer_double_quotes.html
     # - prefer_double_quotes
 
-    #
-    #
+    # Prevent confusion with call-side when using named parameters
+    # https://dart-lang.github.io/linter/lints/prefer_equal_for_default_values.html
     - prefer_equal_for_default_values
 
     # Single line methods + implementation makes it hard to write comments for that line.
@@ -416,68 +418,68 @@ linter:
     # https://dart-lang.github.io/linter/lints/prefer_expression_function_bodies.html
     # - prefer_expression_function_bodies
 
-    #
-    #
+    # Avoid accidental reassignments and allows the compiler to do optimizations.
+    # https://dart-lang.github.io/linter/lints/prefer_final_fields.html
     - prefer_final_fields
 
-    #
-    #
+    # Helps avoid accidental reassignments and allows the compiler to do optimizations.
+    # https://dart-lang.github.io/linter/lints/prefer_final_in_for_each.html
     - prefer_final_in_for_each
 
-    #
-    #
+    # Helps avoid accidental reassignments and allows the compiler to do optimizations.
+    # https://dart-lang.github.io/linter/lints/prefer_final_locals.html
     - prefer_final_locals
 
-    #
-    #
+    # Saves lot of code
+    # https://dart-lang.github.io/linter/lints/prefer_for_elements_to_map_fromIterable.html
     - prefer_for_elements_to_map_fromIterable
 
     # Dense code isn't necessarily better code
     # https://dart-lang.github.io/linter/lints/prefer_foreach.html
     # - prefer_foreach
 
-    #
-    #
+    # As Dart allows local function declarations, it is a good practice to use them in the place of function literals.
+    # https://dart-lang.github.io/linter/lints/prefer_function_declarations_over_variables.html
     - prefer_function_declarations_over_variables
 
-    #
-    #
+    # For consistency
+    # https://dart-lang.github.io/linter/lints/prefer_generic_function_type_aliases.html
     - prefer_generic_function_type_aliases
 
-    #
-    #
+    # Allows potential usage of const
+    # https://dart-lang.github.io/linter/lints/prefer_if_elements_to_conditional_expressions.html
     - prefer_if_elements_to_conditional_expressions
 
-    #
-    #
+    # Dart has a special operator for this, use it
+    # https://dart-lang.github.io/linter/lints/prefer_if_null_operators.html
     - prefer_if_null_operators
 
-    #
-    #
+    # Terser code
+    # https://dart-lang.github.io/linter/lints/prefer_initializing_formals.html
     - prefer_initializing_formals
 
-    #
-    #
+    # Easier move towards const, and way easier to read
+    # https://dart-lang.github.io/linter/lints/prefer_inlined_adds.html
     - prefer_inlined_adds
 
     # There is no argument which makes int literals better than double literals for doubles.
     # https://dart-lang.github.io/linter/lints/prefer_int_literals.html
     # - prefer_int_literals
 
-    #
-    #
+    # Interpolate, use less "", '' and +
+    # https://dart-lang.github.io/linter/lints/prefer_interpolation_to_compose_strings.html
     - prefer_interpolation_to_compose_strings
 
-    #
-    #
+    # Iterables do not necessary know their length
+    # https://dart-lang.github.io/linter/lints/prefer_is_empty.html
     - prefer_is_empty
 
-    #
-    #
+    # Easier to read
+    # https://dart-lang.github.io/linter/lints/prefer_is_not_empty.html
     - prefer_is_not_empty
 
-    #
-    #
+    # Easier to read
+    # https://dart-lang.github.io/linter/lints/prefer_iterable_whereType.html
     - prefer_iterable_whereType
 
     # Users of a 3rd party mixins can't change 3rd party code to use the mixin syntax.
@@ -493,48 +495,48 @@ linter:
     # https://dart-lang.github.io/linter/lints/prefer_single_quotes.html
     # - prefer_single_quotes
 
-    #
-    #
+    # Allows potential usage of const
+    # https://dart-lang.github.io/linter/lints/prefer_spread_collections.html
     - prefer_spread_collections
 
-    #
-    #
+    # Define types
+    # https://dart-lang.github.io/linter/lints/prefer_typing_uninitialized_variables.html
     - prefer_typing_uninitialized_variables
 
-    #
-    #
+    # Null is not a type, use void
+    # https://dart-lang.github.io/linter/lints/prefer_void_to_null.html
     - prefer_void_to_null
 
-    #
-    #
+    # Document the replacement API
+    # https://dart-lang.github.io/linter/lints/provide_deprecation_message.html
     - provide_deprecation_message
 
-    # For packages only
+    # Definitely not a rule for standard dart code. Maybe relevant for packages
     # https://dart-lang.github.io/linter/lints/public_member_api_docs.html
     # - public_member_api_docs
 
-    #
-    #
+    # Hints accidental recursions
+    # https://dart-lang.github.io/linter/lints/recursive_getters.html
     - recursive_getters
 
-    #
-    #
+    # Follow dart style use triple slashes
+    # https://dart-lang.github.io/linter/lints/slash_for_doc_comments.html
     - slash_for_doc_comments
 
-    #
-    #
+    # Flutter only, always put child last
+    # https://dart-lang.github.io/linter/lints/sort_child_properties_last.html
     - sort_child_properties_last
 
-    #
-    #
+    # Might not be perfect but results in consistent code
+    # https://dart-lang.github.io/linter/lints/sort_constructors_first.html
     - sort_constructors_first
 
-    #
-    #
+    # Any sorting is better than no sorting
+    # https://dart-lang.github.io/linter/lints/sort_pub_dependencies.html
     - sort_pub_dependencies
 
-    #
-    #
+    # Default constructor comes first.
+    # https://dart-lang.github.io/linter/lints/sort_unnamed_constructors_first.html
     - sort_unnamed_constructors_first
 
     #
