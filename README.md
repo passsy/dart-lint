@@ -1,5 +1,8 @@
 # Lint for Dart/Flutter
 
+
+[![Pub](https://img.shields.io/pub/v/lint.svg)](https://pub.dartlang.org/packages/lint)
+
 `lint` is a hand-picked, open-source, community-driven collection of lint rules for Dart and Flutter projects.
 The set of rules follows the [Effective Dart: Style Guide](https://dart.dev/guides/language/effective-dart/style).
 
@@ -24,7 +27,7 @@ If you're writing a package with a public API you should use the `package` versi
 include: package:lint/analysis_options_package.yaml
 ```
 
-## Comparison with package:pedantic
+## Comparison to package:pedantic
 
 Google publicly shares their internal rules as `package:pedantic` in open-source.
 It represents what Google is enforcing internally throughout all Dart code.
