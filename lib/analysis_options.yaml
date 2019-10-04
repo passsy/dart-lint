@@ -544,9 +544,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/sort_child_properties_last.html
     - sort_child_properties_last
 
-    # Might not be perfect but results in consistent code
+    # Working, results in consistent code. But too opinionated
+    # Discussion: https://github.com/passsy/dart-lint/issues/1
+    #
     # https://dart-lang.github.io/linter/lints/sort_constructors_first.html
-    - sort_constructors_first
+    # - sort_constructors_first
 
     # Any sorting is better than no sorting
     # https://dart-lang.github.io/linter/lints/sort_pub_dependencies.html
