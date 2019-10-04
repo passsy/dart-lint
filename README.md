@@ -33,7 +33,7 @@ include: package:lint/analysis_options_package.yaml
 To do so adjust your `analysis_options.yaml`.
 
 ```yaml
-include: package:lint/analysis_options_package.yaml
+include: package:lint/analysis_options.yaml
 
 linter:
   rules:
