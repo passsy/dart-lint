@@ -27,6 +27,51 @@ If you're writing a package with a public API you should use the `package` versi
 include: package:lint/analysis_options_package.yaml
 ```
 
+## Enable/Disable rules
+
+`lint` is customizable, you can add or remove rules, depending on your needs. 
+To do so adjust your `analysis_options.yaml`.
+
+```yaml
+include: package:lint/analysis_options_package.yaml
+
+linter:
+  rules:
+    # ------ Disable individual rules ----- #
+    #                 ---                   #
+    # Turn off what you don't like.         #
+    # ------------------------------------- #
+
+    # Use parameter order as in json response
+    always_put_required_named_parameters_first: false
+    
+    # Util classes are awesome!
+    avoid_classes_with_only_static_members: false
+
+
+    # ------ Enable individual rules ------ #
+    #                 ---                   #
+    # These rules here are good but too     #
+    # opinionated to enable them by default #
+    # ------------------------------------- #
+
+    # Make constructors the first thing in every class
+    sort_constructors_first: true
+
+    # The new tabs vs. spaces. Choose wisely
+    prefer_single_quotes: true
+    prefer_double_quotes: true
+
+    # Good packages document everything
+    public_member_api_docs: true
+    
+    # Blindly follow the Flutter code style, which prefers types everywhere
+    always_specify_types: true
+  
+    # Back to the 80s
+    lines_longer_than_80_chars: true
+```
+
 ## Comparison to package:pedantic
 
 Google publicly shares their internal rules as `package:pedantic` in open-source.
