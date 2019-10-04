@@ -3,6 +3,10 @@
 
 [![Pub](https://img.shields.io/pub/v/lint.svg)](https://pub.dartlang.org/packages/lint)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1096485/66208760-2b83b900-e6b6-11e9-8b1a-4eeaccc5125d.png">
+</p>
+
 `lint` is a hand-picked, open-source, community-driven collection of lint rules for Dart and Flutter projects.
 The set of rules follows the [Effective Dart: Style Guide](https://dart.dev/guides/language/effective-dart/style).
 
