@@ -1,5 +1,5 @@
 name: lint
-version: 0.3.0+dart205
+version: 0.3.1+dart205
 description: An opiniated, community-driven set of lint rules for Dart and Flutter projects. Like pedantic but stricter
 author: Pascal Welsch <pascal@welsch.dev>
 homepage: https://github.com/passsy/dart-lint

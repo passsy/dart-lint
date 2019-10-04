@@ -1,5 +1,9 @@
 # Changlog
 
+## 0.3.1
+
+- Add `Example` tab to https://pub.dev/packages/lint
+
 ## 0.3.0
 
 - Disable `one_member_abstracts` [#2](https://github.com/passsy/dart-lint/issues/2)
