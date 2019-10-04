@@ -51,10 +51,9 @@ linter:
     # http://dart-lang.github.io/linter/lints/avoid_annotating_with_dynamic.html
     # - avoid_annotating_with_dynamic
 
-    # There are good reasons to use `as`, i.e. in operator ==() methods.
-    # Too many false positives:
-    # - http://dart-lang.github.io/linter/lints/avoid_as.html
-    #
+    # A leftover from dart1, should be deprecated
+    # - https://github.com/dart-lang/linter/issues/1401
+    # http://dart-lang.github.io/linter/lints/avoid_as.html
     # - avoid_as
 
     # Highlights boolean expressions which can be simplified
