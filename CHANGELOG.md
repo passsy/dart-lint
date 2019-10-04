@@ -1,5 +1,17 @@
 # Changlog
 
+## 0.3.0
+
+- Disable `one_member_abstracts` [#2](https://github.com/passsy/dart-lint/issues/2)
+- Disable `sort_constructors_first` [#1](https://github.com/passsy/dart-lint/issues/1)
+
+New version schema:
+
+- `0.3.0+dart202`: Dart 2.2 Release `sdk: '>=2.2.0 <2.3.0'`
+- `0.3.0+dart203`: Dart 2.3 Release `sdk: '>=2.3.0 <2.4.0'`
+- `0.3.0+dart204`: Dart 2.4 Release `sdk: '>=2.4.0 <2.5.0'`
+- `0.3.0+dart205`: Dart 2.5 Release `sdk: '>=2.5.0 <3.0.0'`
+
 ## 0.2.3
 
 - Release for Dart 2.5 enables
