@@ -13,7 +13,7 @@ This package can be used as a replacement for [`package:pedantic`](https://githu
 Add `lint` as dependency to your `pubspec.yaml`
 ```yaml
 dev_dependencies:
-  lint: ^0.2.0
+  lint: 0.3.0+dart203
 ```
 
 Create a `analysis_options.yaml` file in the root of your project and import the `lint` rules:
