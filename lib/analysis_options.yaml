@@ -347,7 +347,7 @@ linter:
 
     # Defining interfaces (abstract classes), with only one method, makes sense architecture wise
     # https://dart-lang.github.io/linter/lints/one_member_abstracts.html
-    - one_member_abstracts
+    # - one_member_abstracts
 
     # Since Errors aren't intended to be caught (see avoid_catching_errors), throwing anything
     # doesn't cause trouble.
