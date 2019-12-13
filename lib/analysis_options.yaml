@@ -179,6 +179,10 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_types_on_closure_parameters.html
     # - avoid_types_on_closure_parameters
 
+    # Containers without parameters have no effect and can be removed
+    # https://dart-lang.github.io/linter/lints/avoid_unnecessary_containers.html
+    - avoid_unnecessary_containers
+
     # Unused parameters should be removed
     # https://dart-lang.github.io/linter/lints/avoid_unused_constructor_parameters.html
     - avoid_unused_constructor_parameters
