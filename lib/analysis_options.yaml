@@ -340,6 +340,10 @@ linter:
     # https://dart-lang.github.io/linter/lints/no_duplicate_case_values.html
     - no_duplicate_case_values
 
+    # Flutter only: `createState` shouldn't pass information into the state
+    # https://dart-lang.github.io/linter/lints/no_logic_in_create_state.html
+    - no_logic_in_create_state
+
     # Follow dart style naming conventions
     # https://dart-lang.github.io/linter/lints/non_constant_identifier_names.html
     - non_constant_identifier_names
