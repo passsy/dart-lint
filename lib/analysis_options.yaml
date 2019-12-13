@@ -498,6 +498,10 @@ linter:
     # https://dart-lang.github.io/linter/lints/prefer_is_not_empty.html
     - prefer_is_not_empty
 
+    # Use the `foo is! Foo` instead of `!(foo is Foo)`
+    # https://dart-lang.github.io/linter/lints/prefer_is_not_operator.html
+    - prefer_is_not_operator
+
     # Easier to read
     # https://dart-lang.github.io/linter/lints/prefer_iterable_whereType.html
     - prefer_iterable_whereType
