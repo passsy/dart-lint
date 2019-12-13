@@ -385,14 +385,14 @@ linter:
     # https://dart-lang.github.io/linter/lints/prefer_asserts_in_initializer_lists.html
     - prefer_asserts_in_initializer_lists
 
-    # Collection literals are shorter. They exists, use them.
-    # https://dart-lang.github.io/linter/lints/prefer_collection_literals.html
-    - prefer_collection_literals
-
     # Assertions blocks don't require a message because they throw simple to understand errors
     # https://dart-lang.github.io/linter/lints/prefer_asserts_with_message.html
     # - prefer_asserts_with_message
 
+    # Collection literals are shorter. They exists, use them.
+    # https://dart-lang.github.io/linter/lints/prefer_collection_literals.html
+    - prefer_collection_literals
+    -
     # Use the ??= operator when possible
     # https://dart-lang.github.io/linter/lints/prefer_conditional_assignment.html
     - prefer_conditional_assignment
@@ -636,6 +636,10 @@ linter:
     # https://dart-lang.github.io/linter/lints/unrelated_type_equality_checks.html
     - unrelated_type_equality_checks
 
+    # Web only
+    # https://dart-lang.github.io/linter/lints/unsafe_html.html
+    - unsafe_html
+
     # Always use hex syntax Color(0x00000001), never Color(1)
     # https://dart-lang.github.io/linter/lints/use_full_hex_values_for_flutter_colors.html
     - use_full_hex_values_for_flutter_colors
@@ -643,10 +647,6 @@ linter:
     # Always use generic function type syntax, don't mix styles
     # https://dart-lang.github.io/linter/lints/use_function_type_syntax_for_parameters.html
     - use_function_type_syntax_for_parameters
-
-    # Web only
-    # https://dart-lang.github.io/linter/lints/unsafe_html.html
-    - unsafe_html
 
     # Use rethrow to preserve the original stacktrace.
     # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception
