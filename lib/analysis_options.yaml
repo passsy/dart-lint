@@ -599,6 +599,10 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_const.html
     - unnecessary_const
 
+    # Disabled because `final` prevents accidental reassignment
+    # https://dart-lang.github.io/linter/lints/unnecessary_final.html
+    # - unnecessary_final
+
     # Getter/setters can be added later on in a non API breaking manner
     # https://dart-lang.github.io/linter/lints/unnecessary_getters_setters.html
     - unnecessary_getters_setters
