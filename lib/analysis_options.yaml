@@ -188,6 +188,10 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_void_async.html
     - avoid_void_async
 
+    # Flutter mobile only: Web packages aren't available in mobile flutter apps
+    # https://dart-lang.github.io/linter/lints/avoid_web_libraries_in_flutter.html
+    - avoid_web_libraries_in_flutter
+
     # Use the await keyword only for futures. There is nothing to await in synchronous code
     # https://dart-lang.github.io/linter/lints/await_only_futures.html
     - await_only_futures
