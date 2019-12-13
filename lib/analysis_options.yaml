@@ -33,7 +33,7 @@ linter:
 
     # All non nullable named parameters should be and annotated with @required.
     # This allows API consumers to get warnings via lint rather than a crash a runtime.
-    # Might become obsolete with Non-Nullable types in dart 2.6
+    # Might become obsolete with Non-Nullable types
     # http://dart-lang.github.io/linter/lints/always_require_non_null_named_parameters.html
     - always_require_non_null_named_parameters
 
@@ -141,7 +141,7 @@ linter:
     # - avoid_returning_null
 
     # Don't use `Future?`, therefore never return null instead of a Future.
-    # Will become obsolete one Non-Nullable types land in dart 2.6
+    # Will become obsolete one Non-Nullable types land
     # https://dart-lang.github.io/linter/lints/avoid_returning_null_for_future.html
     - avoid_returning_null_for_future
 
@@ -193,9 +193,8 @@ linter:
     - await_only_futures
 
     # Follow the style guide and use UpperCamelCase for extensions
-    # Wait for dart 2.6 release
     # https://dart-lang.github.io/linter/lints/camel_case_extensions.html
-    # - camel_case_extensions
+    - camel_case_extensions
 
     # Follow the style guide and use UpperCamelCase for class names and typedefs
     # https://dart-lang.github.io/linter/lints/camel_case_types.html
