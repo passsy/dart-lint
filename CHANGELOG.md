@@ -1,5 +1,10 @@
 # Changlog
 
+## 1.0.0
+
+Release for Dart 2.6
+ - enabled: `camel_case_extensions`
+
 ## 0.3.1
 
 - Add `Example` tab to https://pub.dev/packages/lint
