@@ -3,12 +3,13 @@
 ## 1.1.0
 
 Release for Dart 2.7
-- enabled: [`prefer_is_not_operator`](https://dart-lang.github.io/linter/lints/prefer_is_not_operator.html)
+- Enable [`prefer_is_not_operator`](https://dart-lang.github.io/linter/lints/prefer_is_not_operator.html)
+- Enable [`avoid_unnecessary_containers`](https://dart-lang.github.io/linter/lints/avoid_unnecessary_containers.html)
 
 ## 1.0.0
 
 Release for Dart 2.6
- - enabled: [`camel_case_extensions`](https://dart-lang.github.io/linter/lints/camel_case_extensions.html)
+ - Enable [`camel_case_extensions`](https://dart-lang.github.io/linter/lints/camel_case_extensions.html)
 
 ## 0.3.1
 
