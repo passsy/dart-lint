@@ -511,6 +511,10 @@ linter:
     # https://github.com/flutter/flutter/pull/32711#issuecomment-492930932
     - prefer_null_aware_operators
 
+    # Conflicting with `avoid_relative_lib_imports` which is enforced
+    # https://dart-lang.github.io/linter/lints/prefer_relative_imports.html
+    # - prefer_relative_imports
+
     # Use whatever makes you happy. noexcuse doesn't define a style
     # https://dart-lang.github.io/linter/lints/prefer_single_quotes.html
     # - prefer_single_quotes
