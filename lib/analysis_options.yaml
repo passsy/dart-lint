@@ -25,12 +25,13 @@ linter:
     - always_declare_return_types
 
     # Single line `if`s are fine as recommended in Effective Dart "DO format your code using dartfmt"
+    # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/always_put_control_body_on_new_line.html
     # - always_put_control_body_on_new_line
 
     # Flutter widgets always put a Key as first optional parameter which breaks this rule.
     # Also violates other orderings like matching the class fields or alphabetically.
-    # pedantic: enabled
+    # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/always_declare_return_types.html
     # - always_put_required_named_parameters_first
 
@@ -44,6 +45,7 @@ linter:
     # `var foo = 10;` is enough information for the compiler to make foo a int.
     # Violates Effective Dart "AVOID type annotating initialized local variables".
     # Makes code unnecessarily complex https://github.com/dart-lang/linter/issues/1620
+    # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/always_specify_types.html
     # - always_specify_types
 
@@ -54,10 +56,12 @@ linter:
 
     # All methods should define a return type. dynamic is no exception.
     # Violates Effective Dart "PREFER annotating with dynamic instead of letting inference fail"
+    # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/avoid_annotating_with_dynamic.html
     # - avoid_annotating_with_dynamic
 
     # A leftover from dart1, should be deprecated
+    # pedantic: disabled
     # - https://github.com/dart-lang/linter/issues/1401
     # http://dart-lang.github.io/linter/lints/avoid_as.html
     # - avoid_as
@@ -68,18 +72,22 @@ linter:
 
     # There are no strong arguments to enable this rule because it is very strict. Catching anything is useful
     # and common even if not always the most correct thing to do.
+    # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/avoid_catches_without_on_clauses.html
     # - avoid_catches_without_on_clauses
 
     # Errors aren't for catching but to prevent prior to runtime
+    # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/avoid_catching_errors.html
     - avoid_catching_errors
 
     # Can usually be replaced with an extension
+    # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/avoid_classes_with_only_static_members.html
     - avoid_classes_with_only_static_members
 
     # Only useful when targeting JS
+    # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/avoid_double_and_int_checks.html
     # - avoid_double_and_int_checks
 
@@ -90,10 +98,12 @@ linter:
 
     # It is expected that mutable objects which override hash & equals shouldn't be used as keys for hashmaps.
     # This one use case doesn't make all hash & equals implementations for mutable classes bad.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/avoid_equals_and_hash_code_on_mutable_classes.html
     # - avoid_equals_and_hash_code_on_mutable_classes
 
     # Prevents unnecessary allocation of a field
+    # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/avoid_field_initializers_in_const_classes.html
     - avoid_field_initializers_in_const_classes
 
@@ -111,6 +121,7 @@ linter:
 
     # Only useful when targeting JS
     # Warns about too large integers when compiling to JS
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/avoid_js_rounded_ints.html
     # - avoid_js_rounded_ints
 
@@ -124,6 +135,7 @@ linter:
     - avoid_positional_boolean_parameters
 
     # Don't call print in production code
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/avoid_print.html
     - avoid_print
 
@@ -148,6 +160,7 @@ linter:
 
     # Especially with Non-Nullable types on the horizon, `int?` is fine.
     # There are plenty of valid reasons to return null.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/avoid_returning_null.html
     # - avoid_returning_null
 
@@ -162,6 +175,7 @@ linter:
 
     # Hinting you forgot about the cascade operator. But too often you did this on purpose.
     # There are plenty of valid reasons to return this.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/avoid_returning_this.html
     # - avoid_returning_this
 
@@ -180,6 +194,7 @@ linter:
 
     # Might cause frame drops because of synchronous file access on mobile, especially on older phones with slow storage.
     # There are no known measurements sync access does *not* drop frames.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/avoid_slow_async_io.html
     # - avoid_slow_async_io
 
@@ -200,8 +215,10 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_unused_constructor_parameters.html
     - avoid_unused_constructor_parameters
 
+    # TODO double check
     # For async functions use `Future<void>` as return value, not `void`
     # This allows usage of the await keyword and prevents operations from running in parallel.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/avoid_void_async.html
     - avoid_void_async
 
@@ -223,6 +240,9 @@ linter:
     - camel_case_types
 
     # Prevents leaks and code executing after their lifecycle.
+    # Discussion https://github.com/passsy/dart-lint/issues/4
+    #
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/cancel_subscriptions.html
     - cancel_subscriptions
 
@@ -236,6 +256,7 @@ linter:
     # False positives, not reliable enough
     # - https://github.com/dart-lang/linter/issues/1381
     #
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/close_sinks.html
     # - close_sinks
 
@@ -246,10 +267,12 @@ linter:
     # - comment_references
 
     # Follow standard dart naming style.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/constant_identifier_names.html
     - constant_identifier_names
 
     # Prevents hard to debug code
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/control_flow_in_finally.html
     - control_flow_in_finally
 
@@ -265,6 +288,7 @@ linter:
     # - diagnostic_describe_all_properties
 
     # Follows dart style. Fully supported by IDEs and no manual effort for a consistent style
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/directives_ordering.html
     - directives_ordering
 
@@ -279,6 +303,7 @@ linter:
     - empty_constructor_bodies
 
     # Don't allow empty if bodies. Works together with curly_braces_in_flow_control_structures
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/empty_statements.html
     - empty_statements
 
@@ -287,6 +312,7 @@ linter:
     - file_names
 
     # Very flutter specific, not applicable for all projects
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/flutter_style_todos.html
     # - flutter_style_todos # not all todos require a ticket
 
@@ -302,6 +328,7 @@ linter:
     # Although there are some false positives, this lint generally catches unnecessary checks
     # - https://github.com/dart-lang/linter/issues/811
     #
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/invariant_booleans.html
     - invariant_booleans
 
@@ -311,6 +338,7 @@ linter:
     - iterable_contains_unrelated_type
 
     # Hint to join return and assignment.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/join_return_with_assignment.html
     - join_return_with_assignment
 
@@ -348,10 +376,12 @@ linter:
     #
     # Known issue: while(true) loops https://github.com/dart-lang/linter/issues/453
     #
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/literal_only_boolean_expressions.html
     # - literal_only_boolean_expressions
 
     # Concat Strings obviously with `+` inside a list.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/no_adjacent_strings_in_list.html
     - no_adjacent_strings_in_list
 
@@ -382,6 +412,7 @@ linter:
     # Defining interfaces (abstract classes), with only one method, makes sense architecture wise
     # Discussion: https://github.com/passsy/dart-lint/issues/2
     #
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/one_member_abstracts.html
     # - one_member_abstracts
 
@@ -408,6 +439,7 @@ linter:
 
     # Most likely a mistake, if not: bad practice
     # Not compatible with NNBD
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/parameter_assignments.html
     - parameter_assignments
 
@@ -417,10 +449,12 @@ linter:
     # - prefer_adjacent_string_concatenation
 
     # Makes it easier to migrate to const constructors and to have final fields
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_asserts_in_initializer_lists.html
     - prefer_asserts_in_initializer_lists
 
     # Assertions blocks don't require a message because they throw simple to understand errors
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_asserts_with_message.html
     # - prefer_asserts_with_message
 
@@ -435,10 +469,12 @@ linter:
     - prefer_conditional_assignment
 
     # Always use const when possible, make runtime faster
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_const_constructors.html
     - prefer_const_constructors
 
     # Add a const constructor when possible
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_const_constructors_in_immutables.html
     - prefer_const_constructors_in_immutables
 
@@ -447,11 +483,13 @@ linter:
     - prefer_const_declarations
 
     # Always use const when possible, make runtime faster
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_const_literals_to_create_immutables.html
     - prefer_const_literals_to_create_immutables
 
     # Dart has named constructors. Static methods in other languages (java) are a workaround which don't have
     # named constructors.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_constructors_over_static_methods.html
     - prefer_constructors_over_static_methods
 
@@ -461,6 +499,7 @@ linter:
     - prefer_contains
 
     # Use whatever makes you happy. lint doesn't define a style
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_double_quotes.html
     # - prefer_double_quotes
 
@@ -471,6 +510,7 @@ linter:
 
     # Single line methods + implementation makes it hard to write comments for that line.
     # Dense code isn't necessarily better code.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_expression_function_bodies.html
     # - prefer_expression_function_bodies
 
@@ -480,10 +520,12 @@ linter:
     - prefer_final_fields
 
     # Helps avoid accidental reassignments and allows the compiler to do optimizations.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_final_in_for_each.html
     - prefer_final_in_for_each
 
     # Helps avoid accidental reassignments and allows the compiler to do optimizations.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_final_locals.html
     - prefer_final_locals
 
@@ -493,6 +535,7 @@ linter:
     - prefer_for_elements_to_map_fromIterable
 
     # Dense code isn't necessarily better code
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_foreach.html
     # - prefer_foreach
 
@@ -523,6 +566,7 @@ linter:
     - prefer_inlined_adds
 
     # There is no argument which makes int literals better than double literals for doubles.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_int_literals.html
     # - prefer_int_literals
 
@@ -573,6 +617,7 @@ linter:
     - prefer_spread_collections
 
     # Define types
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_typing_uninitialized_variables.html
     - prefer_typing_uninitialized_variables
 
@@ -605,6 +650,7 @@ linter:
     # Working, results in consistent code. But too opinionated
     # Discussion: https://github.com/passsy/dart-lint/issues/1
     #
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/sort_constructors_first.html
     # - sort_constructors_first
 
@@ -613,14 +659,17 @@ linter:
     - sort_pub_dependencies
 
     # Default constructor comes first.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/sort_unnamed_constructors_first.html
     - sort_unnamed_constructors_first
 
     # First test, then cast
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/test_types_in_equals.html
     - test_types_in_equals
 
     # Hard to debug and bad style
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/throw_in_finally.html
     - throw_in_finally
 
@@ -675,6 +724,7 @@ linter:
     - unnecessary_new
 
     # Don't assign `null` when value is already `null`.
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/unnecessary_null_aware_assignments.html
     - unnecessary_null_aware_assignments
 
@@ -725,6 +775,7 @@ linter:
     - use_rethrow_when_possible
 
     # Use the setter syntax
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/use_setters_to_change_properties.html
     - use_setters_to_change_properties
 
@@ -733,6 +784,7 @@ linter:
     - use_string_buffers
 
     # Naming is hard, strict rules don't help
+    # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/use_to_and_as_if_applicable.html
     # - use_to_and_as_if_applicable
 
