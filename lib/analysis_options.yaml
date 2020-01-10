@@ -399,7 +399,7 @@ linter:
     # Collection literals are shorter. They exists, use them.
     # https://dart-lang.github.io/linter/lints/prefer_collection_literals.html
     - prefer_collection_literals
-    -
+
     # Use the ??= operator when possible
     # https://dart-lang.github.io/linter/lints/prefer_conditional_assignment.html
     - prefer_conditional_assignment
