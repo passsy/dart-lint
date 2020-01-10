@@ -1,5 +1,9 @@
 # Changlog
 
+## 1.1.1
+
+- Fix syntactical error which breaks custom rules [#5](https://github.com/passsy/dart-lint/issues/5)
+
 ## 1.1.0
 
 Release for Dart 2.7
