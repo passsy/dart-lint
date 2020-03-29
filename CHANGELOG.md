@@ -1,5 +1,9 @@
 # Changlog
 
+## 1.2.0-dev.d28.2
+
+Raise min sdk to `2.8.0-dev.16.0`
+
 ## 1.2.0-dev.d28.1
 
 - Dart 2.8 pre-release
