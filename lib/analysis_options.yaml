@@ -352,6 +352,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/join_return_with_assignment.html
     - join_return_with_assignment
 
+    # Add leading \n which which makes multiline strings easier to read
+    # Dart SDK: >= 2.8.0-dev.16.0 • (Linter v0.1.113)
+    # https://dart-lang.github.io/linter/lints/leading_newlines_in_multiline_strings.html
+    - leading_newlines_in_multiline_strings
+
     # Makes sure a library name is a valid dart identifier.
     # This comes in handy for test files combining multiple tests where the file name can be used as identifier
     #
