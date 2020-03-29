@@ -102,6 +102,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_equals_and_hash_code_on_mutable_classes.html
     # - avoid_equals_and_hash_code_on_mutable_classes
 
+    # Use different quotes instead of escaping
+    # Dart SDK: >= 2.8.0-dev.11.0 • (Linter v0.1.111)
+    # https://dart-lang.github.io/linter/lints/avoid_escaping_inner_quotes.html
+    - avoid_escaping_inner_quotes
+
     # Prevents unnecessary allocation of a field
     # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/avoid_field_initializers_in_const_classes.html
@@ -756,10 +761,19 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_parenthesis.html
     - unnecessary_parenthesis
 
+    # Use raw string only when needed
+    # Dart SDK: >= 2.8.0-dev.11.0 • (Linter v0.1.111)
+    # https://dart-lang.github.io/linter/lints/unnecessary_raw_strings.html
+    - unnecessary_raw_strings
+
     # Avoid magic overloads of + operators
     # https://dart-lang.github.io/linter/lints/unnecessary_statements.html
     - unnecessary_statements
 
+    # Remove unnecessary escape characters
+    # Dart SDK: >= 2.8.0-dev.11.0 • (Linter v0.1.111)
+    # https://dart-lang.github.io/linter/lints/unnecessary_string_escapes.html
+    - unnecessary_string_escapes
 
     # Especially with NNBD a no-brainer
     # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
