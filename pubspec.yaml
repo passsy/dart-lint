@@ -1,5 +1,5 @@
 name: lint
-version: 1.2.0-dev.d28.2
+version: 1.2.0
 description: An opiniated, community-driven set of lint rules for Dart and Flutter projects. Like pedantic but stricter
 homepage: https://github.com/passsy/dart-lint
 
