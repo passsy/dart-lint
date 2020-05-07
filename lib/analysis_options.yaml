@@ -102,6 +102,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_equals_and_hash_code_on_mutable_classes.html
     # - avoid_equals_and_hash_code_on_mutable_classes
 
+    # Use different quotes instead of escaping
+    # Dart SDK: >= 2.8.0-dev.11.0 • (Linter v0.1.111)
+    # https://dart-lang.github.io/linter/lints/avoid_escaping_inner_quotes.html
+    - avoid_escaping_inner_quotes
+
     # Prevents unnecessary allocation of a field
     # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/avoid_field_initializers_in_const_classes.html
@@ -143,6 +148,11 @@ linter:
     # Jumping twice in code to see the signature of a lambda sucks. This is different from the flutter analysis_options
     # https://dart-lang.github.io/linter/lints/avoid_private_typedef_functions.html
     - avoid_private_typedef_functions
+
+    # Don't explicitly set defaults
+    # Dart SDK: >= 2.8.0-dev.1.0 • (Linter v0.1.107)
+    # https://dart-lang.github.io/linter/lints/avoid_redundant_argument_values.html
+    - avoid_redundant_argument_values
 
     # package or relative? Let's end the discussion and use package everywhere.
     # pedantic: enabled
@@ -342,6 +352,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/join_return_with_assignment.html
     - join_return_with_assignment
 
+    # Add leading \n which which makes multiline strings easier to read
+    # Dart SDK: >= 2.8.0-dev.16.0 • (Linter v0.1.113)
+    # https://dart-lang.github.io/linter/lints/leading_newlines_in_multiline_strings.html
+    - leading_newlines_in_multiline_strings
+
     # Makes sure a library name is a valid dart identifier.
     # This comes in handy for test files combining multiple tests where the file name can be used as identifier
     #
@@ -380,6 +395,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/literal_only_boolean_expressions.html
     # - literal_only_boolean_expressions
 
+    # Don't forget the whitespaces at the end
+    # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
+    # https://dart-lang.github.io/linter/lints/missing_whitespace_between_adjacent_strings.html
+    - missing_whitespace_between_adjacent_strings
+
     # Concat Strings obviously with `+` inside a list.
     # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/no_adjacent_strings_in_list.html
@@ -393,6 +413,11 @@ linter:
     # Flutter only: `createState` shouldn't pass information into the state
     # https://dart-lang.github.io/linter/lints/no_logic_in_create_state.html
     - no_logic_in_create_state
+
+    # calling `runtimeType` may be a performance problem
+    # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
+    # https://dart-lang.github.io/linter/lints/no_runtimeType_toString.html
+    - no_runtimeType_toString
 
     # Follow dart style naming conventions
     # https://dart-lang.github.io/linter/lints/non_constant_identifier_names.html
@@ -741,9 +766,24 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_parenthesis.html
     - unnecessary_parenthesis
 
+    # Use raw string only when needed
+    # Dart SDK: >= 2.8.0-dev.11.0 • (Linter v0.1.111)
+    # https://dart-lang.github.io/linter/lints/unnecessary_raw_strings.html
+    - unnecessary_raw_strings
+
     # Avoid magic overloads of + operators
     # https://dart-lang.github.io/linter/lints/unnecessary_statements.html
     - unnecessary_statements
+
+    # Remove unnecessary escape characters
+    # Dart SDK: >= 2.8.0-dev.11.0 • (Linter v0.1.111)
+    # https://dart-lang.github.io/linter/lints/unnecessary_string_escapes.html
+    - unnecessary_string_escapes
+
+    # Especially with NNBD a no-brainer
+    # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
+    # https://dart-lang.github.io/linter/lints/unnecessary_string_interpolations.html
+    - unnecessary_string_interpolations
 
     # The variable is clear, remove clutter
     # pedantic: enabled
@@ -767,6 +807,11 @@ linter:
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/use_function_type_syntax_for_parameters.html
     - use_function_type_syntax_for_parameters
+
+    # Adding a key without using it isn't helpful in applications, only for the Flutter SDK
+    # Dart SDK: >= 2.8.0-dev.1.0 • (Linter v0.1.108)
+    # https://dart-lang.github.io/linter/lints/use_key_in_widget_constructors.html
+    # - use_key_in_widget_constructors
 
     # Use rethrow to preserve the original stacktrace.
     # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception

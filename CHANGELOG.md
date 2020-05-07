@@ -1,5 +1,20 @@
 # Changlog
 
+## 1.2.0-dev.d28.2
+
+Raise min sdk to `2.8.0-dev.16.0`
+
+## 1.2.0-dev.d28.1
+
+- Dart 2.8 pre-release
+- Enable [`avoid_redundant_argument_values`](https://dart-lang.github.io/linter/lints/avoid_redundant_argument_values.html)
+- Enable [`missing_whitespace_between_adjacent_strings`](https://dart-lang.github.io/linter/lints/missing_whitespace_between_adjacent_strings.html)
+- Enable [`no_runtimeType_toString`](https://dart-lang.github.io/linter/lints/no_runtimeType_toString.html)
+- Enable [`unnecessary_string_interpolations`](https://dart-lang.github.io/linter/lints/unnecessary_string_interpolations.html)
+- Enable [`unnecessary_raw_strings`](https://dart-lang.github.io/linter/lints/unnecessary_raw_strings.html)
+- Enable [`unnecessary_string_escapes`](https://dart-lang.github.io/linter/lints/unnecessary_string_escapes.html)
+- Enable [`leading_newlines_in_multiline_strings`](https://dart-lang.github.io/linter/lints/leading_newlines_in_multiline_strings.html)
+
 ## 1.1.1
 
 - Fix syntactical error which breaks custom rules [#5](https://github.com/passsy/dart-lint/issues/5)
