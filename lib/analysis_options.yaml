@@ -663,6 +663,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/recursive_getters.html
     - recursive_getters
 
+    # Flutter only, prefer SizedBox over Container which offers a const constructors
+    # Dart SDK: >= 2.9.0-4.0.dev • (Linter v0.1.115)
+    # https://dart-lang.github.io/linter/lints/sized_box_for_whitespace.html
+    - sized_box_for_whitespace
+
     # Follow dart style use triple slashes
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/slash_for_doc_comments.html
