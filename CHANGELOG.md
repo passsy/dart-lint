@@ -1,5 +1,11 @@
 # Changlog
 
+## 1.3.0-dev.d29.1
+
+Dart SDK: >= 2.9.0-4.0.dev • (Linter v0.1.115)
+
+- Enable [`sized_box_for_whitespace`](https://dart-lang.github.io/linter/lints/sized_box_for_whitespace.html)
+
 ## 1.2.0
 
 Release for Dart 2.8.1 with Linter v0.1.114
