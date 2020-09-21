@@ -332,6 +332,12 @@ linter:
     # https://dart-lang.github.io/linter/lints/empty_statements.html
     - empty_statements
 
+    # Enums aren't powerful enough, now enum like classes get the same linting support
+    # pedantic: disabled
+    # Dart SDK: >= 2.9.0-12.0.dev • (Linter v0.1.116)
+    # https://dart-lang.github.io/linter/lints/exhaustive_cases.html
+    - exhaustive_cases
+
     # Follow dart file naming schema
     # https://dart-lang.github.io/linter/lints/file_names.html
     - file_names
