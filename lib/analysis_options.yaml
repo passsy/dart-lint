@@ -302,6 +302,21 @@ linter:
     # https://dart-lang.github.io/linter/lints/directives_ordering.html
     - directives_ordering
 
+    # String.fromEnvironment looks up env variables at compile time. The variable is baked in by the compiler
+    # and can't be changed by environment variables.
+    #
+    # For dart apps:
+    # Better look up a environment variable at runtime with Platform.environment
+    # or use code generation to define variables at compile time.
+    #
+    # For Flutter apps:
+    # String.fromEnvironment is the recommended way to include variables defined with `flutter build --dart-define`
+    #
+    # pedantic: disabled
+    # Dart SDK: >= 2.10.0-0.0.dev • (Linter v0.1.117)
+    # https://dart-lang.github.io/linter/lints/do_not_use_environment.html
+    # - do_not_use_environment
+
     # Add a comment why no further error handling is required
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/empty_catches.html
