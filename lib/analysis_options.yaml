@@ -784,6 +784,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_null_in_if_null_operators.html
     - unnecessary_null_in_if_null_operators
 
+    # If a variable doesn't change and is initialized, no need to define it as nullable (NNDB)
+    # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
+    # https://dart-lang.github.io/linter/lints/unnecessary_nullable_for_final_variable_declarations.html
+    - unnecessary_nullable_for_final_variable_declarations
+
     # Remove overrides which simply call super
     # https://dart-lang.github.io/linter/lints/unnecessary_overrides.html
     - unnecessary_overrides
@@ -838,6 +843,11 @@ linter:
     # Dart SDK: >= 2.8.0-dev.1.0 • (Linter v0.1.108)
     # https://dart-lang.github.io/linter/lints/use_key_in_widget_constructors.html
     # - use_key_in_widget_constructors
+
+    # Still unsure if `late` is always better than `!` (NNBD)
+    # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
+    # https://dart-lang.github.io/linter/lints/use_late_for_private_fields_and_variables.html
+    - use_late_for_private_fields_and_variables
 
     # Use rethrow to preserve the original stacktrace.
     # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception

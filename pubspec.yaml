@@ -4,4 +4,4 @@ description: An opiniated, community-driven set of lint rules for Dart and Flutt
 homepage: https://github.com/passsy/dart-lint
 
 environment:
-  sdk: '>=2.9.0-16.0.dev <3.0.0'
+  sdk: '>=2.10.0-10.0.dev <3.0.0'

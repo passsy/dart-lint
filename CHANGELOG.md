@@ -1,5 +1,14 @@
 # Changlog
 
+## 1.4.0-dev.d210.1
+
+Release for Dart 2.10.0 with Linter v0.1.118
+
+Min SDK is `2.10.0-5.0.dev`
+
+- Enable [`use_late_for_private_fields_and_variables`](https://dart-lang.github.io/linter/lints/use_late_for_private_fields_and_variables.html)
+- Enable [`unnecessary_nullable_for_final_variable_declarations`](https://dart-lang.github.io/linter/lints/unnecessary_nullable_for_final_variable_declarations.html)
+
 ## 1.3.0
 
 Release for Dart 2.9.0 with Linter v0.1.117
