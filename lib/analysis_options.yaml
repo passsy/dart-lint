@@ -302,6 +302,21 @@ linter:
     # https://dart-lang.github.io/linter/lints/directives_ordering.html
     - directives_ordering
 
+    # String.fromEnvironment looks up env variables at compile time. The variable is baked in by the compiler
+    # and can't be changed by environment variables.
+    #
+    # For dart apps:
+    # Better look up a environment variable at runtime with Platform.environment
+    # or use code generation to define variables at compile time.
+    #
+    # For Flutter apps:
+    # String.fromEnvironment is the recommended way to include variables defined with `flutter build --dart-define`
+    #
+    # pedantic: disabled
+    # Dart SDK: >= 2.10.0-0.0.dev • (Linter v0.1.117)
+    # https://dart-lang.github.io/linter/lints/do_not_use_environment.html
+    # - do_not_use_environment
+
     # Add a comment why no further error handling is required
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/empty_catches.html
@@ -316,6 +331,12 @@ linter:
     # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/empty_statements.html
     - empty_statements
+
+    # Enums aren't powerful enough, now enum like classes get the same linting support
+    # pedantic: disabled
+    # Dart SDK: >= 2.9.0-12.0.dev • (Linter v0.1.116)
+    # https://dart-lang.github.io/linter/lints/exhaustive_cases.html
+    - exhaustive_cases
 
     # Follow dart file naming schema
     # https://dart-lang.github.io/linter/lints/file_names.html
@@ -662,6 +683,11 @@ linter:
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/recursive_getters.html
     - recursive_getters
+
+    # Flutter only, prefer SizedBox over Container which offers a const constructors
+    # Dart SDK: >= 2.9.0-4.0.dev • (Linter v0.1.115)
+    # https://dart-lang.github.io/linter/lints/sized_box_for_whitespace.html
+    - sized_box_for_whitespace
 
     # Follow dart style use triple slashes
     # pedantic: enabled
