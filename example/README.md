@@ -7,7 +7,7 @@ dev_dependencies:
 
 Add a `analysis_options.yaml` to the root of you project.
 
-```yaml 
+```yaml
 include: package:lint/analysis_options.yaml
 
 # Not happy with the default? Customize the rules depending on your needs. 
