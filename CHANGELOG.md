@@ -1,5 +1,11 @@
 # Changlog
 
+## 1.5.1
+
+Min SDK is `2.12.0-0`
+
+Widen SDK contraints as long as nnbd is still in beta. 
+
 ## 1.5.0
 
 Min SDK is `2.12.0`
