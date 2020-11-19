@@ -1,5 +1,11 @@
 # Changlog
 
+## 1.5.0
+
+Min SDK is `2.12.0`
+
+- NNBD support
+
 ## 1.4.0-dev.d210.1
 
 Release for Dart 2.10.0 with Linter v0.1.118
