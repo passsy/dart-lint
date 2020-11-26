@@ -1,7 +1,8 @@
+[![Pub](https://img.shields.io/pub/v/lint.svg)](https://pub.dartlang.org/packages/lint) 
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
+
 # Lint for Dart/Flutter
 
-
-[![Pub](https://img.shields.io/pub/v/lint.svg)](https://pub.dartlang.org/packages/lint)
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/1096485/66209493-bc0ec900-e6b7-11e9-80c6-222e778f0c8d.png">
@@ -74,6 +75,17 @@ linter:
   
     # Back to the 80s
     lines_longer_than_80_chars: true
+```
+
+## Lint badge
+
+You're using lint in your open-source project? 
+Add the badge to your `README.md` show that you honor strict lint rules
+
+
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
+```md
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 ```
 
 ## Comparison to package:pedantic
