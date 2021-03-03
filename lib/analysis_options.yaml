@@ -505,7 +505,6 @@ linter:
     - package_prefixed_library_names
 
     # Most likely a mistake, if not: bad practice
-    # Not compatible with NNBD
     # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/parameter_assignments.html
     - parameter_assignments
@@ -842,7 +841,7 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_string_escapes.html
     - unnecessary_string_escapes
 
-    # Especially with NNBD a no-brainer
+    # Completely unnecessary code, simplify to save a few CPU cycles
     # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
     # https://dart-lang.github.io/linter/lints/unnecessary_string_interpolations.html
     - unnecessary_string_interpolations
@@ -875,7 +874,9 @@ linter:
     # https://dart-lang.github.io/linter/lints/use_key_in_widget_constructors.html
     # - use_key_in_widget_constructors
 
-    # Still unsure if `late` is always better than `!` (NNBD)
+    # Some might argue late is a code smell, this lint is very opinionated. It triggers only for private fields and
+    # therefore might actually cleanup some code.
+    # There is no performance impact either way https://github.com/dart-lang/linter/pull/2189#discussion_r457945301
     # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
     # https://dart-lang.github.io/linter/lints/use_late_for_private_fields_and_variables.html
     - use_late_for_private_fields_and_variables
