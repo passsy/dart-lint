@@ -208,6 +208,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_slow_async_io.html
     # - avoid_slow_async_io
 
+    # Don't use .toString() in production code which might be minified
+    # Dart SDK: >= 2.10.0-144.0.dev • (Linter v0.1.119)
+    # https://dart-lang.github.io/linter/lints/avoid_type_to_string.html
+    - avoid_type_to_string
+
     # Don't use a parameter names which can be confused with a types (i.e. int, bool, num, ...)
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/avoid_types_as_parameter_names.html
@@ -778,6 +783,11 @@ linter:
     # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/unnecessary_null_aware_assignments.html
     - unnecessary_null_aware_assignments
+
+    # Remove ! when already non-nullable
+    # Dart SDK: >= 2.10.0-144.0.dev • (Linter v0.1.119)
+    # https://dart-lang.github.io/linter/lints/unnecessary_null_checks.html
+    - unnecessary_null_checks
 
     # Don't assign `null` when value is already `null`.
     # pedantic: enabled
