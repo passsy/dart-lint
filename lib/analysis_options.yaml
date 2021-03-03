@@ -86,6 +86,11 @@ linter:
     # http://dart-lang.github.io/linter/lints/avoid_classes_with_only_static_members.html
     - avoid_classes_with_only_static_members
 
+    # Never accidentally use dynamic invocations
+    # Dart SDK: >= 2.12.0-251.0.dev • (Linter v0.1.129)
+    # https://dart-lang.github.io/linter/lints/avoid_dynamic_calls.html
+    - avoid_dynamic_calls
+
     # Only useful when targeting JS
     # pedantic: disabled
     # http://dart-lang.github.io/linter/lints/avoid_double_and_int_checks.html
@@ -208,6 +213,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_slow_async_io.html
     # - avoid_slow_async_io
 
+    # Don't use .toString() in production code which might be minified
+    # Dart SDK: >= 2.10.0-144.0.dev • (Linter v0.1.119)
+    # https://dart-lang.github.io/linter/lints/avoid_type_to_string.html
+    - avoid_type_to_string
+
     # Don't use a parameter names which can be confused with a types (i.e. int, bool, num, ...)
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/avoid_types_as_parameter_names.html
@@ -262,6 +272,11 @@ linter:
     #
     # https://dart-lang.github.io/linter/lints/cascade_invocations.html
     # - cascade_invocations
+
+    # Don't cast T? to T. Use ! instead
+    # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
+    # https://dart-lang.github.io/linter/lints/cast_nullable_to_non_nullable.html
+    - cast_nullable_to_non_nullable
 
     # False positives, not reliable enough
     # - https://github.com/dart-lang/linter/issues/1381
@@ -444,6 +459,12 @@ linter:
     # https://dart-lang.github.io/linter/lints/non_constant_identifier_names.html
     - non_constant_identifier_names
 
+    # Generic T might have a value of String or String?. Both are valid.
+    # This lint triggers when ! is used on T? casting (String?)? to String and not (String?)? to String?
+    # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
+    # https://dart-lang.github.io/linter/lints/null_check_on_nullable_type_parameter.html
+    - null_check_on_nullable_type_parameter
+
     # Might become irrelevant when non-nullable types land in dart. Until then use this lint check which checks for
     # non null arguments for specific dart sdk methods.
     # pedantic: enabled
@@ -484,7 +505,6 @@ linter:
     - package_prefixed_library_names
 
     # Most likely a mistake, if not: bad practice
-    # Not compatible with NNBD
     # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/parameter_assignments.html
     - parameter_assignments
@@ -724,6 +744,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/throw_in_finally.html
     - throw_in_finally
 
+    # Help the compiler at compile time with non-null asserts rather than crashing at runtime
+    # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
+    # https://dart-lang.github.io/linter/lints/tighten_type_of_initializing_formals.html
+    - tighten_type_of_initializing_formals
+
     # Type annotations make the compiler intelligent, use them
     # https://dart-lang.github.io/linter/lints/type_annotate_public_apis.html
     - type_annotate_public_apis
@@ -779,6 +804,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_null_aware_assignments.html
     - unnecessary_null_aware_assignments
 
+    # Remove ! when already non-nullable
+    # Dart SDK: >= 2.10.0-144.0.dev • (Linter v0.1.119)
+    # https://dart-lang.github.io/linter/lints/unnecessary_null_checks.html
+    - unnecessary_null_checks
+
     # Don't assign `null` when value is already `null`.
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/unnecessary_null_in_if_null_operators.html
@@ -811,7 +841,7 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_string_escapes.html
     - unnecessary_string_escapes
 
-    # Especially with NNBD a no-brainer
+    # Completely unnecessary code, simplify to save a few CPU cycles
     # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
     # https://dart-lang.github.io/linter/lints/unnecessary_string_interpolations.html
     - unnecessary_string_interpolations
@@ -844,7 +874,9 @@ linter:
     # https://dart-lang.github.io/linter/lints/use_key_in_widget_constructors.html
     # - use_key_in_widget_constructors
 
-    # Still unsure if `late` is always better than `!` (NNBD)
+    # Some might argue late is a code smell, this lint is very opinionated. It triggers only for private fields and
+    # therefore might actually cleanup some code.
+    # There is no performance impact either way https://github.com/dart-lang/linter/pull/2189#discussion_r457945301
     # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
     # https://dart-lang.github.io/linter/lints/use_late_for_private_fields_and_variables.html
     - use_late_for_private_fields_and_variables
