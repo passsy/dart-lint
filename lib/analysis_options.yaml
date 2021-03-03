@@ -268,6 +268,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/cascade_invocations.html
     # - cascade_invocations
 
+    # Don't cast T? to T. Use ! instead
+    # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
+    # https://dart-lang.github.io/linter/lints/cast_nullable_to_non_nullable.html
+    - cast_nullable_to_non_nullable
+
     # False positives, not reliable enough
     # - https://github.com/dart-lang/linter/issues/1381
     #
@@ -448,6 +453,12 @@ linter:
     # Follow dart style naming conventions
     # https://dart-lang.github.io/linter/lints/non_constant_identifier_names.html
     - non_constant_identifier_names
+
+    # Generic T might have a value of String or String?. Both are valid.
+    # This lint triggers when ! is used on T? casting (String?)? to String and not (String?)? to String?
+    # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
+    # https://dart-lang.github.io/linter/lints/null_check_on_nullable_type_parameter.html
+    - null_check_on_nullable_type_parameter
 
     # Might become irrelevant when non-nullable types land in dart. Until then use this lint check which checks for
     # non null arguments for specific dart sdk methods.
@@ -728,6 +739,11 @@ linter:
     # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/throw_in_finally.html
     - throw_in_finally
+
+    # Help the compiler at compile time with non-null asserts rather than crashing at runtime
+    # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
+    # https://dart-lang.github.io/linter/lints/tighten_type_of_initializing_formals.html
+    - tighten_type_of_initializing_formals
 
     # Type annotations make the compiler intelligent, use them
     # https://dart-lang.github.io/linter/lints/type_annotate_public_apis.html
