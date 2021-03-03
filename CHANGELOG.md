@@ -1,5 +1,15 @@
 # Changlog
 
+## 1.5.2
+
+Release for stable Dart `2.12.0`
+- Enable [avoid_dynamic_calls](https://dart-lang.github.io/linter/lints/avoid_dynamic_calls.html)
+- Enable [avoid_type_to_string](https://dart-lang.github.io/linter/lints/avoid_type_to_string.html)
+- Enable [cast_nullable_to_non_nullable](https://dart-lang.github.io/linter/lints/cast_nullable_to_non_nullable.html)
+- Enable [null_check_on_nullable_type_parameter](https://dart-lang.github.io/linter/lints/null_check_on_nullable_type_parameter.html)
+- Enable [tighten_type_of_initializing_formals](https://dart-lang.github.io/linter/lints/tighten_type_of_initializing_formals.html)
+- Enable [unnecessary_null_checks](https://dart-lang.github.io/linter/lints/unnecessary_null_checks.html)
+
 ## 1.5.1
 
 Min SDK is `2.12.0-0`
