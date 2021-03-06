@@ -1,5 +1,9 @@
 # Changlog
 
+## 1.5.3
+
+- Remove [avoid_dynamic_calls](https://dart-lang.github.io/linter/lints/avoid_dynamic_calls.html), which is not part of the stable Dart 2.12 release
+
 ## 1.5.2
 
 Release for stable Dart `2.12.0`
