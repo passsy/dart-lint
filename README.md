@@ -18,7 +18,7 @@ This package can be used as a replacement for [`package:pedantic`](https://githu
 Add `lint` as dependency to your `pubspec.yaml`
 ```yaml
 dev_dependencies:
-  lint: ^1.0.0
+  lint: ^1.5.3
 ```
 
 Create a `analysis_options.yaml` file in the root of your project and import the `lint` rules:
