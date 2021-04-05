@@ -1,4 +1,4 @@
-/// The lint package doesn't ship any dart source code.
+/// The lint package ships an opinionated, community-driven set of lint rules for Dart and Flutter projects. Like pedantic but stricter
 ///
 /// To enable `lint`,
 /// 1. Add it to your dev_dependencies
@@ -12,3 +12,5 @@
 /// include: package:lint/analysis_options.yaml
 /// ```
 library lint;
+
+export 'package:lint/fire_and_forget.dart';

@@ -8,7 +8,7 @@
   <img src="https://user-images.githubusercontent.com/1096485/66209493-bc0ec900-e6b7-11e9-80c6-222e778f0c8d.png">
 </p>
 
-`lint` is a hand-picked, open-source, community-driven collection of lint rules for Dart and Flutter projects.
+`lint` is an opinionated, hand-picked, open-source, community-driven **collection** of lint rules for Dart and Flutter projects.
 The set of rules follows the [Effective Dart: Style Guide](https://dart.dev/guides/language/effective-dart/style).
 
 This package can be used as a replacement for [`package:pedantic`](https://github.com/dart-lang/pedantic) for those who prefer stricter rules.
