@@ -763,12 +763,29 @@ linter:
     # https://dart-lang.github.io/linter/lints/type_init_formals.html
     - type_init_formals
 
-    # Too many false positives.
-    # Using the pedantic package for the unawaited function doesn't make code better readable
+    # Catches common mistakes where `await` was accidentally forgotten.
+    # The lint can be ignored by wrapping the Future in any function or calling a function on it. Lint provides the
+    # `fireAndForget` function and extension which can be used.
     #
+    # ```
+    # Future<void> logAsync(String msg) async { /*...*/ }
+    #
+    # Future<void> someOperation() async {
+    #   await doSomething();
+    #
+    #   // This alone triggers the lint because await is missing
+    #   logAsync('success');
+    #
+    #   // The fireAndForget() extensions signals that await is intentionally missing
+    #   logAsync('success').fireAndForget();
+    #
+    #   // The fireAndForget() function signals that await is intentionally missing
+    #   fireAndForget(logAsync('success'));
+    # }
+    # ```
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/unawaited_futures.html
-    # - unawaited_futures
+    - unawaited_futures
 
     # Remove async/await clutter when not required
     # https://dart-lang.github.io/linter/lints/unnecessary_await_in_return.html
