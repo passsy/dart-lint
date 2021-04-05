@@ -1,6 +1,6 @@
 name: lint
 version: 1.5.3
-description: An opiniated, community-driven set of lint rules for Dart and Flutter projects. Like pedantic but stricter
+description: An opinionated, community-driven set of lint rules for Dart and Flutter projects. Like pedantic but stricter
 homepage: https://github.com/passsy/dart-lint
 
 environment:
