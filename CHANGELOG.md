@@ -1,8 +1,18 @@
 # Changlog
 
+## 1.7.1
+
+Requires Dart `sdk: '>=2.14.0-172.0.dev <3.0.0'`
+
+- Enable [`depend_on_referenced_packages`](https://dart-lang.github.io/linter/lints/depend_on_referenced_packages.html)
+- Enable [`noop_primitive_operations`](https://dart-lang.github.io/linter/lints/noop_primitive_operations.html)
+- Enable [`prefer_final_parameters`](https://dart-lang.github.io/linter/lints/prefer_final_parameters.html)
+- Enable [`use_test_throws_matchers`](https://dart-lang.github.io/linter/lints/use_test_throws_matchers.html)
+
 ## 1.7.0
 
 Requires Dart `sdk: '>=2.14.0-2.0.dev <3.0.0'`
+
 - Enable [`prefer_null_aware_method_calls`](https://dart-lang.github.io/linter/lints/prefer_null_aware_method_calls.html)
 - Enable [`require_trailing_commas`](https://dart-lang.github.io/linter/lints/require_trailing_commas.html)
 
