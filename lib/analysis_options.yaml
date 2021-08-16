@@ -266,6 +266,7 @@ linter:
     - camel_case_extensions
 
     # Follow the style guide and use UpperCamelCase for class names and typedefs
+    #
     # https://dart-lang.github.io/linter/lints/camel_case_types.html
     - camel_case_types
 
@@ -396,8 +397,9 @@ linter:
     # https://dart-lang.github.io/linter/lints/invariant_booleans.html
     - invariant_booleans
 
-    # Type check for Iterable<T>.contains(other) where other is! T
-    # otherwise contains will always report false. Those errors are usually very hard to catch.
+    # Type check for `Iterable<T>.contains(other)` where `other is! T`
+    # Without this, `contains` will always report false. Those errors are usually very hard to catch.
+    #
     # https://dart-lang.github.io/linter/lints/iterable_contains_unrelated_type.html
     - iterable_contains_unrelated_type
 
