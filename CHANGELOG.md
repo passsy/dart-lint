@@ -1,5 +1,11 @@
 # Changlog
 
+## 1.7.2
+
+Requires Dart `sdk: '>=2.14.0-360.0.dev <3.0.0'`
+
+- Enable [`eol_at_end_of_file`](https://dart-lang.github.io/linter/lints/eol_at_end_of_file.html)
+
 ## 1.7.1
 
 Requires Dart `sdk: '>=2.14.0-172.0.dev <3.0.0'`
