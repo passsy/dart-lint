@@ -1,5 +1,15 @@
 # Changlog
 
+## 1.6.0
+
+Requires Dart `sdk: >=2.13.0 <3.0.0`
+
+- Enable [`avoid_multiple_declarations_per_line`](https://dart-lang.github.io/linter/lints/avoid_multiple_declarations_per_line.html)
+- Enable [`deprecated_consistency`](https://dart-lang.github.io/linter/lints/deprecated_consistency.html)
+- Enable [`use_if_null_to_convert_nulls_to_bools`](https://dart-lang.github.io/linter/lints/use_if_null_to_convert_nulls_to_bools.html)
+- Enable [`use_build_context_synchronously`](https://dart-lang.github.io/linter/lints/use_build_context_synchronously.html)
+- Enable [`use_named_constants`](https://dart-lang.github.io/linter/lints/use_named_constants.html)
+
 ## 1.5.3
 
 - Remove [avoid_dynamic_calls](https://dart-lang.github.io/linter/lints/avoid_dynamic_calls.html), which is not part of the stable Dart 2.12 release
