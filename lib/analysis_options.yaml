@@ -244,7 +244,6 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_unused_constructor_parameters.html
     - avoid_unused_constructor_parameters
 
-    # TODO double check
     # For async functions use `Future<void>` as return value, not `void`
     # This allows usage of the await keyword and prevents operations from running in parallel.
     # pedantic: disabled
