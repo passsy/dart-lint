@@ -311,6 +311,14 @@ linter:
     # https://dart-lang.github.io/linter/lints/curly_braces_in_flow_control_structures.html
     - curly_braces_in_flow_control_structures
 
+    # When deprecating classes, also deprecate the constructor. When deprecating fields, also deprecate the constructor
+    # parameter. That rule is useful for apps and especially for packages
+    #
+    # Dart SDK: 2.13.0 • (Linter v1.0.0)
+    #
+    # https://dart-lang.github.io/linter/lints/deprecated_consistency.html
+    - deprecated_consistency
+
     # Still experimental and pretty much work when enforced
     # https://dart-lang.github.io/linter/lints/diagnostic_describe_all_properties.html
     # - diagnostic_describe_all_properties
@@ -877,6 +885,23 @@ linter:
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/use_function_type_syntax_for_parameters.html
     - use_function_type_syntax_for_parameters
+
+    # Write `if (nullableBool ?? false)` instead of `if (nullableBool == true)`
+    # Not enabled, because `nullableBool == true` is very explicit, whereas `nullableBool ?? false` requires
+    # cognitive effort to process
+    #
+    # Dart SDK: 2.13.0 • (Linter v1.0.0)
+    #
+    # https://dart-lang.github.io/linter/lints/use_if_null_to_convert_nulls_to_bools.html
+    # - use_if_null_to_convert_nulls_to_bools
+
+    # Replace const values with predefined constants
+    # `const Duration(seconds: 0)` -> `Duration.zero`
+    #
+    # Dart SDK: 2.13.0 • (Linter v1.0.0)
+    #
+    # https://dart-lang.github.io/linter/lints/use_named_constants.html
+    - use_named_constants
 
     # Adding a key without using it isn't helpful in applications, only for the Flutter SDK
     # Dart SDK: >= 2.8.0-dev.1.0 • (Linter v0.1.108)
