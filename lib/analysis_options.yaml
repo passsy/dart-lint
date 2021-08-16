@@ -136,6 +136,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_js_rounded_ints.html
     # - avoid_js_rounded_ints
 
+    # Not useful for coding golf, but in every environment where code is maintained by multiple authors.
+    #
+    # Dart SDK: 2.13.0 • (Linter v1.1.0)
+    #
+    # https://dart-lang.github.io/linter/lints/avoid_multiple_declarations_per_line.html
+    - avoid_multiple_declarations_per_line
+
     # Null checks aren't required in ==() operators
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/avoid_null_checks_in_equality_operators.html
@@ -875,6 +882,13 @@ linter:
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/unsafe_html.html
     - unsafe_html
+
+    # Very useful in preventing Flutter BuildContext bugs in async callbacks
+    #
+    # Dart SDK: 2.13.0 • (Linter v1.1.0)
+    #
+    # https://dart-lang.github.io/linter/lints/use_build_context_synchronously.html
+    - use_build_context_synchronously
 
     # Always use hex syntax Color(0x00000001), never Color(1)
     # pedantic: enabled
