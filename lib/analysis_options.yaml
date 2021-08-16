@@ -318,6 +318,14 @@ linter:
     # https://dart-lang.github.io/linter/lints/curly_braces_in_flow_control_structures.html
     - curly_braces_in_flow_control_structures
 
+    # Requires all referenced dependencies to be declared as direct dependencies in pubspec.yaml. Transitive
+    # dependencies might be removed by a dependency, breaking your code.
+    #
+    # Dart SDK: 2.14.0-172.0.dev • (Linter v1.5.0)
+    #
+    # https://dart-lang.github.io/linter/lints/depend_on_referenced_packages.html
+    - depend_on_referenced_packages
+
     # When deprecating classes, also deprecate the constructor. When deprecating fields, also deprecate the constructor
     # parameter. That rule is useful for apps and especially for packages
     #
@@ -480,6 +488,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/non_constant_identifier_names.html
     - non_constant_identifier_names
 
+    # Don't call unnecessary conversion methods on primitives
+    #
+    # Dart SDK: 2.14.0-172.0.dev • (Linter v1.5.0)
+    #
+    # https://dart-lang.github.io/linter/lints/noop_primitive_operations.html
+    - noop_primitive_operations
+
     # Generic T might have a value of String or String?. Both are valid.
     # This lint triggers when ! is used on T? casting (String?)? to String and not (String?)? to String?
     # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
@@ -615,6 +630,15 @@ linter:
     # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/prefer_final_locals.html
     - prefer_final_locals
+
+    # While prefer_final_fields and prefer_final_locals is enabled, this lint would add a lot of clutter to methods,
+    # especially lambdas.
+    # parameter_assignments is already enabled, catching this error
+    #
+    # Dart SDK: 2.14.0-172.0.dev • (Linter v1.5.0)
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_final_parameters.html
+    # - prefer_final_parameters
 
     # Saves lot of code
     # pedantic: enabled
@@ -966,6 +990,14 @@ linter:
     # In most cases, using a string buffer is preferred for composing strings due to its improved performance.
     # https://dart-lang.github.io/linter/lints/use_string_buffers.html
     - use_string_buffers
+
+    # Don't use try-catch with fail(), instead catch the error with the `throwsA` matcher. The big advantage:
+    # When another error is thrown, the assertion fails whereas catching a specific error would miss the catch block
+    #
+    # Dart SDK: 2.14.0-172.0.dev • (Linter v1.5.0)
+    #
+    # https://dart-lang.github.io/linter/lints/use_test_throws_matchers.html
+    - use_test_throws_matchers
 
     # Naming is hard, strict rules don't help
     # pedantic: disabled
