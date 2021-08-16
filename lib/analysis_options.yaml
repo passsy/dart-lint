@@ -43,10 +43,14 @@ linter:
     - always_require_non_null_named_parameters
 
     # Since dart 2.0 dart is a sound language, specifying types is not required anymore.
-    # `var foo = 10;` is enough information for the compiler to make foo a int.
+    # `var foo = 10;` is enough information for the compiler to make foo an int.
     # Violates Effective Dart "AVOID type annotating initialized local variables".
     # Makes code unnecessarily complex https://github.com/dart-lang/linter/issues/1620
-    # pedantic: disabled
+    #
+    # This convention is used in the Flutter repository
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.4)
+    #
     # http://dart-lang.github.io/linter/lints/always_specify_types.html
     # - always_specify_types
 
@@ -83,7 +87,9 @@ linter:
     - avoid_catching_errors
 
     # Can usually be replaced with an extension
-    # pedantic: disabled
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.31)
+    #
     # http://dart-lang.github.io/linter/lints/avoid_classes_with_only_static_members.html
     - avoid_classes_with_only_static_members
 
@@ -119,6 +125,9 @@ linter:
     - avoid_field_initializers_in_const_classes
 
     # Prevents allocating a lambda and allows return/break/continue control flow statements inside the loop
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.30)
+    #
     # http://dart-lang.github.io/linter/lints/avoid_function_literals_in_foreach_calls.html
     - avoid_function_literals_in_foreach_calls
 
@@ -181,9 +190,12 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_return_types_on_setters.html
     - avoid_return_types_on_setters
 
-    # Especially with Non-Nullable types on the horizon, `int?` is fine.
-    # There are plenty of valid reasons to return null.
-    # pedantic: disabled
+    # Since nullsafety landed in dart, `int?` is completely fine to return null and `int` can't return `null` at all.
+    #
+    # In general there are plenty of valid reasons to return `null`, not a useful rule
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.31)
+    #
     # https://dart-lang.github.io/linter/lints/avoid_returning_null.html
     # - avoid_returning_null
 
@@ -314,7 +326,9 @@ linter:
     # Single line `if`s are fine, but when a new line splits the bool expression and body curly braces
     # are recommended. It prevents the danging else problem and easily allows the addition of more lines inside
     # the if body
-    # pedantic: enabled
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.57)
+    #
     # https://dart-lang.github.io/linter/lints/curly_braces_in_flow_control_structures.html
     - curly_braces_in_flow_control_structures
 
@@ -373,9 +387,20 @@ linter:
     # https://dart-lang.github.io/linter/lints/empty_statements.html
     - empty_statements
 
+    # That's good habit, but not necessary. It might be useful for some parsers that split lines based on the
+    # new line character. Common in simple bash scripts.
+    #
+    # Most IDEs do this automatically, therefore zero effort for devs
+    #
+    # Dart SDK: >=2.14.0-360.0.dev • (Linter v1.8.0)
+    #
+    # https://dart-lang.github.io/linter/lints/eol_at_end_of_file.html
+    - eol_at_end_of_file
+
     # Enums aren't powerful enough, now enum like classes get the same linting support
-    # pedantic: disabled
+    #
     # Dart SDK: >= 2.9.0-12.0.dev • (Linter v0.1.116)
+    #
     # https://dart-lang.github.io/linter/lints/exhaustive_cases.html
     - exhaustive_cases
 
@@ -460,7 +485,9 @@ linter:
     # - literal_only_boolean_expressions
 
     # Don't forget the whitespaces at the end
+    #
     # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
+    #
     # https://dart-lang.github.io/linter/lints/missing_whitespace_between_adjacent_strings.html
     - missing_whitespace_between_adjacent_strings
 
@@ -475,6 +502,7 @@ linter:
     - no_duplicate_case_values
 
     # Flutter only: `createState` shouldn't pass information into the state
+    #
     # https://dart-lang.github.io/linter/lints/no_logic_in_create_state.html
     - no_logic_in_create_state
 
@@ -533,6 +561,9 @@ linter:
     # - package_api_docs
 
     # Follow dart style package naming convention
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.31)
+    #
     # https://dart-lang.github.io/linter/lints/package_names.html
     - package_names
 
@@ -692,7 +723,9 @@ linter:
     - prefer_is_empty
 
     # Easier to read
-    # pedantic: enabled
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.5)
+    #
     # https://dart-lang.github.io/linter/lints/prefer_is_not_empty.html
     - prefer_is_not_empty
 
@@ -781,7 +814,7 @@ linter:
     - slash_for_doc_comments
 
     # Flutter only, always put child last
-    # pedantic: enabled
+    #
     # https://dart-lang.github.io/linter/lints/sort_child_properties_last.html
     - sort_child_properties_last
 
@@ -851,7 +884,7 @@ linter:
     # - unnecessary_final
 
     # Getter/setters can be added later on in a non API breaking manner
-    # pedantic: enabled
+    #
     # https://dart-lang.github.io/linter/lints/unnecessary_getters_setters.html
     - unnecessary_getters_setters
 
@@ -911,7 +944,9 @@ linter:
     - unnecessary_string_escapes
 
     # Completely unnecessary code, simplify to save a few CPU cycles
+    #
     # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
+    #
     # https://dart-lang.github.io/linter/lints/unnecessary_string_interpolations.html
     - unnecessary_string_interpolations
 
@@ -969,10 +1004,12 @@ linter:
     # https://dart-lang.github.io/linter/lints/use_key_in_widget_constructors.html
     # - use_key_in_widget_constructors
 
-    # Some might argue late is a code smell, this lint is very opinionated. It triggers only for private fields and
+    # Some might argue `late` is a code smell, this lint is very opinionated. It triggers only for private fields and
     # therefore might actually cleanup some code.
     # There is no performance impact either way https://github.com/dart-lang/linter/pull/2189#discussion_r457945301
+    #
     # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
+    #
     # https://dart-lang.github.io/linter/lints/use_late_for_private_fields_and_variables.html
     - use_late_for_private_fields_and_variables
 
@@ -983,7 +1020,7 @@ linter:
     - use_rethrow_when_possible
 
     # Use the setter syntax
-    # pedantic: disabled
+    #
     # https://dart-lang.github.io/linter/lints/use_setters_to_change_properties.html
     - use_setters_to_change_properties
 
