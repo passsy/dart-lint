@@ -535,8 +535,10 @@ linter:
     # https://dart-lang.github.io/linter/lints/null_closures.html
     - null_closures
 
-    # Types for local variables may improve readability.
-    # pedantic: enabled
+    # Types for local variables can improve readability and shouldn't be forced to be removed.
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.30)
+    #
     # https://dart-lang.github.io/linter/lints/omit_local_variable_types.html
     # - omit_local_variable_types
 
@@ -1015,7 +1017,9 @@ linter:
 
     # Use rethrow to preserve the original stacktrace.
     # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception
-    # pedantic: enabled
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.31)
+    #
     # https://dart-lang.github.io/linter/lints/use_rethrow_when_possible.html
     - use_rethrow_when_possible
 
