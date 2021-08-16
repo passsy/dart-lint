@@ -433,6 +433,7 @@ linter:
     - library_prefixes
 
     # Nobody wants to manually wrap lines when changing a few words. This rule is too hard to be a "general" rule
+    #
     # https://dart-lang.github.io/linter/lints/lines_longer_than_80_chars.html
     # - lines_longer_than_80_chars
 
@@ -476,6 +477,7 @@ linter:
     - no_runtimeType_toString
 
     # Follow dart style naming conventions
+    #
     # https://dart-lang.github.io/linter/lints/non_constant_identifier_names.html
     - non_constant_identifier_names
 
@@ -685,6 +687,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/prefer_mixin.html
     # - prefer_mixin
 
+    # It's shorter and should be preferred. Especially helpful for devs new to dart.
+    #
+    # Dart SDK: 2.14.0-2.0.dev • (Linter v1.3.0)
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_null_aware_method_calls.html
+    - prefer_null_aware_method_calls
+
     # Makes expressions with null checks easier to read.
     # https://github.com/flutter/flutter/pull/32711#issuecomment-492930932
     - prefer_null_aware_operators
@@ -693,7 +702,7 @@ linter:
     # https://dart-lang.github.io/linter/lints/prefer_relative_imports.html
     # - prefer_relative_imports
 
-    # Use whatever makes you happy. noexcuse doesn't define a style
+    # Use whatever makes you happy. lint doesn't define a style
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/prefer_single_quotes.html
     # - prefer_single_quotes
@@ -724,6 +733,16 @@ linter:
     # pedantic: enabled
     # https://dart-lang.github.io/linter/lints/recursive_getters.html
     - recursive_getters
+
+    # Dartfmt formats differently when adding trailing commas. This lint makes sure there is zero doubt in how code
+    # should be formatted.
+    #
+    # Awaiting the public vote before landing this https://twitter.com/passsy/status/1427220769050972162
+    #
+    # Dart SDK: 2.14.0-2.0.dev • (Linter v1.3.0)
+    #
+    # https://dart-lang.github.io/linter/lints/require_trailing_commas.html
+    #- require_trailing_commas
 
     # Flutter only, prefer SizedBox over Container which offers a const constructors
     # Dart SDK: >= 2.9.0-4.0.dev • (Linter v0.1.115)
