@@ -1,5 +1,12 @@
 # Changlog
 
+## 1.7.0
+
+Requires Dart `sdk: '>=2.14.0-2.0.dev <3.0.0'`
+- Enable [`prefer_null_aware_method_calls`](https://dart-lang.github.io/linter/lints/prefer_null_aware_method_calls.html)
+- Enable [`require_trailing_commas`](https://dart-lang.github.io/linter/lints/require_trailing_commas.html)
+
+
 ## 1.6.0
 
 Requires Dart `sdk: >=2.13.0 <3.0.0`
