@@ -737,12 +737,15 @@ linter:
     # Dartfmt formats differently when adding trailing commas. This lint makes sure there is zero doubt in how code
     # should be formatted.
     #
-    # Awaiting the public vote before landing this https://twitter.com/passsy/status/1427220769050972162
+    # This rule is debatable, though.
+    # A non-representative [vote](https://twitter.com/passsy/status/1427220769050972162) shows a strong tendency towards
+    # enabling this rule. Especially because the code example does only include the debatable formatting changes. There
+    # are more, especially in Flutter build methods which make the code clearly better.
     #
     # Dart SDK: 2.14.0-2.0.dev • (Linter v1.3.0)
     #
     # https://dart-lang.github.io/linter/lints/require_trailing_commas.html
-    #- require_trailing_commas
+    - require_trailing_commas
 
     # Flutter only, prefer SizedBox over Container which offers a const constructors
     # Dart SDK: >= 2.9.0-4.0.dev • (Linter v0.1.115)
