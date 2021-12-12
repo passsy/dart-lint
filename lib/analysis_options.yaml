@@ -94,7 +94,7 @@ linter:
     - avoid_classes_with_only_static_members
 
     # Never accidentally use dynamic invocations
-    # Dart SDK: unreleased • (Linter vnull)
+    # Dart SDK: unreleased • (Linter v1.0)
     # https://dart-lang.github.io/linter/lints/avoid_dynamic_calls.html
     # avoid_dynamic_calls
 
@@ -181,7 +181,7 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_relative_lib_imports.html
     - avoid_relative_lib_imports
 
-    # Not recommended to break dartdoc but besides that there is no reason to continue with bad naming
+    # It's definitely not recommended to break dartdoc but besides that there is no reason to inherit a bad named parameter
     # https://dart-lang.github.io/linter/lints/avoid_renaming_method_parameters.html
     # - avoid_renaming_method_parameters
 
