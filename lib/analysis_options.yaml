@@ -381,7 +381,7 @@ linter:
     # and can't be changed by environment variables.
     #
     # For dart apps:
-    # Better look up a environment variable at runtime with Platform.environment
+    # Better look up an environment variable at runtime with Platform.environment
     # or use code generation to define variables at compile time.
     #
     # For Flutter apps:
