@@ -7,6 +7,13 @@ include: package:lint/analysis_options.yaml
 # Lint rules and documentation, see http://dart-lang.github.io/linter/lints
 linter:
   rules:
+
+    # Make sure the public API is complete
+    #
+    # Linter v1.3
+    # https://dart-lang.github.io/linter/lints/library_private_types_in_public_api.html
+    - library_private_types_in_public_api
+
     # Good for libraries to prevent unnecessary code paths.
     # Dart SDK: >= 2.0.0 • (Linter v0.1.25)
     # https://dart-lang.github.io/linter/lints/literal_only_boolean_expressions.html
