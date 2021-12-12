@@ -319,6 +319,12 @@ linter:
     # https://dart-lang.github.io/linter/lints/comment_references.html
     # - comment_references
 
+    # Checks that files in conditional imports exist
+    #
+    # Linter v1.16.0
+    # https://dart-lang.github.io/linter/lints/conditional_uri_does_not_exist.html
+    - conditional_uri_does_not_exist
+
     # Follow standard dart naming style.
     #
     # https://dart-lang.github.io/linter/lints/constant_identifier_names.html
