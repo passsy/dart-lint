@@ -805,6 +805,12 @@ linter:
     # https://dart-lang.github.io/linter/lints/require_trailing_commas.html
     - require_trailing_commas
 
+    # Use https in pubspec.yaml
+    #
+    # Linter v1.15
+    # https://dart-lang.github.io/linter/lints/secure_pubspec_urls.html
+    - secure_pubspec_urls
+
     # Flutter only, prefer SizedBox over Container which offers a const constructors
     # Dart SDK: >= 2.9.0-4.0.dev • (Linter v0.1.115)
     # https://dart-lang.github.io/linter/lints/sized_box_for_whitespace.html
