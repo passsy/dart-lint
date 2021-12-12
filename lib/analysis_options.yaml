@@ -93,10 +93,10 @@ linter:
     # http://dart-lang.github.io/linter/lints/avoid_classes_with_only_static_members.html
     - avoid_classes_with_only_static_members
 
-    # Never accidentally use dynamic invocations
+    # Never accidentally use dynamic invocations, as it makes type error very hard to find
     # Dart SDK: unreleased • (Linter v1.0)
     # https://dart-lang.github.io/linter/lints/avoid_dynamic_calls.html
-    # avoid_dynamic_calls
+    - avoid_dynamic_calls
 
     # Only useful when targeting JS
     #
