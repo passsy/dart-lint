@@ -42,6 +42,15 @@ linter:
     # http://dart-lang.github.io/linter/lints/always_require_non_null_named_parameters.html
     - always_require_non_null_named_parameters
 
+    # Always use package: imports.
+    # While both, relative and package imports are fine, package imports are preferred because they allow for easy find
+    # and replace
+    # Conflicting with: prefer_relative_imports, avoid_relative_lib_imports
+    #
+    # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
+    # http://dart-lang.github.io/linter/lints/always_use_package_imports.html
+    - always_use_package_imports
+
     # Since dart 2.0 dart is a sound language, specifying types is not required anymore.
     # `var foo = 10;` is enough information for the compiler to make foo an int.
     # Violates Effective Dart "AVOID type annotating initialized local variables".
