@@ -1004,6 +1004,12 @@ linter:
     # https://dart-lang.github.io/linter/lints/use_function_type_syntax_for_parameters.html
     - use_function_type_syntax_for_parameters
 
+    # Don't use the modulo operator for isEven/isOdd checks
+    #
+    # Linter v0.1.116
+    # https://dart-lang.github.io/linter/lints/use_is_even_rather_than_modulo.html
+    - use_is_even_rather_than_modulo
+
     # Write `if (nullableBool ?? false)` instead of `if (nullableBool == true)`
     # Not enabled, because `nullableBool == true` is very explicit, whereas `nullableBool ?? false` requires
     # cognitive effort to process
