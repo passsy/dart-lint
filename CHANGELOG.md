@@ -1,5 +1,9 @@
 # Changlog
 
+## 1.9.0
+
+Requires Dart `sdk: '>=2.16.0-44.0.dev <3.0.0'`
+
 ## 1.8.0
 
 Requires Dart `sdk: '>=2.15.0-7.0.dev <3.0.0'`
