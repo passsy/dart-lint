@@ -810,6 +810,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/sized_box_for_whitespace.html
     - sized_box_for_whitespace
 
+    # Use the SizeBox.expand or SizeBox.shrink constructor instead of setting both width and height
+    # to `0` or `double.infinity`
+    #
+    # Linter v1.15
+    # https://dart-lang.github.io/linter/lints/sized_box_shrink_expand.html
+    - sized_box_shrink_expand
+
     # Follow dart style use triple slashes
     #
     # https://dart-lang.github.io/linter/lints/slash_for_doc_comments.html
