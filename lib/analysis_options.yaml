@@ -6,13 +6,23 @@ analyzer:
     # Will become the default once non-nullable types land
     # https://github.com/dart-lang/sdk/issues/31410#issuecomment-510683629
     implicit-casts: false
+
   errors:
-    # treat missing required parameters as a warning (not a hint)
-    missing_required_param: warning
-    # treat missing returns as a warning (not a hint)
-    missing_return: warning
-    # allow having TODOs in the code
+    # treat missing required parameters as an error (not a hint)
+    missing_required_param: error
+
+    # treat missing returns as an error (not a hint)
+    missing_return: error
+
+    # allow having TODOs in code
     todo: ignore
+
+    # Reassignment should be treated as warning (not a hint)
+    parameter_assignments: warning
+
+  exclude:
+    # Generated for Flutter web apps. Since it is auto-generated, errors should be ignored
+    - lib/generated_plugin_registrant.dart
 
 # Rules are in the same order (alphabetically) as documented at http://dart-lang.github.io/linter/lints
 # and https://github.com/dart-lang/linter/blob/master/example/all.yaml
@@ -41,6 +51,15 @@ linter:
     #
     # http://dart-lang.github.io/linter/lints/always_require_non_null_named_parameters.html
     - always_require_non_null_named_parameters
+
+    # Always use package: imports.
+    # While both, relative and package imports are fine, package imports are preferred because they allow for easy find
+    # and replace
+    # Conflicting with: prefer_relative_imports, avoid_relative_lib_imports
+    #
+    # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
+    # http://dart-lang.github.io/linter/lints/always_use_package_imports.html
+    - always_use_package_imports
 
     # Since dart 2.0 dart is a sound language, specifying types is not required anymore.
     # `var foo = 10;` is enough information for the compiler to make foo an int.
@@ -98,10 +117,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_dynamic_calls.html
     - avoid_dynamic_calls
 
-    # Only useful when targeting JS
+    # Since all dart code may be compiled to JS this should be considered.
+    # Disable it manually when you're explicitly not targeting web
     #
     # http://dart-lang.github.io/linter/lints/avoid_double_and_int_checks.html
-    # - avoid_double_and_int_checks
+    - avoid_double_and_int_checks
 
     # Prevents accidental empty else cases. See samples in documentation
     #
@@ -373,7 +393,7 @@ linter:
     # and can't be changed by environment variables.
     #
     # For dart apps:
-    # Better look up a environment variable at runtime with Platform.environment
+    # Better look up an environment variable at runtime with Platform.environment
     # or use code generation to define variables at compile time.
     #
     # For Flutter apps:
@@ -1029,6 +1049,12 @@ linter:
     #
     # https://dart-lang.github.io/linter/lints/use_function_type_syntax_for_parameters.html
     - use_function_type_syntax_for_parameters
+
+    # Don't use the modulo operator for isEven/isOdd checks
+    #
+    # Linter v0.1.116
+    # https://dart-lang.github.io/linter/lints/use_is_even_rather_than_modulo.html
+    - use_is_even_rather_than_modulo
 
     # Write `if (nullableBool ?? false)` instead of `if (nullableBool == true)`
     # Not enabled, because `nullableBool == true` is very explicit, whereas `nullableBool ?? false` requires
