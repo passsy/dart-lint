@@ -6,12 +6,15 @@ analyzer:
     # Will become the default once non-nullable types land
     # https://github.com/dart-lang/sdk/issues/31410#issuecomment-510683629
     implicit-casts: false
+
   errors:
-    # treat missing required parameters as a warning (not a hint)
-    missing_required_param: warning
-    # treat missing returns as a warning (not a hint)
-    missing_return: warning
-    # allow having TODOs in the code
+    # treat missing required parameters as an error (not a hint)
+    missing_required_param: error
+
+    # treat missing returns as an error (not a hint)
+    missing_return: error
+
+    # allow having TODOs in code
     todo: ignore
 
     # Reassignment should be treated as warning (not a hint)
