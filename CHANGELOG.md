@@ -4,6 +4,8 @@
 
 Requires Dart `sdk: '>=2.15.0-7.0.dev <3.0.0'`
 
+- Enable [`avoid_dynamic_calls`](https://dart-lang.github.io/linter/lints/avoid_dynamic_calls.html)
+
 ## 1.7.2
 
 Requires Dart `sdk: '>=2.14.0-360.0.dev <3.0.0'`
