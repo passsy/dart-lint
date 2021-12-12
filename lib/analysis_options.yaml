@@ -19,6 +19,11 @@ analyzer:
 
     # Reassignment should be treated as warning (not a hint)
     parameter_assignments: warning
+
+  exclude:
+    # Generated for Flutter web apps. Since it is auto-generated, errors should be ignored
+    - lib/generated_plugin_registrant.dart
+
 # Rules are in the same order (alphabetically) as documented at http://dart-lang.github.io/linter/lints
 # and https://github.com/dart-lang/linter/blob/master/example/all.yaml
 linter:
