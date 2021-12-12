@@ -117,10 +117,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_dynamic_calls.html
     - avoid_dynamic_calls
 
-    # Only useful when targeting JS
+    # Since all dart code may be compiled to JS this should be considered.
+    # Disable it manually when you're explicitly not targeting web
     #
     # http://dart-lang.github.io/linter/lints/avoid_double_and_int_checks.html
-    # - avoid_double_and_int_checks
+    - avoid_double_and_int_checks
 
     # Prevents accidental empty else cases. See samples in documentation
     #
