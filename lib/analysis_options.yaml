@@ -124,6 +124,12 @@ linter:
     # http://dart-lang.github.io/linter/lints/avoid_field_initializers_in_const_classes.html
     - avoid_field_initializers_in_const_classes
 
+    # Since lint `parameter_assignments` is enabled, the final parameter doesn't add more safety, it would be just verbose
+    # Conflicts with prefer_final_parameters
+    #
+    # http://dart-lang.github.io/linter/lints/avoid_final_parameters.html
+    - avoid_final_parameters
+
     # Prevents allocating a lambda and allows return/break/continue control flow statements inside the loop
     #
     # Dart SDK: >= 2.0.0 • (Linter v0.1.30)
@@ -646,6 +652,7 @@ linter:
     - prefer_contains
 
     # Use whatever makes you happy. lint doesn't define a style
+    # Conflicts with prefer_double_quotes
     #
     # https://dart-lang.github.io/linter/lints/prefer_double_quotes.html
     # - prefer_double_quotes
@@ -679,6 +686,7 @@ linter:
     # While prefer_final_fields and prefer_final_locals is enabled, this lint would add a lot of clutter to methods,
     # especially lambdas.
     # parameter_assignments is already enabled, catching this error
+    # Conflicts with avoid_final_parameters
     #
     # Dart SDK: 2.14.0-172.0.dev • (Linter v1.5.0)
     #
@@ -773,6 +781,7 @@ linter:
     # - prefer_relative_imports
 
     # Use whatever makes you happy. lint doesn't define a style
+    # Conflicts with prefer_double_quotes
     #
     # https://dart-lang.github.io/linter/lints/prefer_single_quotes.html
     # - prefer_single_quotes
