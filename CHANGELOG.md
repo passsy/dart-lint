@@ -11,7 +11,7 @@ Requires Dart `sdk: '>=2.15.0-7.0.dev <3.0.0'`
 - Enable [`always_use_package_imports`](https://dart-lang.github.io/linter/lints/always_use_package_imports.html)
 - Enable [`avoid_double_and_int_checks`](https://dart-lang.github.io/linter/lints/avoid_double_and_int_checks.html)
 - Enable [`use_is_even_rather_than_modulo`](https://dart-lang.github.io/linter/lints/use_is_even_rather_than_modulo.html)
-- [`parameter_assignments`](https://dart-lang.github.io/linter/lints/always_use_package_imports.html) is now a warning (was hint)
+- [`parameter_assignments`](https://dart-lang.github.io/linter/lints/parameter_assignments.html) is now a warning (was hint)
 - [`missing_required_param`](https://dart-lang.github.io/linter/lints/missing_required_param.html) is now a error (was warning)
 - [`missing_return`](https://dart-lang.github.io/linter/lints/missing_return.html) is now an error (was warning)
 - ignore any errors in auto-generated flutter file `lib/generated_plugin_registrant.dart`
