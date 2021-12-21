@@ -22,7 +22,7 @@ dev_dependencies:
   lint: ^1.0.0
 ```
 
-Create a `analysis_options.yaml` file in the root of your project with the following content:
+Create an `analysis_options.yaml` file in the root of your project with the following content:
 
 ```yaml
 # This file configures the analyzer to use the lint rule set from `package:lint`
