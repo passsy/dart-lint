@@ -14,12 +14,6 @@ linter:
     # https://dart-lang.github.io/linter/lints/library_private_types_in_public_api.html
     - library_private_types_in_public_api
 
-    # `pana` requires 80 chars max for a perfect pub score. Let's enforce this right away
-    #
-    # Linter v1.3
-    # https://dart-lang.github.io/linter/lints/library_private_types_in_public_api.html
-    - lines_longer_than_80_chars
-
     # Good for libraries to prevent unnecessary code paths.
     # Dart SDK: >= 2.0.0 • (Linter v0.1.25)
     # https://dart-lang.github.io/linter/lints/literal_only_boolean_expressions.html
@@ -30,12 +24,6 @@ linter:
     # Dart SDK: >= 2.0.0 • (Linter v0.1.1)
     # https://dart-lang.github.io/linter/lints/package_api_docs.html
     - package_api_docs
-
-    # `pana` requires single quotes for a perfect score, better start early with it
-    #
-    # Linter v0.1.33
-    # https://dart-lang.github.io/linter/lints/prefer_single_quotes.html
-    - prefer_single_quotes
 
     # Too strict. Implementing all exported public APIs (`package_api_docs`) is enough.
     # Dart SDK: >= 2.0.0 • (Linter v0.1.11)
