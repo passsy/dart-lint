@@ -1,4 +1,10 @@
-# Changlog
+# Changelog
+
+## 1.8.2
+
+[pana](https://github.com/dart-lang/pana) lint rules have been relaxed. No need for those two rules in the `package` version:
+- Remove [`lines_longer_than_80_chars`](https://dart-lang.github.io/linter/lints/lines_longer_than_80_chars.html) from `analysis_options_package.yaml`
+- Remove [`prefer_single_quotes`](https://dart-lang.github.io/linter/lints/prefer_single_quotes.html) from `analysis_options_package.yaml`
 
 ## 1.8.1
 
