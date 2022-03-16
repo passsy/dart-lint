@@ -678,7 +678,7 @@ linter:
     - prefer_contains
 
     # Use whatever makes you happy. lint doesn't define a style
-    # Conflicts with prefer_double_quotes
+    # Conflicts with prefer_single_quotes
     #
     # https://dart-lang.github.io/linter/lints/prefer_double_quotes.html
     # - prefer_double_quotes
