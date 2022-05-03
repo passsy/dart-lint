@@ -1,0 +1,8 @@
+dartdoc:
+  ignore:
+    # This package only contains lint rules and no Dart libraries. Therefore,
+    # `dart doc` shows a warning (Dartdoc could not find any public libraries to
+    # document in...). The warning may also be changed to an error in the future
+    # (see https://github.com/dart-lang/dartdoc/issues/2907). To avoid problems,
+    # should `dart doc` ignore that there is no Dart library.
+    - no-documentable-libraries
