@@ -454,13 +454,6 @@ linter:
     # https://dart-lang.github.io/linter/lints/implementation_imports.html
     - implementation_imports
 
-    # Although there are some false positives, this lint generally catches unnecessary checks
-    # - https://github.com/dart-lang/linter/issues/811
-    #
-    #
-    # https://dart-lang.github.io/linter/lints/invariant_booleans.html
-    - invariant_booleans
-
     # Type check for `Iterable<T>.contains(other)` where `other is! T`
     # Without this, `contains` will always report false. Those errors are usually very hard to catch.
     #
