@@ -1040,11 +1040,25 @@ linter:
     # https://dart-lang.github.io/linter/lints/use_build_context_synchronously.html
     - use_build_context_synchronously
 
+    # Replace Container with ColoredBox to be able to use the const constructor
+    #
+    # Linter v1.19.1
+    # https://dart-lang.github.io/linter/lints/use_colored_box.html
+    - use_colored_box
+
     # Yet another "Container might be overkill" lint
     #
     # Linter v1.15
     # https://dart-lang.github.io/linter/lints/use_decorated_box.html
     - use_decorated_box
+
+    # Use the [Enhanced Enum Classes](https://github.com/dart-lang/language/blob/master/accepted/future-releases/enhanced-enums/feature-specification.md) feature instead of classes with static members.
+    #
+    # This check is very precise, it's rather unlikely to have false positives.
+    #
+    # Linter v1.19.1
+    # https://dart-lang.github.io/linter/lints/use_enums.html
+    - use_enums
 
     # Always use hex syntax Color(0x00000001), never Color(1)
     #
@@ -1109,6 +1123,14 @@ linter:
     # In most cases, using a string buffer is preferred for composing strings due to its improved performance.
     # https://dart-lang.github.io/linter/lints/use_string_buffers.html
     - use_string_buffers
+
+    # More concise and easier to read constructors.
+    #
+    # Especially helps not to repeat default parameters, which will not update when they change in the super constructor.
+    #
+    # Linter v1.19
+    # https://dart-lang.github.io/linter/lints/use_super_initializers.html
+    - use_super_initializers
 
     # Don't use try-catch with fail(), instead catch the error with the `throwsA` matcher. The big advantage:
     # When another error is thrown, the assertion fails whereas catching a specific error would miss the catch block
