@@ -1,7 +1,7 @@
 name: lint
-version: 1.9.0
+version: 1.10.0
 description: An opinionated, community-driven set of lint rules for Dart and Flutter projects. Like pedantic but stricter
 homepage: https://github.com/passsy/dart-lint
 
 environment:
-  sdk: '>=2.16.0 <3.0.0'
+  sdk: '>=2.17.0 <3.0.0'
