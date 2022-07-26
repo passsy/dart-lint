@@ -1,8 +1,14 @@
-# Changlog
+# Changelog
 
-## 1.9.0
+## 1.9.0 (Future release)
 
 Requires Dart `sdk: '>=2.16.0-44.0.dev <3.0.0'`
+
+## 1.8.2
+
+[pana](https://github.com/dart-lang/pana) lint rules have been relaxed. No need for those two rules in the `package` version:
+- Remove [`lines_longer_than_80_chars`](https://dart-lang.github.io/linter/lints/lines_longer_than_80_chars.html) from `analysis_options_package.yaml`
+- Remove [`prefer_single_quotes`](https://dart-lang.github.io/linter/lints/prefer_single_quotes.html) from `analysis_options_package.yaml`
 
 ## 1.8.1
 
@@ -11,7 +17,7 @@ Requires Dart `sdk: '>=2.15.0-7.0.dev <3.0.0'`
 - Enable [`always_use_package_imports`](https://dart-lang.github.io/linter/lints/always_use_package_imports.html)
 - Enable [`avoid_double_and_int_checks`](https://dart-lang.github.io/linter/lints/avoid_double_and_int_checks.html)
 - Enable [`use_is_even_rather_than_modulo`](https://dart-lang.github.io/linter/lints/use_is_even_rather_than_modulo.html)
-- [`parameter_assignments`](https://dart-lang.github.io/linter/lints/always_use_package_imports.html) is now a warning (was hint)
+- [`parameter_assignments`](https://dart-lang.github.io/linter/lints/parameter_assignments.html) is now a warning (was hint)
 - [`missing_required_param`](https://dart-lang.github.io/linter/lints/missing_required_param.html) is now a error (was warning)
 - [`missing_return`](https://dart-lang.github.io/linter/lints/missing_return.html) is now an error (was warning)
 - ignore any errors in auto-generated flutter file `lib/generated_plugin_registrant.dart`
