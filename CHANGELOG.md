@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.10.0 
+
+Requires Dart `sdk: '>=2.17.0'`
+
+- Removal of [`invariant_booleans`](https://dart-lang.github.io/linter/lints/invariant_booleans.html)
+
 ## 1.9.0 (Future release)
 
 Requires Dart `sdk: '>=2.16.0-44.0.dev <3.0.0'`
