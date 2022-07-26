@@ -1128,9 +1128,9 @@ linter:
     #
     # Especially helps not to repeat default parameters, which will not update when they change in the super constructor.
     #
-    # Linter v1.19
-    # https://dart-lang.github.io/linter/lints/use_super_initializers.html
-    - use_super_initializers
+    # Linter v1.20
+    # https://dart-lang.github.io/linter/lints/use_super_parameters.html
+    - use_super_parameters
 
     # Don't use try-catch with fail(), instead catch the error with the `throwsA` matcher. The big advantage:
     # When another error is thrown, the assertion fails whereas catching a specific error would miss the catch block
