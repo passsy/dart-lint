@@ -958,6 +958,12 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_lambdas.html
     # - unnecessary_lambdas
 
+    # Top-level and static variables with initializers are already evaluated lazily as if they are marked late
+    #
+    # Linter v1.17
+    # https://dart-lang.github.io/linter/lints/unnecessary_late.html
+    - unnecessary_late
+
     # Remove the optional `new` keyword
     #
     # https://dart-lang.github.io/linter/lints/unnecessary_new.html
