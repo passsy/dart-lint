@@ -4,4 +4,4 @@ description: An opinionated, community-driven set of lint rules for Dart and Flu
 homepage: https://github.com/passsy/dart-lint
 
 environment:
-  sdk: '>=2.16.0-44.0.dev <3.0.0'
+  sdk: '>=2.16.0 <3.0.0'
