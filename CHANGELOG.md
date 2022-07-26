@@ -2,7 +2,12 @@
 
 ## 1.9.0 (Future release)
 
-Requires Dart `sdk: '>=2.16.0-44.0.dev <3.0.0'`
+Requires Dart `sdk: '>=2.16.0 <3.0.0'`
+
+- Enable [`unnecessary_late`](https://dart-lang.github.io/linter/lints/unnecessary_late.html)
+- Remove strict pana rules from `analysis_options_package.yaml`
+  - `lines_longer_than_80_chars`
+  - `prefer_single_quotes`
 
 ## 1.8.2
 
