@@ -1094,6 +1094,8 @@ linter:
     - use_named_constants
 
     # Adding a key without using it isn't helpful in applications, only for the Flutter SDK
+    # https://github.com/dart-lang/linter/issues/3384
+    #
     # Dart SDK: >= 2.8.0-dev.1.0 • (Linter v0.1.108)
     # https://dart-lang.github.io/linter/lints/use_key_in_widget_constructors.html
     # - use_key_in_widget_constructors
