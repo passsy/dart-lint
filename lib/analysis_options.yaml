@@ -389,6 +389,14 @@ linter:
     # https://dart-lang.github.io/linter/lints/directives_ordering.html
     - directives_ordering
 
+    # Similar to `unawaited_futures` but only within async function blocks
+    # Unclear which unawaited function to use
+    #
+    # Dart SDK: >= 2.18.0 • (Linter v1.24.0)
+    #
+    # https://dart-lang.github.io/linter/lints/discarded_futures.html
+    # - discarded_futures
+
     # String.fromEnvironment looks up env variables at compile time. The variable is baked in by the compiler
     # and can't be changed by environment variables.
     #
@@ -913,9 +921,7 @@ linter:
     # https://dart-lang.github.io/linter/lints/type_init_formals.html
     - type_init_formals
 
-    # Too many false positives.
-    # Using the pedantic package for the unawaited function doesn't make code better readable
-    #
+    # Unclear which unawaited function to use
     #
     # https://dart-lang.github.io/linter/lints/unawaited_futures.html
     # - unawaited_futures
@@ -967,6 +973,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_null_aware_assignments.html
     - unnecessary_null_aware_assignments
 
+    # Unnecessary `?.` when the extension is on type `T?`
+    #
+    # Dart SDK: >= 2.18.0 • (Linter v1.24.0)
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_null_aware_operator_on_extension_on_nullable.html
+    - unnecessary_null_aware_operator_on_extension_on_nullable
+
     # Remove ! when already non-nullable
     # Dart SDK: >= 2.10.0-144.0.dev • (Linter v0.1.119)
     # https://dart-lang.github.io/linter/lints/unnecessary_null_checks.html
@@ -1015,6 +1028,13 @@ linter:
     #
     # https://dart-lang.github.io/linter/lints/unnecessary_this.html
     - unnecessary_this
+
+    # toList() is not required when an Iterable is expected
+    #
+    # Dart SDK: >= 2.18.0 • (Linter v1.24.0)
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_to_list_in_spreads.html
+    - unnecessary_to_list_in_spreads
 
     # Highlights potential bugs where unrelated types are compared with another. (always *not* equal).
     #

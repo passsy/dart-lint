@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.11.0
+
+Requires Dart `sdk: '>=2.18.0'`
+- Enable [`unnecessary_null_aware_operator_on_extension_on_nullable`](https://dart-lang.github.io/linter/lints/unnecessary_null_aware_assignments.html)
+- Enable [`unnecessary_to_list_in_spreads`](https://dart-lang.github.io/linter/lints/unnecessary_to_list_in_spreads.html)
+
+
 ## 1.10.0 
 
 Requires Dart `sdk: '>=2.17.0'`
