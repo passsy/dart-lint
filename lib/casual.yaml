@@ -1,0 +1,671 @@
+##
+# Casual lint rules that help to prevent bugs, but don't care about const, prints or formatting like commas
+##
+
+analyzer:
+  strong-mode:
+    implicit-casts: false
+
+  errors:
+    # treat missing required parameters as an error (not a hint)
+    missing_required_param: error
+
+    # treat missing returns as an error (not a hint)
+    missing_return: error
+
+    # allow having TODOs in code
+    todo: ignore
+
+    # Reassignment should be treated as warning (not a hint)
+    parameter_assignments: warning
+
+  exclude:
+    # Generated for Flutter web apps. Since it is auto-generated, errors should be ignored
+    - lib/generated_plugin_registrant.dart
+
+# Rules are in the same order (alphabetically) as documented at http://dart-lang.github.io/linter/lints
+# and https://github.com/dart-lang/linter/blob/master/example/all.yaml
+linter:
+  rules:
+    # Prevents accidental return type changes which results in a breaking API change.
+    # Enforcing return type makes API changes visible in a diff
+    #
+    # http://dart-lang.github.io/linter/lints/always_declare_return_types.html
+    - always_declare_return_types
+
+    # All non-nullable named parameters should be and annotated with @required.
+    # This allows API consumers to get warnings via lint rather than a crash a runtime.
+    # Might become obsolete with Non-Nullable types
+    #
+    # http://dart-lang.github.io/linter/lints/always_require_non_null_named_parameters.html
+    - always_require_non_null_named_parameters
+
+    # Always use package: imports.
+    # While both, relative and package imports are fine, package imports are preferred because they allow for easy find
+    # and replace
+    # Conflicting with: prefer_relative_imports, avoid_relative_lib_imports
+    #
+    # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
+    # http://dart-lang.github.io/linter/lints/always_use_package_imports.html
+    - always_use_package_imports
+
+    # Protect against unintentionally overriding superclass members
+    #
+    # http://dart-lang.github.io/linter/lints/annotate_overrides.html
+    - annotate_overrides
+
+    # Highlights boolean expressions which can be simplified
+    #
+    # http://dart-lang.github.io/linter/lints/avoid_bool_literals_in_conditional_expressions.html
+    - avoid_bool_literals_in_conditional_expressions
+
+    # Never accidentally use dynamic invocations, as it makes type error very hard to find
+    #
+    # Dart SDK: unreleased • (Linter v1.0)
+    # https://dart-lang.github.io/linter/lints/avoid_dynamic_calls.html
+    - avoid_dynamic_calls
+
+    # Since all dart code may be compiled to JS this should be considered.
+    # Disable it manually when you're explicitly not targeting web
+    #
+    # http://dart-lang.github.io/linter/lints/avoid_double_and_int_checks.html
+    - avoid_double_and_int_checks
+
+    # Since lint `parameter_assignments` is enabled, the final parameter doesn't add more safety, it would be just verbose
+    # Conflicts with prefer_final_parameters
+    #
+    # http://dart-lang.github.io/linter/lints/avoid_final_parameters.html
+    - avoid_final_parameters
+
+    # Prevents allocating a lambda and allows return/break/continue control flow statements inside the loop
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.30)
+    #
+    # http://dart-lang.github.io/linter/lints/avoid_function_literals_in_foreach_calls.html
+    - avoid_function_literals_in_foreach_calls
+
+    # Don't break value types by implementing them
+    # http://dart-lang.github.io/linter/lints/avoid_implementing_value_types.html
+    - avoid_implementing_value_types
+
+    # Removes redundant `= null;`
+    # https://dart-lang.github.io/linter/lints/avoid_init_to_null.html
+    - avoid_init_to_null
+
+    # Not useful for coding golf, but in every environment where code is maintained by multiple authors.
+    #
+    # Dart SDK: 2.13.0 • (Linter v1.1.0)
+    #
+    # https://dart-lang.github.io/linter/lints/avoid_multiple_declarations_per_line.html
+    - avoid_multiple_declarations_per_line
+
+    # Null checks aren't required in ==() operators
+    #
+    # https://dart-lang.github.io/linter/lints/avoid_null_checks_in_equality_operators.html
+    - avoid_null_checks_in_equality_operators
+
+    # Good APIs don't use ambiguous boolean parameters. Instead, use named parameters
+    #
+    # https://dart-lang.github.io/linter/lints/avoid_positional_boolean_parameters.html
+    - avoid_positional_boolean_parameters
+
+    # Don't explicitly set defaults
+    #
+    # Dart SDK: >= 2.8.0-dev.1.0 • (Linter v0.1.107)
+    # https://dart-lang.github.io/linter/lints/avoid_redundant_argument_values.html
+    - avoid_redundant_argument_values
+
+    # package or relative? Let's end the discussion and use package everywhere.
+    #
+    # https://dart-lang.github.io/linter/lints/avoid_relative_lib_imports.html
+    - avoid_relative_lib_imports
+
+    # Setters always return void, therefore defining void is redundant
+    #
+    # https://dart-lang.github.io/linter/lints/avoid_return_types_on_setters.html
+    - avoid_return_types_on_setters
+
+    # Don't use `Future?`, therefore never return null instead of a Future.
+    # Will become obsolete one Non-Nullable types land
+    # https://dart-lang.github.io/linter/lints/avoid_returning_null_for_future.html
+    - avoid_returning_null_for_future
+
+    # Use empty returns, don't show off with your knowledge about dart internals.
+    # https://dart-lang.github.io/linter/lints/avoid_returning_null_for_void.html
+    - avoid_returning_null_for_void
+
+    # Prevents logical inconsistencies. It's good practice to define getters for all existing setters.
+    # https://dart-lang.github.io/linter/lints/avoid_setters_without_getters.html
+    - avoid_setters_without_getters
+
+    # Don't reuse a type parameter when on with the same name already exists in the same scope
+    #
+    # https://dart-lang.github.io/linter/lints/avoid_shadowing_type_parameters.html
+    - avoid_shadowing_type_parameters
+
+    # A single cascade operator can be replaced with a normal method call
+    #
+    # https://dart-lang.github.io/linter/lints/avoid_single_cascade_in_expression_statements.html
+    - avoid_single_cascade_in_expression_statements
+
+    # Don't use .toString() in production code which might be minified
+    # Dart SDK: >= 2.10.0-144.0.dev • (Linter v0.1.119)
+    # https://dart-lang.github.io/linter/lints/avoid_type_to_string.html
+    - avoid_type_to_string
+
+    # Don't use a parameter names which can be confused with a types (i.e. int, bool, num, ...)
+    #
+    # https://dart-lang.github.io/linter/lints/avoid_types_as_parameter_names.html
+    - avoid_types_as_parameter_names
+
+    # Unused parameters should be removed
+    # https://dart-lang.github.io/linter/lints/avoid_unused_constructor_parameters.html
+    - avoid_unused_constructor_parameters
+
+    # For async functions use `Future<void>` as return value, not `void`
+    # This allows usage of the await keyword and prevents operations from running in parallel.
+    #
+    # https://dart-lang.github.io/linter/lints/avoid_void_async.html
+    - avoid_void_async
+
+    # Flutter mobile only: Web packages aren't available in mobile flutter apps
+    # https://dart-lang.github.io/linter/lints/avoid_web_libraries_in_flutter.html
+    - avoid_web_libraries_in_flutter
+
+    # Use the await keyword only for futures. There is nothing to await in synchronous code
+    #
+    # https://dart-lang.github.io/linter/lints/await_only_futures.html
+    - await_only_futures
+
+    # Follow the style guide and use UpperCamelCase for extensions
+    #
+    # https://dart-lang.github.io/linter/lints/camel_case_extensions.html
+    - camel_case_extensions
+
+    # Follow the style guide and use UpperCamelCase for class names and typedefs
+    #
+    # https://dart-lang.github.io/linter/lints/camel_case_types.html
+    - camel_case_types
+
+    # Prevents leaks and code executing after their lifecycle.
+    # Discussion https://github.com/passsy/dart-lint/issues/4
+    #
+    # https://dart-lang.github.io/linter/lints/cancel_subscriptions.html
+    - cancel_subscriptions
+
+    # Don't cast T? to T. Use ! instead
+    # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
+    #
+    # https://dart-lang.github.io/linter/lints/cast_nullable_to_non_nullable.html
+    - cast_nullable_to_non_nullable
+
+    # Checks that files in conditional imports exist
+    #
+    # Linter v1.16.0
+    # https://dart-lang.github.io/linter/lints/conditional_uri_does_not_exist.html
+    - conditional_uri_does_not_exist
+
+    # Follow standard dart naming style.
+    #
+    # https://dart-lang.github.io/linter/lints/constant_identifier_names.html
+    - constant_identifier_names
+
+    # Prevents hard to debug code
+    #
+    # https://dart-lang.github.io/linter/lints/control_flow_in_finally.html
+    - control_flow_in_finally
+
+    # Requires all referenced dependencies to be declared as direct dependencies in pubspec.yaml. Transitive
+    # dependencies might be removed by a dependency, breaking your code.
+    #
+    # Dart SDK: 2.14.0-172.0.dev • (Linter v1.5.0)
+    #
+    # https://dart-lang.github.io/linter/lints/depend_on_referenced_packages.html
+    - depend_on_referenced_packages
+
+    # Don't allow empty if bodies. Works together with curly_braces_in_flow_control_structures
+    #
+    # https://dart-lang.github.io/linter/lints/empty_statements.html
+    - empty_statements
+
+    # Enums aren't powerful enough, now enum like classes get the same linting support
+    #
+    # Dart SDK: >= 2.9.0-12.0.dev • (Linter v0.1.116)
+    #
+    # https://dart-lang.github.io/linter/lints/exhaustive_cases.html
+    - exhaustive_cases
+
+    # Follow dart file naming schema
+    # https://dart-lang.github.io/linter/lints/file_names.html
+    - file_names
+
+    # hashCode and equals need to be consistent. One can't live without another.
+    # https://dart-lang.github.io/linter/lints/hash_and_equals.html
+    - hash_and_equals
+
+    # DON'T import implementation files from another package.
+    # If you need access to some internal code, create an issue
+    # https://dart-lang.github.io/linter/lints/implementation_imports.html
+    - implementation_imports
+
+    # Type check for `Iterable<T>.contains(other)` where `other is! T`
+    # Without this, `contains` will always report false. Those errors are usually very hard to catch.
+    #
+    # https://dart-lang.github.io/linter/lints/iterable_contains_unrelated_type.html
+    - iterable_contains_unrelated_type
+
+    # Add leading \n which which makes multiline strings easier to read
+    # Dart SDK: >= 2.8.0-dev.16.0 • (Linter v0.1.113)
+    # https://dart-lang.github.io/linter/lints/leading_newlines_in_multiline_strings.html
+    - leading_newlines_in_multiline_strings
+
+    # Makes sure a library name is a valid dart identifier.
+    # This comes in handy for test files combining multiple tests where the file name can be used as identifier
+    #
+    # ```
+    # import src/some_test.dart as some_test;
+    #
+    # main() {
+    #   some_test.main();
+    # }
+    # ```
+    #
+    # https://dart-lang.github.io/linter/lints/library_names.html
+    - library_names
+
+    # Follow dart style
+    #
+    # https://dart-lang.github.io/linter/lints/library_prefixes.html
+    - library_prefixes
+
+    # Type check for List<T>.remove(item) where item is! T
+    # The list can't contain item. Those errors are not directly obvious especially when refactoring.
+    # https://dart-lang.github.io/linter/lints/list_remove_unrelated_type.html
+    - list_remove_unrelated_type
+
+    # Don't forget the whitespaces at the end
+    #
+    # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
+    #
+    # https://dart-lang.github.io/linter/lints/missing_whitespace_between_adjacent_strings.html
+    - missing_whitespace_between_adjacent_strings
+
+    # Concat Strings obviously with `+` inside a list.
+    #
+    # https://dart-lang.github.io/linter/lints/no_adjacent_strings_in_list.html
+    - no_adjacent_strings_in_list
+
+    # Second case is basically dead code which will never be reached.
+    #
+    # https://dart-lang.github.io/linter/lints/no_duplicate_case_values.html
+    - no_duplicate_case_values
+
+    # private library prefixes don't exist, don't try to introduce concepts that have no effect
+    #
+    # Linter v1.15
+    # https://dart-lang.github.io/linter/lints/no_leading_underscores_for_library_prefixes.html
+    - no_leading_underscores_for_library_prefixes
+
+    # calling `runtimeType` may be a performance problem
+    # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
+    # https://dart-lang.github.io/linter/lints/no_runtimeType_toString.html
+    - no_runtimeType_toString
+
+    # Follow dart style naming conventions
+    #
+    # https://dart-lang.github.io/linter/lints/non_constant_identifier_names.html
+    - non_constant_identifier_names
+
+    # Don't call unnecessary conversion methods on primitives
+    #
+    # Dart SDK: 2.14.0-172.0.dev • (Linter v1.5.0)
+    #
+    # https://dart-lang.github.io/linter/lints/noop_primitive_operations.html
+    - noop_primitive_operations
+
+    # Generic T might have a value of String or String?. Both are valid.
+    # This lint triggers when ! is used on T? casting (String?)? to String and not (String?)? to String?
+    # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
+    # https://dart-lang.github.io/linter/lints/null_check_on_nullable_type_parameter.html
+    - null_check_on_nullable_type_parameter
+
+    # Might become irrelevant when non-nullable types land in dart. Until then use this lint check which checks for
+    # non null arguments for specific dart sdk methods.
+    #
+    # https://dart-lang.github.io/linter/lints/null_closures.html
+    - null_closures
+
+    # Highlights unintentionally overridden fields.
+    #
+    # https://dart-lang.github.io/linter/lints/overridden_fields.html
+    - overridden_fields
+
+    # Follow dart style package naming convention
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.31)
+    #
+    # https://dart-lang.github.io/linter/lints/package_names.html
+    - package_names
+
+    # Seems very rare, especially for applications.
+    #
+    # https://dart-lang.github.io/linter/lints/package_prefixed_library_names.html
+    - package_prefixed_library_names
+
+    # Most likely a mistake, if not: bad practice
+    #
+    # https://dart-lang.github.io/linter/lints/parameter_assignments.html
+    - parameter_assignments
+
+    # Collection literals are shorter. They exists, use them.
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_collection_literals.html
+    - prefer_collection_literals
+
+    # Contains may be faster and is easier to read
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_contains.html
+    - prefer_contains
+
+    # Prevent confusion with call-side when using named parameters
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_equal_for_default_values.html
+    - prefer_equal_for_default_values
+
+    # Avoid accidental reassignments and allows the compiler to do optimizations.
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_final_fields.html
+    - prefer_final_fields
+
+    # Helps avoid accidental reassignments and allows the compiler to do optimizations.
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_final_in_for_each.html
+    - prefer_final_in_for_each
+
+    # Helps avoid accidental reassignments and allows the compiler to do optimizations.
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_final_locals.html
+    - prefer_final_locals
+
+    # Saves lot of code
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_for_elements_to_map_fromIterable.html
+    - prefer_for_elements_to_map_fromIterable
+
+    # As Dart allows local function declarations, it is a good practice to use them in the place of function literals.
+    # https://dart-lang.github.io/linter/lints/prefer_function_declarations_over_variables.html
+    - prefer_function_declarations_over_variables
+
+    # For consistency
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_generic_function_type_aliases.html
+    - prefer_generic_function_type_aliases
+
+    # Allows potential usage of const
+    # https://dart-lang.github.io/linter/lints/prefer_if_elements_to_conditional_expressions.html
+    - prefer_if_elements_to_conditional_expressions
+
+    # Dart has a special operator for this, use it
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_if_null_operators.html
+    - prefer_if_null_operators
+
+    # Interpolate, use less "", '' and +
+    # https://dart-lang.github.io/linter/lints/prefer_interpolation_to_compose_strings.html
+    - prefer_interpolation_to_compose_strings
+
+    # Iterables do not necessary know their length
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_is_empty.html
+    - prefer_is_empty
+
+    # Easier to read
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.5)
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_is_not_empty.html
+    - prefer_is_not_empty
+
+    # Use the `foo is! Foo` instead of `!(foo is Foo)`
+    # https://dart-lang.github.io/linter/lints/prefer_is_not_operator.html
+    - prefer_is_not_operator
+
+    # Easier to read
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_iterable_whereType.html
+    - prefer_iterable_whereType
+
+    # It's shorter and should be preferred. Especially helpful for devs new to dart.
+    #
+    # Dart SDK: 2.14.0-2.0.dev • (Linter v1.3.0)
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_null_aware_method_calls.html
+    - prefer_null_aware_method_calls
+
+    # Makes expressions with null checks easier to read.
+    # https://github.com/flutter/flutter/pull/32711#issuecomment-492930932
+    - prefer_null_aware_operators
+
+    # Allows potential usage of const
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_spread_collections.html
+    - prefer_spread_collections
+
+    # Define types
+    #
+    # https://dart-lang.github.io/linter/lints/prefer_typing_uninitialized_variables.html
+    - prefer_typing_uninitialized_variables
+
+    # Null is not a type, use void
+    # https://dart-lang.github.io/linter/lints/prefer_void_to_null.html
+    - prefer_void_to_null
+
+    # Document the replacement API
+    # https://dart-lang.github.io/linter/lints/provide_deprecation_message.html
+    - provide_deprecation_message
+
+    # Hints accidental recursions
+    #
+    # https://dart-lang.github.io/linter/lints/recursive_getters.html
+    - recursive_getters
+
+    # Use https in pubspec.yaml
+    #
+    # Linter v1.15
+    # https://dart-lang.github.io/linter/lints/secure_pubspec_urls.html
+    - secure_pubspec_urls
+
+    # Use the SizeBox.expand or SizeBox.shrink constructor instead of setting both width and height
+    # to `0` or `double.infinity`
+    #
+    # Linter v1.15
+    # https://dart-lang.github.io/linter/lints/sized_box_shrink_expand.html
+    - sized_box_shrink_expand
+
+    # Follow dart style use triple slashes
+    #
+    # https://dart-lang.github.io/linter/lints/slash_for_doc_comments.html
+    - slash_for_doc_comments
+
+    # First test, then cast
+    #
+    # https://dart-lang.github.io/linter/lints/test_types_in_equals.html
+    - test_types_in_equals
+
+    # Hard to debug and bad style
+    #
+    # https://dart-lang.github.io/linter/lints/throw_in_finally.html
+    - throw_in_finally
+
+    # Help the compiler at compile time with non-null asserts rather than crashing at runtime
+    #
+    # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
+    # https://dart-lang.github.io/linter/lints/tighten_type_of_initializing_formals.html
+    - tighten_type_of_initializing_formals
+
+    # Type annotations make the compiler intelligent, use them
+    # https://dart-lang.github.io/linter/lints/type_annotate_public_apis.html
+    - type_annotate_public_apis
+
+    # Remove async/await clutter when not required
+    # https://dart-lang.github.io/linter/lints/unnecessary_await_in_return.html
+    - unnecessary_await_in_return
+
+    # Top-level and static variables with initializers are already evaluated lazily as if they are marked late
+    #
+    # Linter v1.17
+    # https://dart-lang.github.io/linter/lints/unnecessary_late.html
+    - unnecessary_late
+
+    # Remove the optional `new` keyword
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_new.html
+    - unnecessary_new
+
+    # Don't assign `null` when value is already `null`.
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_null_aware_assignments.html
+    - unnecessary_null_aware_assignments
+
+    # Unnecessary `?.` when the extension is on type `T?`
+    #
+    # Dart SDK: >= 2.18.0 • (Linter v1.24.0)
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_null_aware_operator_on_extension_on_nullable.html
+    - unnecessary_null_aware_operator_on_extension_on_nullable
+
+    # Remove ! when already non-nullable
+    # Dart SDK: >= 2.10.0-144.0.dev • (Linter v0.1.119)
+    # https://dart-lang.github.io/linter/lints/unnecessary_null_checks.html
+    - unnecessary_null_checks
+
+    # Don't assign `null` when value is already `null`.
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_null_in_if_null_operators.html
+    - unnecessary_null_in_if_null_operators
+
+    # If a variable doesn't change and is initialized, no need to define it as nullable (NNDB)
+    # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
+    # https://dart-lang.github.io/linter/lints/unnecessary_nullable_for_final_variable_declarations.html
+    - unnecessary_nullable_for_final_variable_declarations
+
+    # Remove overrides which simply call super
+    # https://dart-lang.github.io/linter/lints/unnecessary_overrides.html
+    - unnecessary_overrides
+
+    # Remove clutter where possible
+    # https://dart-lang.github.io/linter/lints/unnecessary_parenthesis.html
+    - unnecessary_parenthesis
+
+    # Use raw string only when needed
+    # Dart SDK: >= 2.8.0-dev.11.0 • (Linter v0.1.111)
+    # https://dart-lang.github.io/linter/lints/unnecessary_raw_strings.html
+    - unnecessary_raw_strings
+
+    # Avoid magic overloads of + operators
+    # https://dart-lang.github.io/linter/lints/unnecessary_statements.html
+    - unnecessary_statements
+
+    # Remove unnecessary escape characters
+    # Dart SDK: >= 2.8.0-dev.11.0 • (Linter v0.1.111)
+    # https://dart-lang.github.io/linter/lints/unnecessary_string_escapes.html
+    - unnecessary_string_escapes
+
+    # Completely unnecessary code, simplify to save a few CPU cycles
+    #
+    # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_string_interpolations.html
+    - unnecessary_string_interpolations
+
+    # The variable is clear, remove clutter
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_this.html
+    - unnecessary_this
+
+    # toList() is not required when an Iterable is expected
+    #
+    # Dart SDK: >= 2.18.0 • (Linter v1.24.0)
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_to_list_in_spreads.html
+    - unnecessary_to_list_in_spreads
+
+    # Highlights potential bugs where unrelated types are compared with another. (always *not* equal).
+    #
+    # https://dart-lang.github.io/linter/lints/unrelated_type_equality_checks.html
+    - unrelated_type_equality_checks
+
+    # Very useful in preventing Flutter BuildContext bugs in async callbacks
+    #
+    # Dart SDK: 2.13.0 • (Linter v1.1.0)
+    #
+    # https://dart-lang.github.io/linter/lints/use_build_context_synchronously.html
+    - use_build_context_synchronously
+
+    # Use the [Enhanced Enum Classes](https://github.com/dart-lang/language/blob/master/accepted/future-releases/enhanced-enums/feature-specification.md) feature instead of classes with static members.
+    #
+    # This check is very precise, it's rather unlikely to have false positives.
+    #
+    # Linter v1.19.1
+    # https://dart-lang.github.io/linter/lints/use_enums.html
+    - use_enums
+
+    # Always use hex syntax Color(0x00000001), never Color(1)
+    #
+    # https://dart-lang.github.io/linter/lints/use_full_hex_values_for_flutter_colors.html
+    - use_full_hex_values_for_flutter_colors
+
+    # Always use generic function type syntax, don't mix styles
+    #
+    # https://dart-lang.github.io/linter/lints/use_function_type_syntax_for_parameters.html
+    - use_function_type_syntax_for_parameters
+
+    # Replace const values with predefined constants
+    # `const Duration(seconds: 0)` -> `Duration.zero`
+    #
+    # Dart SDK: 2.13.0 • (Linter v1.0.0)
+    #
+    # https://dart-lang.github.io/linter/lints/use_named_constants.html
+    - use_named_constants
+
+    # Use rethrow to preserve the original stacktrace.
+    # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception
+    #
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.31)
+    #
+    # https://dart-lang.github.io/linter/lints/use_rethrow_when_possible.html
+    - use_rethrow_when_possible
+
+    # Use the setter syntax
+    #
+    # https://dart-lang.github.io/linter/lints/use_setters_to_change_properties.html
+    - use_setters_to_change_properties
+
+    # In most cases, using a string buffer is preferred for composing strings due to its improved performance.
+    # https://dart-lang.github.io/linter/lints/use_string_buffers.html
+    - use_string_buffers
+
+    # More concise and easier to read constructors.
+    #
+    # Especially helps not to repeat default parameters, which will not update when they change in the super constructor.
+    #
+    # Linter v1.20
+    # https://dart-lang.github.io/linter/lints/use_super_parameters.html
+    - use_super_parameters
+
+    # Don't use try-catch with fail(), instead catch the error with the `throwsA` matcher. The big advantage:
+    # When another error is thrown, the assertion fails whereas catching a specific error would miss the catch block
+    #
+    # Dart SDK: 2.14.0-172.0.dev • (Linter v1.5.0)
+    #
+    # https://dart-lang.github.io/linter/lints/use_test_throws_matchers.html
+    - use_test_throws_matchers
+
+    # Catches invalid regular expressions.
+    #
+    # https://dart-lang.github.io/linter/lints/valid_regexps.html
+    - valid_regexps
+
+    # Don't assign anything to void
+    # https://dart-lang.github.io/linter/lints/void_checks.html
+    - void_checks

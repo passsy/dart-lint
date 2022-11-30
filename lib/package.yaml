@@ -1,0 +1,36 @@
+##
+# Lint rules to be used for packages, which provide a dart API for developers
+##
+
+include: package:lint/analysis_options.yaml
+
+# Lint rules and documentation, see http://dart-lang.github.io/linter/lints
+linter:
+  rules:
+
+    # Make sure the public API is complete
+    #
+    # Linter v1.3
+    # https://dart-lang.github.io/linter/lints/library_private_types_in_public_api.html
+    - library_private_types_in_public_api
+
+    # Good for libraries to prevent unnecessary code paths.
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.25)
+    # https://dart-lang.github.io/linter/lints/literal_only_boolean_expressions.html
+    - literal_only_boolean_expressions
+
+    # One of the most important rules. Docs for package public APIs make a good package.
+    # Like catching undocumented code? Enable `public_member_api_docs` as well.
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.1)
+    # https://dart-lang.github.io/linter/lints/package_api_docs.html
+    - package_api_docs
+
+    # Too strict. Implementing all exported public APIs (`package_api_docs`) is enough.
+    # Dart SDK: >= 2.0.0 • (Linter v0.1.11)
+    # https://dart-lang.github.io/linter/lints/public_member_api_docs.html
+    # - public_member_api_docs
+
+    # Adding a key without using it isn't helpful in applications, only for the Flutter SDK
+    # Dart SDK: >= 2.8.0-dev.1.0 • (Linter v0.1.108)
+    # https://dart-lang.github.io/linter/lints/use_key_in_widget_constructors.html
+    - use_key_in_widget_constructors
