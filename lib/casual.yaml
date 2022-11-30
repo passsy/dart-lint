@@ -1064,7 +1064,7 @@ linter:
     # https://dart-lang.github.io/linter/lints/use_colored_box.html
     # - use_colored_box
 
-    # Decorated Box is not a replacement for Container https://github.com/dart-lang/linter/issues/3286
+    # DecoratedBox is not a replacement for Container https://github.com/dart-lang/linter/issues/3286
     #
     # Linter v1.15
     # https://dart-lang.github.io/linter/lints/use_decorated_box.html

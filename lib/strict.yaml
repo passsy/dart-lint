@@ -1066,11 +1066,11 @@ linter:
     # https://dart-lang.github.io/linter/lints/use_colored_box.html
     - use_colored_box
 
-    # Yet another "Container might be overkill" lint
+    # DecoratedBox is not a replacement for Container https://github.com/dart-lang/linter/issues/3286
     #
     # Linter v1.15
     # https://dart-lang.github.io/linter/lints/use_decorated_box.html
-    - use_decorated_box
+    # - use_decorated_box
 
     # Use the [Enhanced Enum Classes](https://github.com/dart-lang/language/blob/master/accepted/future-releases/enhanced-enums/feature-specification.md) feature instead of classes with static members.
     #
