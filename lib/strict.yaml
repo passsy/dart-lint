@@ -93,6 +93,7 @@ linter:
     # - avoid_as
 
     # Highlights boolean expressions which can be simplified
+    #
     # http://dart-lang.github.io/linter/lints/avoid_bool_literals_in_conditional_expressions.html
     - avoid_bool_literals_in_conditional_expressions
 
@@ -115,6 +116,7 @@ linter:
     - avoid_classes_with_only_static_members
 
     # Never accidentally use dynamic invocations, as it makes type error very hard to find
+    #
     # Dart SDK: unreleased • (Linter v1.0)
     # https://dart-lang.github.io/linter/lints/avoid_dynamic_calls.html
     - avoid_dynamic_calls
@@ -200,6 +202,7 @@ linter:
     - avoid_private_typedef_functions
 
     # Don't explicitly set defaults
+    #
     # Dart SDK: >= 2.8.0-dev.1.0 • (Linter v0.1.107)
     # https://dart-lang.github.io/linter/lints/avoid_redundant_argument_values.html
     - avoid_redundant_argument_values
@@ -232,7 +235,7 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_returning_null_for_future.html
     - avoid_returning_null_for_future
 
-    # Use empty returns, don't show off with you knowledge about dart internals.
+    # Use empty returns, don't show off with your knowledge about dart internals.
     # https://dart-lang.github.io/linter/lints/avoid_returning_null_for_void.html
     - avoid_returning_null_for_void
 
@@ -312,7 +315,6 @@ linter:
     # Prevents leaks and code executing after their lifecycle.
     # Discussion https://github.com/passsy/dart-lint/issues/4
     #
-    #
     # https://dart-lang.github.io/linter/lints/cancel_subscriptions.html
     - cancel_subscriptions
 
@@ -325,12 +327,12 @@ linter:
 
     # Don't cast T? to T. Use ! instead
     # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
+    #
     # https://dart-lang.github.io/linter/lints/cast_nullable_to_non_nullable.html
     - cast_nullable_to_non_nullable
 
     # False positives, not reliable enough
     # - https://github.com/dart-lang/linter/issues/1381
-    #
     #
     # https://dart-lang.github.io/linter/lints/close_sinks.html
     # - close_sinks
@@ -602,6 +604,7 @@ linter:
     # - only_throw_errors
 
     # Highlights unintentionally overridden fields.
+    #
     # https://dart-lang.github.io/linter/lints/overridden_fields.html
     - overridden_fields
 
@@ -617,6 +620,7 @@ linter:
     - package_names
 
     # Seems very rare, especially for applications.
+    #
     # https://dart-lang.github.io/linter/lints/package_prefixed_library_names.html
     - package_prefixed_library_names
 
@@ -910,6 +914,7 @@ linter:
     - throw_in_finally
 
     # Help the compiler at compile time with non-null asserts rather than crashing at runtime
+    #
     # Dart SDK: >= 2.11.0-182.0.dev • (Linter v0.1.120)
     # https://dart-lang.github.io/linter/lints/tighten_type_of_initializing_formals.html
     - tighten_type_of_initializing_formals
