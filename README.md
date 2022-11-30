@@ -12,14 +12,17 @@ The set of rules follows the [Effective Dart: Style Guide](https://dart.dev/guid
 
 This package can be used as a replacement for [`package:lints`](https://pub.dev/packages/lints) or the discontinued [`package:pedantic`](https://github.com/dart-lang/pedantic) for those who prefer stricter rules.
 
-`lint` tries to be strict but not annoying.
+`lint` supports 3 different set of rules:
+- `strict`: tries to be strict but not annoying. Perfect for production app code
+- `casual`: great when prototyping, to be used in code samples, any non-production code
+- `package`: like `strict` but for dart packages, that have a public API 
 
 ## Install
 
 Add `lint` as dependency to your `pubspec.yaml`. Version `^1.0.0` means you're automatically getting the latest version for `lint` when running `pub upgrade`
 ```yaml
 dev_dependencies:
-  lint: ^1.0.0
+  lint: ^2.0.0
 ```
 
 Create an `analysis_options.yaml` file in the root of your project with the following content:
@@ -27,17 +30,16 @@ Create an `analysis_options.yaml` file in the root of your project with the foll
 ```yaml
 # This file configures the analyzer to use the lint rule set from `package:lint`
 
-# For apps, use the default set
-include: package:lint/analysis_options.yaml
+include: package:lint/strict.yaml # For production apps
+# include: package:lint/casual.yaml # For code samples, hackathons and other non-production code
+# include: package:lint/package.yaml # Use this for packages with public API
 
-# Packages, that may be distributed (i.e. via pub.dev) should use the package 
-# version, resulting in a better pub score.
-# include: package:lint/analysis_options_package.yaml
 
 # You might want to exclude auto-generated files from dart analysis
 analyzer:
   exclude:
     #- '**.freezed.dart'
+    #- '**.g.dart'
 
 # You can customize the lint rules set to your own liking. A list of all rules
 # can be found at https://dart-lang.github.io/linter/lints/options/options.html
@@ -70,6 +72,21 @@ Add the badge to your `README.md` show that you honor strict lint rules
 A detailed comparison of all linting packages for dart can be found at https://rydmike.com/blog_flutter_linting.html
 
 `lint` is among the strictest but not the strictest. It tires to find the right balance between useful and annoying.
+
+## Which version to use?
+
+Generally, you can just put `lint: ^2.0.0` in your `pubspec.yaml` and pub get the latest version compatible with your Dart version.
+
+| Dart Version | Lint Version                                                        |
+|--------------|---------------------------------------------------------------------|
+| `2.18`         | [`2.0.0`](https://pub.dev/packages/lint/versions/2.0.0/changelog)   |
+| `2.17`         | [`1.10.0`](https://pub.dev/packages/lint/versions/1.10.0/changelog) |
+| `2.16`         | [`1.9.0`](https://pub.dev/packages/lint/versions/1.9.0/changelog)   |
+| `2.15`         | [`1.8.0`](https://pub.dev/packages/lint/versions/1.8.0/changelog)   |
+| `2.14`         | [`1.7.0`](https://pub.dev/packages/lint/versions/1.7.0/changelog)   |
+| `2.13`         | [`1.6.0`](https://pub.dev/packages/lint/versions/1.6.0/changelog)   |
+| `2.12`         | [`1.5.0`](https://pub.dev/packages/lint/versions/1.5.0/changelog)   |
+
 
 ## Comparison to discontinued package:pedantic
 
