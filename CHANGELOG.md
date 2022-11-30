@@ -1,11 +1,20 @@
 # Changelog
 
-## 1.11.0
+## 2.0.1
+- Update changelog
+
+## 2.0.0
 
 Requires Dart `sdk: '>=2.18.0'`
+
+- New `package:lint/strict.yaml`
+- New `package:lint/casual.yaml`
+- New `package:lint/package.yaml`
+- Deprecate `package:lint/analysis_options.yaml` (uses `strict.yaml`)
+- Deprecate `package:lint/analysis_options_package.yaml` (uses `package.yaml`)
+- Disable [`use_decorated_box`](https://dart-lang.github.io/linter/lints/use_decorated_box.html)
 - Enable [`unnecessary_null_aware_operator_on_extension_on_nullable`](https://dart-lang.github.io/linter/lints/unnecessary_null_aware_assignments.html)
 - Enable [`unnecessary_to_list_in_spreads`](https://dart-lang.github.io/linter/lints/unnecessary_to_list_in_spreads.html)
-
 
 ## 1.10.0 
 
