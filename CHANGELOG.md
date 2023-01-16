@@ -1,5 +1,9 @@
 # Changlog
 
+## 1.7.3
+
+- Removal of [`invariant_booleans`](https://dart-lang.github.io/linter/lints/invariant_booleans.html)
+
 ## 1.7.2
 
 Requires Dart `sdk: '>=2.14.0-360.0.dev <3.0.0'`
