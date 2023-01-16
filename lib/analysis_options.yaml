@@ -427,7 +427,7 @@ linter:
     #
     # pedantic: disabled
     # https://dart-lang.github.io/linter/lints/invariant_booleans.html
-    - invariant_booleans
+    # - invariant_booleans
 
     # Type check for `Iterable<T>.contains(other)` where `other is! T`
     # Without this, `contains` will always report false. Those errors are usually very hard to catch.
