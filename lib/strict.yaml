@@ -187,9 +187,14 @@ linter:
     # https://dart-lang.github.io/linter/lints/avoid_null_checks_in_equality_operators.html
     - avoid_null_checks_in_equality_operators
 
-    # Good APIs don't use ambiguous boolean parameters. Instead use named parameters
+    # Causes false-positives for callbacks and functional interfaces such as
+    #
+    # ```dart
+    # final void Function(bool value)? onChanged;
+    # ```
+    #
     # https://dart-lang.github.io/linter/lints/avoid_positional_boolean_parameters.html
-    - avoid_positional_boolean_parameters
+    # - avoid_positional_boolean_parameters
 
     # Don't call print in production code
     #
