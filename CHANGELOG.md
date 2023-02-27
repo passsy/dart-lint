@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.0
+
+Requires Dart `sdk: '>=3.0.0-0'`
+
+- Remove `implicit-casts: false`
+- Enable `strict-casts: true`
+
 ## 2.0.1
 - Update changelog
 
