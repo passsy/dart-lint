@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.1
+
+- Disable `avoid_positional_boolean_parameters` due to new false positives in Dart 3.0 
+
 ## 2.1.0
 
 Requires Dart `sdk: '>=3.0.0-0'`
