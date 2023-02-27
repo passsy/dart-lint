@@ -3,8 +3,8 @@
 ##
 
 analyzer:
-  strong-mode:
-    implicit-casts: false
+  language:
+    strict-casts: true
 
   errors:
     # treat missing required parameters as an error (not a hint)
