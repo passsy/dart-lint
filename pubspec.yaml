@@ -5,4 +5,4 @@ repository: https://github.com/passsy/dart-lint
 issue_tracker: https://github.com/passsy/dart-lint/issues
 
 environment:
-  sdk: '>=2.18.0 <3.0.0'
+  sdk: '>=2.19.0 <3.0.0'
