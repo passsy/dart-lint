@@ -335,6 +335,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/close_sinks.html
     # - close_sinks
 
+    # It's surprising that this is not solved with a type in the sdk, but with a linter rule. This is a must have.
+    #
+    # Dart SDK: 2.19.0 • (Linter v1.29.0)
+    #
+    # https://dart-lang.github.io/linter/lints/collection_methods_unrelated_type.html
+    - collection_methods_unrelated_type
+
     # False positives:
     # - https://github.com/dart-lang/linter/issues/1142
     #
