@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.0.20
+
+Requires Dart `sdk: '>=2.19.0'`
+
+- Enable [`combinators_ordering`](https://dart-lang.github.io/linter/lints/combinators_ordering.html) for strict
+- Enable [`use_string_in_part_of_directives`](https://dart-lang.github.io/linter/lints/use_string_in_part_of_directives.html)
+- Enable [`unreachable_from_main`](https://dart-lang.github.io/linter/lints/unreachable_from_main.html) for strict
+- Enable [`dangling_library_doc_comments`](https://dart-lang.github.io/linter/lints/dangling_library_doc_comments.html) for strict
+- Enable [`collection_methods_unrelated_type`](https://dart-lang.github.io/linter/lints/collection_methods_unrelated_type.html)
+- Enable [`implicit_call_tearoffs`](https://dart-lang.github.io/linter/lints/implicit_call_tearoffs.html)
+- Enable [`unnecessary_library_directive`](https://dart-lang.github.io/linter/lints/unnecessary_library_directive.html)
+- Enable [`library_annotations`](https://dart-lang.github.io/linter/lints/library_annotations.html)
+
 ## 2.0.1
 - Update changelog
 
