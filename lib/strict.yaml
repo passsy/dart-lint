@@ -498,6 +498,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/implicit_call_tearoffs.html
     - implicit_call_tearoffs
 
+    # Helps to migrate switch cases from Dart 2 to Dart 3
+    #
+    # Dart SDK: 3.0.0 • (Linter v1.34.0)
+    #
+    # https://dart-lang.github.io/linter/lints/invalid_case_patterns.html
+    - invalid_case_patterns
+
     # Type check for `Iterable<T>.contains(other)` where `other is! T`
     # Without this, `contains` will always report false. Those errors are usually very hard to catch.
     #
