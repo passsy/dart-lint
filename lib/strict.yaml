@@ -976,6 +976,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_brace_in_string_interps.html
     - unnecessary_brace_in_string_interps
 
+    # switch case works now finally without `break;`
+    #
+    # Dart SDK: 3.0.0 • (Linter v1.33.0)
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_breaks.html
+    - unnecessary_breaks
+
     # Yes, const everywhere. But not in an already const scope
     #
     # https://dart-lang.github.io/linter/lints/unnecessary_const.html
