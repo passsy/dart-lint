@@ -509,6 +509,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/leading_newlines_in_multiline_strings.html
     - leading_newlines_in_multiline_strings
 
+    # Library annotations must be attached to the `library` keyword
+    #
+    # Dart SDK: 2.19 • (Linter v1.30.0)
+    #
+    # https://dart-lang.github.io/linter/lints/library_annotations.html
+    - library_annotations
+
     # Makes sure a library name is a valid dart identifier.
     # This comes in handy for test files combining multiple tests where the file name can be used as identifier
     #
