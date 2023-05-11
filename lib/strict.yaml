@@ -1049,6 +1049,12 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_to_list_in_spreads.html
     - unnecessary_to_list_in_spreads
 
+    # Highlights unreachable/unused code in libraries containing a main function / @pragma('vm:entry-point')
+    #
+    # Linter v1.28.0
+    # https://dart-lang.github.io/linter/lints/unreachable_from_main.html
+    - unreachable_from_main
+
     # Highlights potential bugs where unrelated types are compared with another. (always *not* equal).
     #
     # https://dart-lang.github.io/linter/lints/unrelated_type_equality_checks.html
