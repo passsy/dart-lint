@@ -485,6 +485,13 @@ linter:
     # If you need access to some internal code, create an issue
     # https://dart-lang.github.io/linter/lints/implementation_imports.html
     - implementation_imports
+    
+    # Less magic is better. In fear of future Dart versions, that remove the implicit call tear off, we should start migrating now.
+    #
+    # Dart SDK: 2.19 • (Linter v1.29.0)
+    #
+    # https://dart-lang.github.io/linter/lints/implicit_call_tearoffs.html
+    - implicit_call_tearoffs
 
     # Type check for `Iterable<T>.contains(other)` where `other is! T`
     # Without this, `contains` will always report false. Those errors are usually very hard to catch.
