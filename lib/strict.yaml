@@ -498,6 +498,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/implicit_call_tearoffs.html
     - implicit_call_tearoffs
 
+    # Only relevant for package authors
+    #
+    # Dart SDK: 3.0.0 • (Linter v1.35.0)
+    #
+    # https://dart-lang.github.io/linter/lints/implicit_reopen.html
+    # - implicit_reopen
+
     # Helps to migrate switch cases from Dart 2 to Dart 3
     #
     # Dart SDK: 3.0.0 • (Linter v1.34.0)

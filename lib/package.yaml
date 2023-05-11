@@ -8,6 +8,13 @@ include: package:lint/analysis_options.yaml
 linter:
   rules:
 
+    # Make sure reopening is intentional with @reopen
+    #
+    # Dart SDK: 3.0.0 • (Linter v1.35.0)
+    #
+    # https://dart-lang.github.io/linter/lints/implicit_reopen.html
+    - implicit_reopen
+
     # Make sure the public API is complete
     #
     # Linter v1.3
