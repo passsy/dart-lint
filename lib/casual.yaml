@@ -339,6 +339,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/close_sinks.html
     # - close_sinks
 
+    # It's surprising that this is not solved with a type in the sdk, but with a linter rule. This is a must have.
+    #
+    # Dart SDK: 2.19.0 • (Linter v1.29.0)
+    #
+    # https://dart-lang.github.io/linter/lints/collection_methods_unrelated_type.html
+    - collection_methods_unrelated_type
+
     # False positives:
     # - https://github.com/dart-lang/linter/issues/1142
     #
@@ -375,6 +382,13 @@ linter:
     #
     # https://dart-lang.github.io/linter/lints/curly_braces_in_flow_control_structures.html
     # - curly_braces_in_flow_control_structures
+
+    # The location of comments doesn't catch any error
+    #
+    # Dart SDK: 2.19.0 • Linter v1.29.0
+    #
+    # https://dart-lang.github.io/linter/lints/dangling_library_doc_comments.html
+    # - dangling_library_doc_comments
 
     # Requires all referenced dependencies to be declared as direct dependencies in pubspec.yaml. Transitive
     # dependencies might be removed by a dependency, breaking your code.
@@ -474,6 +488,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/implementation_imports.html
     - implementation_imports
 
+    # Less magic is better. In fear of future Dart versions, that remove the implicit call tear off, we should start migrating now.
+    #
+    # Dart SDK: 2.19 • (Linter v1.29.0)
+    #
+    # https://dart-lang.github.io/linter/lints/implicit_call_tearoffs.html
+    - implicit_call_tearoffs
+
     # Type check for `Iterable<T>.contains(other)` where `other is! T`
     # Without this, `contains` will always report false. Those errors are usually very hard to catch.
     #
@@ -489,6 +510,13 @@ linter:
     # Dart SDK: >= 2.8.0-dev.16.0 • (Linter v0.1.113)
     # https://dart-lang.github.io/linter/lints/leading_newlines_in_multiline_strings.html
     - leading_newlines_in_multiline_strings
+
+    # Library annotations must be attached to the `library` keyword
+    #
+    # Dart SDK: 2.19 • (Linter v1.30.0)
+    #
+    # https://dart-lang.github.io/linter/lints/library_annotations.html
+    - library_annotations
 
     # Makes sure a library name is a valid dart identifier.
     # This comes in handy for test files combining multiple tests where the file name can be used as identifier
@@ -977,6 +1005,13 @@ linter:
     # Linter v1.17
     # https://dart-lang.github.io/linter/lints/unnecessary_late.html
     - unnecessary_late
+
+    # New library syntax, time to migrate
+    #
+    # Dart SDK: 2.19.0 • (Linter v1.29.0)
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_library_directive.html
+    - unnecessary_library_directive
 
     # Remove the optional `new` keyword
     #
