@@ -372,6 +372,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/curly_braces_in_flow_control_structures.html
     # - curly_braces_in_flow_control_structures
 
+    # The location of comments doesn't catch any error
+    #
+    # Dart SDK: 2.19.0 • Linter v1.29.0
+    #
+    # https://dart-lang.github.io/linter/lints/dangling_library_doc_comments.html
+    # - dangling_library_doc_comments
+
     # Requires all referenced dependencies to be declared as direct dependencies in pubspec.yaml. Transitive
     # dependencies might be removed by a dependency, breaking your code.
     #
