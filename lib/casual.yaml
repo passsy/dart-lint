@@ -1150,6 +1150,12 @@ linter:
     # https://dart-lang.github.io/linter/lints/use_string_buffers.html
     - use_string_buffers
 
+    # Library names are a legacy feature and discouraged https://dart.dev/guides/language/effective-dart/style#dont-explicitly-name-libraries
+    #
+    # Linter v1.27.0
+    # https://dart-lang.github.io/linter/lints/use_string_in_part_of_directives.html
+    - use_string_in_part_of_directives
+
     # More concise and easier to read constructors.
     #
     # Especially helps not to repeat default parameters, which will not update when they change in the super constructor.
