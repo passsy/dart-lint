@@ -997,6 +997,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/unnecessary_late.html
     - unnecessary_late
 
+    # New library syntax, time to migrate
+    #
+    # Dart SDK: 2.19.0 • (Linter v1.29.0)
+    #
+    # https://dart-lang.github.io/linter/lints/unnecessary_library_directive.html
+    - unnecessary_library_directive
+
     # Remove the optional `new` keyword
     #
     # https://dart-lang.github.io/linter/lints/unnecessary_new.html
