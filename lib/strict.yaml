@@ -729,11 +729,6 @@ linter:
     # https://dart-lang.github.io/linter/lints/prefer_double_quotes.html
     # - prefer_double_quotes
 
-    # Prevent confusion with call-side when using named parameters
-    #
-    # https://dart-lang.github.io/linter/lints/prefer_equal_for_default_values.html
-    - prefer_equal_for_default_values
-
     # Single line methods + implementation makes it hard to write comments for that line.
     # Dense code isn't necessarily better code.
     #
