@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.1.2
+
+Requires Dart `sdk: '>=3.0.0'`
+
+- Remove [`prefer_equal_for_default_values`](https://dart-lang.github.io/linter/lints/prefer_equal_for_default_values.html)
+- Enable [`unnecessary_breaks`](https://dart-lang.github.io/linter/lints/unnecessary_breaks.html)
+- Enable [`invalid_case_patterns`](https://dart-lang.github.io/linter/lints/invalid_case_patterns.html)
+- Enable [`implicit_reopen`](https://dart-lang.github.io/linter/lints/implicit_reopen.html) for package mode
+- Enable [`type_literal_in_constant_pattern`](https://dart-lang.github.io/linter/lints/type_literal_in_constant_pattern.html)
+- Include all rules from `v2.0.20`
+
 ## 2.1.1
 
 - Disable `avoid_positional_boolean_parameters` due to new false positives in Dart 3.0 
