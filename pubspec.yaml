@@ -3,6 +3,8 @@ version: 2.1.2
 description: An opinionated, community-driven set of lint rules for Dart and Flutter projects. Like pedantic but stricter
 repository: https://github.com/passsy/dart-lint
 issue_tracker: https://github.com/passsy/dart-lint/issues
+topics:
+  - lint
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
