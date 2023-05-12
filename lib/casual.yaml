@@ -973,6 +973,13 @@ linter:
     # https://dart-lang.github.io/linter/lints/type_init_formals.html
     # - type_init_formals
 
+    # Catches type matches that look correct but actually don't match
+    #
+    # Dart SDK: Dart 3.0.0 • (Linter v1.35.0)
+    #
+    # https://dart-lang.github.io/linter/lints/type_literal_in_constant_pattern.html
+    - type_literal_in_constant_pattern
+
     # Unclear which unawaited function to use
     #
     # https://dart-lang.github.io/linter/lints/unawaited_futures.html
