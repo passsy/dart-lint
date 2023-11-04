@@ -1253,3 +1253,16 @@ linter:
     # Don't assign anything to void
     # https://dart-lang.github.io/linter/lints/void_checks.html
     - void_checks
+    # Don’t use wildcard parameters or variables. Code using this will break in the future.
+    #
+    # Dart SDK: >= 3.1.0
+    #
+    # https://dart.dev/tools/linter-rules/no_wildcard_variable_uses
+    - no_wildcard_variable_uses
+
+    # Don’t assign a variable to itself.
+    #
+    # Dart SDK: >= 3.1.0
+    #
+    # https://dart.dev/tools/linter-rules/no_self_assignments
+    - no_self_assignments
