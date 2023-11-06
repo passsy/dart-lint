@@ -2,7 +2,7 @@ Add `lint` as dependency to your pubspec.yaml
 
 ```yaml
 dev_dependencies:
-  lint: ^1.3.0
+  lint: ^2.2.0
 ```
 
 Add a `analysis_options.yaml` to the root of you project.

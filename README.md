@@ -22,7 +22,7 @@ This package can be used as a replacement for [`package:lints`](https://pub.dev/
 Add `lint` as dependency to your `pubspec.yaml`. Version `^1.0.0` means you're automatically getting the latest version for `lint` when running `pub upgrade`
 ```yaml
 dev_dependencies:
-  lint: ^2.0.0
+  lint: ^2.2.0
 ```
 
 Create an `analysis_options.yaml` file in the root of your project with the following content:
@@ -75,17 +75,19 @@ A detailed comparison of all linting packages for dart can be found at https://r
 
 ## Which version to use?
 
-Generally, you can just put `lint: ^2.0.0` in your `pubspec.yaml` and pub get the latest version compatible with your Dart version.
+Generally, you can just put `lint: ^2.2.0` in your `pubspec.yaml` and pub get the latest version compatible with your Dart version.
 
 | Dart Version | Lint Version                                                        |
 |--------------|---------------------------------------------------------------------|
-| `2.18`         | [`2.0.0`](https://pub.dev/packages/lint/versions/2.0.0/changelog)   |
-| `2.17`         | [`1.10.0`](https://pub.dev/packages/lint/versions/1.10.0/changelog) |
-| `2.16`         | [`1.9.0`](https://pub.dev/packages/lint/versions/1.9.0/changelog)   |
-| `2.15`         | [`1.8.0`](https://pub.dev/packages/lint/versions/1.8.0/changelog)   |
-| `2.14`         | [`1.7.0`](https://pub.dev/packages/lint/versions/1.7.0/changelog)   |
-| `2.13`         | [`1.6.0`](https://pub.dev/packages/lint/versions/1.6.0/changelog)   |
-| `2.12`         | [`1.5.0`](https://pub.dev/packages/lint/versions/1.5.0/changelog)   |
+| `3.2.0`      | [`2.3.0`](https://pub.dev/packages/lint/versions/2.3.0/changelog)   |
+| `3.1.0`      | [`2.2.0`](https://pub.dev/packages/lint/versions/2.2.0/changelog)   |
+| `2.18`       | [`2.0.0`](https://pub.dev/packages/lint/versions/2.0.0/changelog)   |
+| `2.17`       | [`1.10.0`](https://pub.dev/packages/lint/versions/1.10.0/changelog) |
+| `2.16`       | [`1.9.0`](https://pub.dev/packages/lint/versions/1.9.0/changelog)   |
+| `2.15`       | [`1.8.0`](https://pub.dev/packages/lint/versions/1.8.0/changelog)   |
+| `2.14`       | [`1.7.0`](https://pub.dev/packages/lint/versions/1.7.0/changelog)   |
+| `2.13`       | [`1.6.0`](https://pub.dev/packages/lint/versions/1.6.0/changelog)   |
+| `2.12`       | [`1.5.0`](https://pub.dev/packages/lint/versions/1.5.0/changelog)   |
 
 
 ## Comparison to discontinued package:pedantic
