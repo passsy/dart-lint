@@ -78,16 +78,16 @@ A detailed comparison of all linting packages for dart can be found at https://r
 Generally, you can just put `lint: ^2.2.0` in your `pubspec.yaml` and pub get the latest version compatible with your Dart version.
 
 | Dart Version | Lint Version                                                        |
-|--------------|---------------------------------------------------------------------|
-| `3.2.0`      | [`2.3.0`](https://pub.dev/packages/lint/versions/2.3.0/changelog)   |
-| `3.1.0`      | [`2.2.0`](https://pub.dev/packages/lint/versions/2.2.0/changelog)   |
-| `2.18`       | [`2.0.0`](https://pub.dev/packages/lint/versions/2.0.0/changelog)   |
-| `2.17`       | [`1.10.0`](https://pub.dev/packages/lint/versions/1.10.0/changelog) |
-| `2.16`       | [`1.9.0`](https://pub.dev/packages/lint/versions/1.9.0/changelog)   |
-| `2.15`       | [`1.8.0`](https://pub.dev/packages/lint/versions/1.8.0/changelog)   |
-| `2.14`       | [`1.7.0`](https://pub.dev/packages/lint/versions/1.7.0/changelog)   |
-| `2.13`       | [`1.6.0`](https://pub.dev/packages/lint/versions/1.6.0/changelog)   |
-| `2.12`       | [`1.5.0`](https://pub.dev/packages/lint/versions/1.5.0/changelog)   |
+|----------|---------------------------------------------------------------------|
+| `3.2`    | [`2.3.0`](https://pub.dev/packages/lint/versions/2.3.0/changelog)   |
+| `3.1`    | [`2.2.0`](https://pub.dev/packages/lint/versions/2.2.0/changelog)   |
+| `2.18`   | [`2.0.0`](https://pub.dev/packages/lint/versions/2.0.0/changelog)   |
+| `2.17`   | [`1.10.0`](https://pub.dev/packages/lint/versions/1.10.0/changelog) |
+| `2.16`   | [`1.9.0`](https://pub.dev/packages/lint/versions/1.9.0/changelog)   |
+| `2.15`   | [`1.8.0`](https://pub.dev/packages/lint/versions/1.8.0/changelog)   |
+| `2.14`   | [`1.7.0`](https://pub.dev/packages/lint/versions/1.7.0/changelog)   |
+| `2.13`   | [`1.6.0`](https://pub.dev/packages/lint/versions/1.6.0/changelog)   |
+| `2.12`   | [`1.5.0`](https://pub.dev/packages/lint/versions/1.5.0/changelog)   |
 
 
 ## Comparison to discontinued package:pedantic
