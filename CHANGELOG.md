@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.2.0
+
+Requires Dart `sdk: '>=3.1.0'`
+
+- Enable [`no_wildcard_variable_uses`](https://dart-lang.github.io/linter/lints/no_wildcard_variable_uses.html)
+- Enable [`no_self_assignments`](https://dart-lang.github.io/linter/lints/no_self_assignments.html)
+
 ## 2.1.2
 
 Requires Dart `sdk: '>=3.0.0'`
