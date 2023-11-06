@@ -80,6 +80,13 @@ linter:
     # http://dart-lang.github.io/linter/lints/annotate_overrides.html
     - annotate_overrides
 
+    # Annotate redeclared members. Experimental.
+    #
+    # Dart SDK: >= 3.2.0
+    #
+    # https://dart.dev/tools/linter-rules/annotate_redeclares.html
+    - annotate_redeclares
+
     # All methods should define a return type. dynamic is no exception.
     # Violates Effective Dart "PREFER annotating with dynamic instead of letting inference fail"
     #

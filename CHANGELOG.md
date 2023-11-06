@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.0
+
+Requires Dart `sdk: '>=3.2.0'`
+
+- Enable [`annotate_redeclares`](https://dart.dev/tools/linter-rules/annotate_redeclares.html)
+
 ## 2.2.0
 
 Requires Dart `sdk: '>=3.1.0'`
