@@ -1009,9 +1009,14 @@ linter:
     # https://dart-lang.github.io/linter/lints/unawaited_futures.html
     # - unawaited_futures
 
-    # Remove async/await clutter when not required
+    # Replace `return await future;` with `return future;`
+    #
+    # This check causes false positives in try-catch blocks, where removing await would not catch the exception anymore
+    # https://github.com/dart-lang/linter/issues/2357
+    # https://github.com/dart-lang/linter/issues/2250
+    #
     # https://dart-lang.github.io/linter/lints/unnecessary_await_in_return.html
-    - unnecessary_await_in_return
+    # - unnecessary_await_in_return
 
     # Remove unnecessary braces
     #
