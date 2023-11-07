@@ -79,14 +79,16 @@ Generally, you can just put `lint: ^2.0.0` in your `pubspec.yaml` and pub get th
 
 | Dart Version | Lint Version                                                        |
 |--------------|---------------------------------------------------------------------|
-| `2.18`         | [`2.0.0`](https://pub.dev/packages/lint/versions/2.0.0/changelog)   |
-| `2.17`         | [`1.10.0`](https://pub.dev/packages/lint/versions/1.10.0/changelog) |
-| `2.16`         | [`1.9.0`](https://pub.dev/packages/lint/versions/1.9.0/changelog)   |
-| `2.15`         | [`1.8.0`](https://pub.dev/packages/lint/versions/1.8.0/changelog)   |
-| `2.14`         | [`1.7.0`](https://pub.dev/packages/lint/versions/1.7.0/changelog)   |
-| `2.13`         | [`1.6.0`](https://pub.dev/packages/lint/versions/1.6.0/changelog)   |
-| `2.12`         | [`1.5.0`](https://pub.dev/packages/lint/versions/1.5.0/changelog)   |
-
+| `3.1`        | [`2.2.0`](https://pub.dev/packages/lint/versions/2.2.0/changelog)   |
+| `3.0`        | [`2.1.0`](https://pub.dev/packages/lint/versions/2.1.0/changelog)   |
+| `2.18`       | [`2.0.0`](https://pub.dev/packages/lint/versions/2.0.0/changelog)   |
+| `2.17`       | [`1.10.0`](https://pub.dev/packages/lint/versions/1.10.0/changelog) |
+| `2.16`       | [`1.9.0`](https://pub.dev/packages/lint/versions/1.9.0/changelog)   |
+| `2.15`       | [`1.8.0`](https://pub.dev/packages/lint/versions/1.8.0/changelog)   |
+| `2.14`       | [`1.7.0`](https://pub.dev/packages/lint/versions/1.7.0/changelog)   |
+| `2.13`       | [`1.6.0`](https://pub.dev/packages/lint/versions/1.6.0/changelog)   |
+| `2.12`       | [`1.5.0`](https://pub.dev/packages/lint/versions/1.5.0/changelog)   |
+    
 
 ## Comparison to discontinued package:pedantic
 

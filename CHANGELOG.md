@@ -4,6 +4,7 @@
 
 Requires Dart `sdk: '>=3.1.0'`
 
+- Disable [`unnecessary_await_in_return`](https://dart-lang.github.io/linter/lints/unnecessary_await_in_return.html) due to false positives and almost no benefit
 - Enable [`no_wildcard_variable_uses`](https://dart-lang.github.io/linter/lints/no_wildcard_variable_uses.html)
 - Enable [`no_self_assignments`](https://dart-lang.github.io/linter/lints/no_self_assignments.html)
 
