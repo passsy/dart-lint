@@ -618,14 +618,14 @@ linter:
     # Dart SDK: >= 3.1.0
     #
     # https://dart.dev/tools/linter-rules/no_self_assignments
-    - no_self_assignments
+    # - no_self_assignments
 
     # Don’t use wildcard parameters or variables. Code using this will break in the future.
     #
     # Dart SDK: >= 3.1.0
     #
     # https://dart.dev/tools/linter-rules/no_wildcard_variable_uses
-    - no_wildcard_variable_uses
+    # - no_wildcard_variable_uses
 
     # Follow dart style naming conventions
     #
