@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.4.0
+
+Requires Dart `sdk: '>=3.3.0'`
+
+- Remove [`iterable_contains_unrelated_type`](https://dart-lang.github.io/linter/lints/iterable_contains_unrelated_type.html)
+- Remove [`list_remove_unrelated_type`](https://dart-lang.github.io/linter/lints/list_remove_unrelated_type.html)
+- Remove [`always_require_non_null_named_parameters`](https://dart-lang.github.io/linter/lints/always_require_non_null_named_parameters.html)
+- Remove [`avoid_returning_null`](https://dart-lang.github.io/linter/lints/avoid_returning_null.html)
+- Remove [`avoid_returning_null_for_future`](https://dart-lang.github.io/linter/lints/avoid_returning_null_for_future.html)
+
 ## 2.3.0
 
 Requires Dart `sdk: '>=3.2.0'`
