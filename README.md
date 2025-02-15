@@ -42,7 +42,7 @@ analyzer:
     #- '**.g.dart'
 
 # You can customize the lint rules set to your own liking. A list of all rules
-# can be found at https://dart-lang.github.io/linter/lints/options/options.html
+# can be found at https://dart.dev/tools/linter-rules
 linter:
   rules:
     # Util classes are awesome!
