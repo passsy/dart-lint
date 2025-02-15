@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.5.0
+
+Requires Dart `sdk: '>=3.4.0'`
+
+- Enable [`unnecessary_library_name`](https://dart-lang.github.io/linter/lints/unnecessary_library_name.html)
+- Enable [`missing_code_block_language_in_doc_comment`](https://dart-lang.github.io/linter/lints/missing_code_block_language_in_doc_comment.html)
+
 ## 2.4.0
 
 Requires Dart `sdk: '>=3.3.0'`

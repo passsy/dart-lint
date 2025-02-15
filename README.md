@@ -79,6 +79,7 @@ Generally, you can just put `lint: ^2.0.0` in your `pubspec.yaml` and pub get th
 
 | Dart Version | Lint Version                                                        |
 |--------------|---------------------------------------------------------------------|
+| `3.4`        | [`2.5.0`](https://pub.dev/packages/lint/versions/2.5.0/changelog)   |
 | `3.3`        | [`2.4.0`](https://pub.dev/packages/lint/versions/2.4.0/changelog)   |
 | `3.2`        | [`2.3.0`](https://pub.dev/packages/lint/versions/2.3.0/changelog)   |
 | `3.1`        | [`2.2.0`](https://pub.dev/packages/lint/versions/2.2.0/changelog)   |
