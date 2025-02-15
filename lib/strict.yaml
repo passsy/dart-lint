@@ -273,7 +273,7 @@ linter:
     # https://dart.dev/tools/linter-rules/avoid_types_as_parameter_names
     - avoid_types_as_parameter_names
 
-    # Adding the type is not required, but sometimes improves readability. Therefore removing it doesn't always help
+    # Adding the type is not required, but sometimes improves readability. Therefore, removing it doesn't always help
     # https://dart.dev/tools/linter-rules/avoid_types_on_closure_parameters
     # - avoid_types_on_closure_parameters
 
@@ -316,7 +316,7 @@ linter:
     # https://dart.dev/tools/linter-rules/cancel_subscriptions
     - cancel_subscriptions
 
-    # The cascade syntax is weird and you shouldn't be forced to use it.
+    # The cascade syntax is weird, and you shouldn't be forced to use it.
     # False positives:
     # https://github.com/dart-lang/linter/issues/1589
     #
@@ -335,7 +335,7 @@ linter:
     # https://dart.dev/tools/linter-rules/close_sinks
     # - close_sinks
 
-    # It's surprising that this is not solved with a type in the sdk, but with a linter rule. This is a must have.
+    # It's surprising that this is not solved with a type in the sdk, but with a linter rule. This is a must-have.
     #
     # Dart SDK: 2.19.0 • (Linter v1.29.0)
     #
@@ -371,8 +371,8 @@ linter:
     - control_flow_in_finally
 
     # Single line `if`s are fine, but when a new line splits the bool expression and body curly braces
-    # are recommended. It prevents the danging else problem and easily allows the addition of more lines inside
-    # the if body
+    # are recommended. It prevents the dangling else problem and easily allows the addition of more lines inside
+    # the if-body
     #
     # Dart SDK: >= 2.0.0 • (Linter v0.1.57)
     #
@@ -635,7 +635,7 @@ linter:
     - null_check_on_nullable_type_parameter
 
     # Might become irrelevant when non-nullable types land in dart. Until then use this lint check which checks for
-    # non null arguments for specific dart sdk methods.
+    # non-null arguments for specific dart sdk methods.
     #
     # https://dart.dev/tools/linter-rules/null_closures
     - null_closures
@@ -707,7 +707,7 @@ linter:
     # https://dart.dev/tools/linter-rules/prefer_asserts_with_message
     # - prefer_asserts_with_message
 
-    # Collection literals are shorter. They exists, use them.
+    # Collection literals are shorter. They exist, use them.
     #
     # https://dart.dev/tools/linter-rules/prefer_collection_literals
     - prefer_collection_literals
@@ -784,7 +784,7 @@ linter:
     # https://dart.dev/tools/linter-rules/prefer_final_parameters
     # - prefer_final_parameters
 
-    # Saves lot of code
+    # Saves a lot of code
     #
     # https://dart.dev/tools/linter-rules/prefer_for_elements_to_map_fromIterable
     - prefer_for_elements_to_map_fromIterable
@@ -1096,7 +1096,7 @@ linter:
     # https://dart.dev/tools/linter-rules/unnecessary_null_in_if_null_operators
     - unnecessary_null_in_if_null_operators
 
-    # If a variable doesn't change and is initialized, no need to define it as nullable (NNDB)
+    # If a variable doesn't change and is initialized, no need to define it as nullable (NNBD)
     # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
     # https://dart.dev/tools/linter-rules/unnecessary_nullable_for_final_variable_declarations
     - unnecessary_nullable_for_final_variable_declarations
@@ -1226,7 +1226,7 @@ linter:
     # - use_key_in_widget_constructors
 
     # Some might argue `late` is a code smell, this lint is very opinionated. It triggers only for private fields and
-    # therefore might actually cleanup some code.
+    # therefore might actually clean up some code.
     # There is no performance impact either way https://github.com/dart-lang/linter/pull/2189#discussion_r457945301
     #
     # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
