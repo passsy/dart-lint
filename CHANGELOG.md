@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.6.0
+
+Requires Dart `sdk: '>=3.5.0'`
+
+- Enable [`avoid_futureor_void`](https://dart.dev/tools/linter-rules/avoid_futureor_void.html)
+- Enable [`use_truncating_division`](https://dart.dev/tools/linter-rules/use_truncating_division.html) for strict
+
 ## 2.5.0
 
 Requires Dart `sdk: '>=3.4.0'`
