@@ -434,12 +434,22 @@ linter:
     # https://dart.dev/tools/linter-rules/do_not_use_environment
     # - do_not_use_environment
 
-    # Ensures that ignore comments are properly documented with a reason
+    # The reason for the ignore is usually self-evident and an additional comment would add unnecessary verbosity.
+    # Also, when temporarily ignoring rules for debugging or development purposes, having to add documentation creates unnecessary overhead
+    #
+    # Example where it is annoying:
+    #
+    # ```dart
+    # } catch (e, stack) {
+    #   // ignore: avoid_print
+    #   print(stack);
+    # }
+    # ```
     #
     # Dart SDK: >= 3.5.0
     #
     # https://dart.dev/tools/linter-rules/document_ignores
-    - document_ignores
+    # - document_ignores
 
     # Add a comment why no further error handling is required
     #
