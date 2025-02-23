@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.7.0
+
+- Enable [`use_truncating_division`](https://dart.dev/tools/linter-rules/use_truncating_division.html)
+- Enable [`avoid_futureor_void`](https://dart.dev/tools/linter-rules/avoid_futureor_void.html)
+
 ## 2.6.2
 
 - Disable [`document_ignores`](https://dart.dev/tools/linter-rules/document_ignores.html) due to unnecessary verbosity
