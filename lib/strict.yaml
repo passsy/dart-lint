@@ -132,6 +132,13 @@ linter:
     # https://dart.dev/tools/linter-rules/avoid_empty_else
     - avoid_empty_else
 
+    # Experimental: Avoid using FutureOr<void> as it's redundant
+    #
+    # Dart SDK: >= 3.5.0
+    #
+    # https://dart.dev/tools/linter-rules/avoid_futureor_void
+    - avoid_futureor_void
+
     # It is expected that mutable objects which override hash & equals shouldn't be used as keys for hashmaps.
     # This one use case doesn't make all hash & equals implementations for mutable classes bad.
     #
@@ -654,6 +661,13 @@ linter:
     # https://dart.dev/tools/linter-rules/omit_local_variable_types
     # - omit_local_variable_types
 
+    # It recommends replacing `int` with `var`. That's not useful
+    #
+    # Dart SDK: >= 3.5.0
+    #
+    # https://dart.dev/tools/linter-rules/omit_obvious_local_variable_types
+    # - omit_obvious_local_variable_types
+
     # Defining interfaces (abstract classes), with only one method, makes sense architecture wise
     # Discussion: https://github.com/passsy/dart-lint/issues/2
     #
@@ -960,6 +974,14 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/sort_unnamed_constructors_first
     - sort_unnamed_constructors_first
+
+    # This rule is too opinionated and doesn't have a clear benefit
+    # The complexity of what "obvious" means is too high
+    #
+    # Dart SDK: >= 3.5.0
+    #
+    # https://dart.dev/tools/linter-rules/specify_nonobvious_local_variable_types
+    # - specify_nonobvious_local_variable_types
 
     # First test, then cast
     #
@@ -1271,6 +1293,13 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/use_test_throws_matchers
     - use_test_throws_matchers
+
+    # Use the truncating division operator (~/) for integer division
+    #
+    # Dart SDK: >= 3.5.0
+    #
+    # https://dart.dev/tools/linter-rules/use_truncating_division
+    - use_truncating_division
 
     # Naming is hard, strict rules don't help
     #
