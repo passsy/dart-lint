@@ -432,6 +432,13 @@ linter:
     # https://dart.dev/tools/linter-rules/do_not_use_environment
     # - do_not_use_environment
 
+    # Ensures that ignore comments are properly documented with a reason
+    #
+    # Dart SDK: >= 3.5.0
+    #
+    # https://dart.dev/tools/linter-rules/document_ignores
+    # - document_ignores
+
     # Add a comment why no further error handling is required
     #
     # https://dart.dev/tools/linter-rules/empty_catches
@@ -503,6 +510,12 @@ linter:
     # https://dart.dev/tools/linter-rules/invalid_case_patterns
     - invalid_case_patterns
 
+    # Prevents invalid runtime checks with JS interop types
+    #
+    # Dart SDK: >= 3.5.0
+    #
+    # https://dart.dev/tools/linter-rules/invalid_runtime_check_with_js_interop_types
+    - invalid_runtime_check_with_js_interop_types
 
     # Hint to join return and assignment.
     #
@@ -1140,6 +1153,13 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/unnecessary_to_list_in_spreads
     - unnecessary_to_list_in_spreads
+
+    # Prevents unintended HTML in doc comments which could cause rendering issues
+    #
+    # Dart SDK: >= 3.5.0
+    #
+    # https://dart.dev/tools/linter-rules/unintended_html_in_doc_comment
+    - unintended_html_in_doc_comment
 
     # It's just unused code, nothing to worry about
     #

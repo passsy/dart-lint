@@ -1,11 +1,17 @@
 # Changelog
 
-## 2.6.0
+## 2.6.1
 
 Requires Dart `sdk: '>=3.5.0'`
 
-- Enable [`avoid_futureor_void`](https://dart.dev/tools/linter-rules/avoid_futureor_void.html)
-- Enable [`use_truncating_division`](https://dart.dev/tools/linter-rules/use_truncating_division.html) for strict
+- Enable [`document_ignores`](https://dart.dev/tools/linter-rules/document_ignores.html) for strict mode
+- Enable [`invalid_runtime_check_with_js_interop_types`](https://dart.dev/tools/linter-rules/invalid_runtime_check_with_js_interop_types.html)
+- Enable [`unintended_html_in_doc_comment`](https://dart.dev/tools/linter-rules/unintended_html_in_doc_comment.html)
+
+## 2.6.0
+
+Failed release, accidentally published Dart 3.6 rules with Dart 3.5 SDK constraints.
+Redacted. Use 2.6.1 instead.
 
 ## 2.5.0
 
