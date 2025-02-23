@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.2
+
+- Disable [`document_ignores`](https://dart.dev/tools/linter-rules/document_ignores.html) due to unnecessary verbosity
+
 ## 2.6.1
 
 Requires Dart `sdk: '>=3.5.0'`
