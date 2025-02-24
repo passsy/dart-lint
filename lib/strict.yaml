@@ -695,6 +695,14 @@ linter:
     # https://dart.dev/tools/linter-rules/omit_obvious_local_variable_types
     # - omit_obvious_local_variable_types
 
+    # Humans read plain code without tooling.
+    # Types might be obvious to the compiler, but a human not a tool should decie when to add  a type.
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/omit_obvious_property_types
+    # - omit_obvious_property_types
+
     # Defining interfaces (abstract classes), with only one method, makes sense architecture wise
     # Discussion: https://github.com/passsy/dart-lint/issues/2
     #
