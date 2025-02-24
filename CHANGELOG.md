@@ -9,6 +9,7 @@ Requires Dart `sdk: '>=3.7.0'`
 - Enable [`unnecessary_async`](https://dart.dev/tools/linter-rules/unnecessary_async.html)
 - Remove deprecated and now removed [`package_api_docs`](https://dart.dev/tools/linter-rules/package_api_docs.html) from `package.yaml`. You can enable `public_member_api_docs` as a way stricter replacement.
 - Remove [`unsafe_html`](https://dart.dev/tools/linter-rules/unsafe_html.html)
+- Remove deprecated [`avoid_null_checks_in_equality_operators`](https://dart.dev/tools/linter-rules/avoid_null_checks_in_equality_operators.html)
 
 ## 2.7.0
 

@@ -206,11 +206,6 @@ linter:
     # https://dart.dev/tools/linter-rules/avoid_multiple_declarations_per_line
     - avoid_multiple_declarations_per_line
 
-    # Null checks aren't required in ==() operators
-    #
-    # https://dart.dev/tools/linter-rules/avoid_null_checks_in_equality_operators
-    - avoid_null_checks_in_equality_operators
-
     # Causes false-positives for callbacks and functional interfaces such as
     #
     # ```dart
