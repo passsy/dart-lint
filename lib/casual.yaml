@@ -943,6 +943,8 @@ linter:
 
     # Dartfmt formats differently when adding trailing commas. This lint makes sure there is zero doubt in how code
     # should be formatted.
+    # 
+    # Removed for Dart 3.7 because dart now formats differently, compared to this rule (removes some commas)
     #
     # This rule is debatable, though.
     # A non-representative [vote](https://twitter.com/passsy/status/1427220769050972162) shows a strong tendency towards
