@@ -720,10 +720,6 @@ linter:
     # https://dart.dev/tools/linter-rules/overridden_fields
     - overridden_fields
 
-    # Only relevant for packages, not applications or general dart code
-    # https://dart.dev/tools/linter-rules/package_api_docs
-    # - package_api_docs
-
     # Follow dart style package naming convention
     #
     # Dart SDK: >= 2.0.0 • (Linter v0.1.31)

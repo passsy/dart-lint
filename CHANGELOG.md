@@ -7,6 +7,7 @@ Requires Dart `sdk: '>=3.7.0'`
 - Enable [`unnecessary_underscores`](https://dart.dev/tools/linter-rules/unnecessary_underscores.html)
 - Enable [`strict_top_level_inference`](https://dart.dev/tools/linter-rules/strict_top_level_inference.html)
 - Enable [`unnecessary_async`](https://dart.dev/tools/linter-rules/unnecessary_async.html)
+- Remove deprecated and now removed [`package_api_docs`](https://dart.dev/tools/linter-rules/package_api_docs.html) from `package.yaml`. You can enable `public_member_api_docs` as a way stricter replacement.
 
 ## 2.7.0
 
