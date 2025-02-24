@@ -1250,6 +1250,14 @@ linter:
     # https://dart.dev/tools/linter-rules/unsafe_html
     - unsafe_html
 
+    # In most cases, using T is just fine, unless T is a base class.
+    # The workaround is quite complex and not worth applying, unless runtime errors appear.
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/unsafe_variance
+    # - unsafe_variance
+
     # Very useful in preventing Flutter BuildContext bugs in async callbacks
     #
     # Dart SDK: 2.13.0 • (Linter v1.1.0)
