@@ -1022,6 +1022,21 @@ linter:
     # https://dart.dev/tools/linter-rules/specify_nonobvious_local_variable_types
     # - specify_nonobvious_local_variable_types
 
+    # Useful, but often too agressive
+    #
+    # ```dart
+    # final _formKey = GlobalKey(); // warning
+    # final GlobalKey _formKey = GlobalKey(); // ok
+    #
+    # final animationCurve = Curves.easeOut; // warning
+    # final Curve animationCurve = Curves.easeOut; // ok
+    # ```
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/specify_nonobvious_property_types
+    # - specify_nonobvious_property_types
+
     # First test, then cast
     #
     # https://dart.dev/tools/linter-rules/test_types_in_equals
