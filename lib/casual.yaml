@@ -1238,11 +1238,6 @@ linter:
     # https://dart.dev/tools/linter-rules/unrelated_type_equality_checks
     - unrelated_type_equality_checks
 
-    # Web only
-    #
-    # https://dart.dev/tools/linter-rules/unsafe_html
-    # - unsafe_html
-
     # In most cases, using T is just fine, unless T is a base class.
     # The workaround is quite complex and not worth applying, unless runtime errors appear.
     #
