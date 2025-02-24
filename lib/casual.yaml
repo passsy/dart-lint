@@ -203,11 +203,6 @@ linter:
     # https://dart.dev/tools/linter-rules/avoid_multiple_declarations_per_line
     - avoid_multiple_declarations_per_line
 
-    # Null checks aren't required in ==() operators
-    #
-    # https://dart.dev/tools/linter-rules/avoid_null_checks_in_equality_operators
-    - avoid_null_checks_in_equality_operators
-
     # Causes false-positives for callbacks and functional interfaces such as
     #
     # ```dart
@@ -692,6 +687,14 @@ linter:
     # https://dart.dev/tools/linter-rules/omit_obvious_local_variable_types
     # - omit_obvious_local_variable_types
 
+    # Humans read plain code without tooling.
+    # Types might be obvious to the compiler, but a human not a tool should decie when to add  a type.
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/omit_obvious_property_types
+    # - omit_obvious_property_types
+
     # Defining interfaces (abstract classes), with only one method, makes sense architecture wise
     # Discussion: https://github.com/passsy/dart-lint/issues/2
     #
@@ -708,10 +711,6 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/overridden_fields
     - overridden_fields
-
-    # Only relevant for packages, not applications or general dart code
-    # https://dart.dev/tools/linter-rules/package_api_docs
-    # - package_api_docs
 
     # Follow dart style package naming convention
     #
@@ -944,6 +943,8 @@ linter:
 
     # Dartfmt formats differently when adding trailing commas. This lint makes sure there is zero doubt in how code
     # should be formatted.
+    # 
+    # Removed for Dart 3.7 because dart now formats differently, compared to this rule (removes some commas)
     #
     # This rule is debatable, though.
     # A non-representative [vote](https://twitter.com/passsy/status/1427220769050972162) shows a strong tendency towards
@@ -999,6 +1000,13 @@ linter:
     # https://dart.dev/tools/linter-rules/sort_unnamed_constructors_first
     # - sort_unnamed_constructors_first
 
+    # Never forget a return or variable type!
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/strict_top_level_inference
+    - strict_top_level_inference
+
     # This rule is too opinionated and doesn't have a clear benefit
     # The complexity of what "obvious" means is too high
     #
@@ -1006,6 +1014,21 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/specify_nonobvious_local_variable_types
     # - specify_nonobvious_local_variable_types
+
+    # Useful, but often too agressive
+    #
+    # ```dart
+    # final _formKey = GlobalKey(); // warning
+    # final GlobalKey _formKey = GlobalKey(); // ok
+    #
+    # final animationCurve = Curves.easeOut; // warning
+    # final Curve animationCurve = Curves.easeOut; // ok
+    # ```
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/specify_nonobvious_property_types
+    # - specify_nonobvious_property_types
 
     # First test, then cast
     #
@@ -1043,6 +1066,13 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/unawaited_futures
     # - unawaited_futures
+
+    # No await? No async!
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_async
+    - unnecessary_async
 
     # Replace `return await future;` with `return future;`
     #
@@ -1180,6 +1210,13 @@ linter:
     # https://dart.dev/tools/linter-rules/unnecessary_to_list_in_spreads
     - unnecessary_to_list_in_spreads
 
+    # Due to the wildcard variables language feature in Dart 3.7, multiple parameters can now be called _
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_underscores
+    - unnecessary_underscores
+
     # Prevents unintended HTML in doc comments which could cause rendering issues
     #
     # Dart SDK: >= 3.5.0
@@ -1198,10 +1235,13 @@ linter:
     # https://dart.dev/tools/linter-rules/unrelated_type_equality_checks
     - unrelated_type_equality_checks
 
-    # Web only
+    # In most cases, using T is just fine, unless T is a base class.
+    # The workaround is quite complex and not worth applying, unless runtime errors appear.
     #
-    # https://dart.dev/tools/linter-rules/unsafe_html
-    # - unsafe_html
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/unsafe_variance
+    # - unsafe_variance
 
     # Very useful in preventing Flutter BuildContext bugs in async callbacks
     #

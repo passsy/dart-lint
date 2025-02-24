@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.8.0
+
+Requires Dart `sdk: '>=3.7.0'`
+
+- Disable [`require_trailing_commas`](https://dart.dev/tools/linter-rules/require_trailing_commas.html)
+- Enable [`unnecessary_underscores`](https://dart.dev/tools/linter-rules/unnecessary_underscores.html)
+- Enable [`strict_top_level_inference`](https://dart.dev/tools/linter-rules/strict_top_level_inference.html)
+- Enable [`unnecessary_async`](https://dart.dev/tools/linter-rules/unnecessary_async.html)
+- Remove deprecated and now removed [`package_api_docs`](https://dart.dev/tools/linter-rules/package_api_docs.html) from `package.yaml`. You can enable `public_member_api_docs` as a way stricter replacement.
+- Remove [`unsafe_html`](https://dart.dev/tools/linter-rules/unsafe_html.html)
+- Remove deprecated [`avoid_null_checks_in_equality_operators`](https://dart.dev/tools/linter-rules/avoid_null_checks_in_equality_operators.html)
+
 ## 2.7.0
 
 - Enable [`use_truncating_division`](https://dart.dev/tools/linter-rules/use_truncating_division.html)
