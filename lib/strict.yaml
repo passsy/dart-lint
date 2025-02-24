@@ -1002,6 +1002,13 @@ linter:
     # https://dart.dev/tools/linter-rules/sort_unnamed_constructors_first
     - sort_unnamed_constructors_first
 
+    # Never forget a return or variable type!
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/strict_top_level_inference
+    - strict_top_level_inference
+
     # This rule is too opinionated and doesn't have a clear benefit
     # The complexity of what "obvious" means is too high
     #
