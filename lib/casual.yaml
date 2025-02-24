@@ -1180,6 +1180,13 @@ linter:
     # https://dart.dev/tools/linter-rules/unnecessary_to_list_in_spreads
     - unnecessary_to_list_in_spreads
 
+    # Due to the wildcard variables language feature in Dart 3.7, multiple parameters can now be called _
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_underscores
+    - unnecessary_underscores
+
     # Prevents unintended HTML in doc comments which could cause rendering issues
     #
     # Dart SDK: >= 3.5.0

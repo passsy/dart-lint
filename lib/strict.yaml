@@ -135,14 +135,14 @@ linter:
     # Avoid using FutureOr<void> because the synchronous type void makes no sense since it can't be assigned to a variable
     #
     # Definitly never use it as return type of a function.
-    # 
+    #
     # Exception: It is ok to use it as parameter (also constructor parameter) to accept both a synchronous and asynchronous callback for flexability in API design
-    # 
+    #
     # ```
     # void executeTask(FutureOr<void> Function() task) async { // ok
     #   await task();
     # }
-    # 
+    #
     # void main() {
     #   executeTask(() => print('Sync task')); // sync is allowed
     #   executeTask(() async => await Future.delayed(Duration(seconds: 1), () => print('Async task'))); // will be awaited
@@ -150,7 +150,7 @@ linter:
     # ```
     #
     # See discusson at https://github.com/dart-lang/sdk/issues/59232
-    # 
+    #
     # Dart SDK: >= 3.5.0
     #
     # https://dart.dev/tools/linter-rules/avoid_futureor_void
@@ -517,7 +517,7 @@ linter:
     # If you need access to some internal code, create an issue
     # https://dart.dev/tools/linter-rules/implementation_imports
     - implementation_imports
-    
+
     # Less magic is better. In fear of future Dart versions, that remove the implicit call tear off, we should start migrating now.
     #
     # Dart SDK: 2.19 • (Linter v1.29.0)
@@ -1182,6 +1182,13 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/unnecessary_to_list_in_spreads
     - unnecessary_to_list_in_spreads
+
+    # Due to the wildcard variables language feature in Dart 3.7, multiple parameters can now be called _
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_underscores
+    - unnecessary_underscores
 
     # Prevents unintended HTML in doc comments which could cause rendering issues
     #
