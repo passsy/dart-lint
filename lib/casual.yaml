@@ -1074,6 +1074,13 @@ linter:
     # https://dart.dev/tools/linter-rules/unawaited_futures
     # - unawaited_futures
 
+    # No await? No async!
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_async
+    - unnecessary_async
+
     # Replace `return await future;` with `return future;`
     #
     # This check causes false positives in try-catch blocks, where removing await would not catch the exception anymore

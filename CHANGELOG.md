@@ -6,6 +6,7 @@ Requires Dart `sdk: '>=3.7.0'`
 
 - Enable [`unnecessary_underscores`](https://dart.dev/tools/linter-rules/unnecessary_underscores.html)
 - Enable [`strict_top_level_inference`](https://dart.dev/tools/linter-rules/strict_top_level_inference.html)
+- Enable [`unnecessary_async`](https://dart.dev/tools/linter-rules/unnecessary_async.html)
 
 ## 2.7.0
 

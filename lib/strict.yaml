@@ -1029,7 +1029,7 @@ linter:
     #
     # ```dart
     # final _formKey = GlobalKey(); // warning
-    # final GlobalKey _formKey = GlobalKey(); // ok 
+    # final GlobalKey _formKey = GlobalKey(); // ok
     #
     # final animationCurve = Curves.easeOut; // warning
     # final Curve animationCurve = Curves.easeOut; // ok
@@ -1076,6 +1076,13 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/unawaited_futures
     # - unawaited_futures
+
+    # No await? No async!
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_async
+    - unnecessary_async
 
     # Replace `return await future;` with `return future;`
     #
