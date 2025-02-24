@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.8.0
+
+Requires Dart `sdk: '>=3.7.0'`
 ## 2.7.0
 
 - Enable [`use_truncating_division`](https://dart.dev/tools/linter-rules/use_truncating_division.html)
