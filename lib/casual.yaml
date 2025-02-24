@@ -132,14 +132,14 @@ linter:
     # Avoid using FutureOr<void> because the synchronous type void makes no sense since it can't be assigned to a variable
     #
     # Definitly never use it as return type of a function.
-    # 
+    #
     # Exception: It is ok to use it as parameter (also constructor parameter) to accept both a synchronous and asynchronous callback for flexability in API design
-    # 
+    #
     # ```
     # void executeTask(FutureOr<void> Function() task) async { // ok
     #   await task();
     # }
-    # 
+    #
     # void main() {
     #   executeTask(() => print('Sync task')); // sync is allowed
     #   executeTask(() async => await Future.delayed(Duration(seconds: 1), () => print('Async task'))); // will be awaited
@@ -147,7 +147,7 @@ linter:
     # ```
     #
     # See discusson at https://github.com/dart-lang/sdk/issues/59232
-    # 
+    #
     # Dart SDK: >= 3.5.0
     #
     # https://dart.dev/tools/linter-rules/avoid_futureor_void
@@ -448,7 +448,17 @@ linter:
     # https://dart.dev/tools/linter-rules/do_not_use_environment
     # - do_not_use_environment
 
-    # Ensures that ignore comments are properly documented with a reason
+    # The reason for the ignore is usually self-evident and an additional comment would add unnecessary verbosity.
+    # Also, when temporarily ignoring rules for debugging or development purposes, having to add documentation creates unnecessary overhead
+    #
+    # Example where it is annoying:
+    #
+    # ```dart
+    # } catch (e, stack) {
+    #   // ignore: avoid_print
+    #   print(stack);
+    # }
+    # ```
     #
     # Dart SDK: >= 3.5.0
     #
