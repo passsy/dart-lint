@@ -5,6 +5,7 @@
 Requires Dart `sdk: '>=3.12.0'`
 
 - Enable [`simple_directive_paths`](https://dart.dev/tools/linter-rules/simple_directive_paths.html) for strict, casual and package modes
+- Enable [`var_with_no_type_annotation`](https://dart.dev/tools/linter-rules/var_with_no_type_annotation.html) for strict, casual and package modes
 
 ## 2.12.0
 
