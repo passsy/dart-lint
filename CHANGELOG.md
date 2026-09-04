@@ -4,6 +4,8 @@
 
 Requires Dart `sdk: '>=3.10.0'`
 
+- Enable [`switch_on_type`](https://dart.dev/tools/linter-rules/switch_on_type.html) for strict, casual and package modes
+
 ## 2.10.0
 
 Requires Dart `sdk: '>=3.9.0'`

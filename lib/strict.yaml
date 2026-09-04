@@ -1043,16 +1043,15 @@ linter:
     # https://dart.dev/tools/linter-rules/strict_top_level_inference
     - strict_top_level_inference
 
-    # Prefer object patterns over switching on Type values, which can miss subtypes.
-    # Disabled because Dart 3.9 also reports ordinary dynamic switches.
-    # TODO: Reassess when the minimum SDK reaches Dart 3.10.0, which fixes that false positive.
-    # Exact-type dispatch still needs judgment: object patterns also match subtypes.
+    # Prefer object patterns over switching on Type values. Exact-type dispatch
+    # can silently miss subtypes when a class hierarchy changes.
+    # Dart 3.10.0 fixes the false positives for ordinary dynamic switches.
     # https://github.com/dart-lang/sdk/issues/61355
     #
     # Dart SDK: >= 3.9.0
     #
     # https://dart.dev/tools/linter-rules/switch_on_type
-    # - switch_on_type
+    - switch_on_type
 
     # First test, then cast
     #
