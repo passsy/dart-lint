@@ -44,15 +44,6 @@ linter:
     # https://dart.dev/tools/linter-rules/always_declare_return_types
     # - always_put_required_named_parameters_first
 
-    # Always use package: imports.
-    # While both, relative and package imports are fine, package imports are preferred because they allow for easy find
-    # and replace
-    # Conflicting with: prefer_relative_imports, avoid_relative_lib_imports
-    #
-    # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
-    # https://dart.dev/tools/linter-rules/always_use_package_imports
-    - always_use_package_imports
-
     # Since dart 2.0 dart is a sound language, specifying types is not required anymore.
     # `var foo = 10;` is enough information for the compiler to make foo an int.
     # Violates Effective Dart "AVOID type annotating initialized local variables".
@@ -64,6 +55,15 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/always_specify_types
     # - always_specify_types
+
+    # Always use package: imports.
+    # While both, relative and package imports are fine, package imports are preferred because they allow for easy find
+    # and replace
+    # Conflicting with: prefer_relative_imports, avoid_relative_lib_imports
+    #
+    # Dart SDK: >= 2.10.0-10.0.dev • (Linter v0.1.118)
+    # https://dart.dev/tools/linter-rules/always_use_package_imports
+    - always_use_package_imports
 
     # Protect against unintentionally overriding superclass members
     #
@@ -112,46 +112,22 @@ linter:
     # https://dart.dev/tools/linter-rules/avoid_classes_with_only_static_members
     # - avoid_classes_with_only_static_members
 
-    # Never accidentally use dynamic invocations, as it makes type error very hard to find
-    #
-    # Dart SDK: unreleased • (Linter v1.0)
-    # https://dart.dev/tools/linter-rules/avoid_dynamic_calls
-    - avoid_dynamic_calls
-
     # Since all dart code may be compiled to JS this should be considered.
     # Disable it manually when you're explicitly not targeting web
     #
     # https://dart.dev/tools/linter-rules/avoid_double_and_int_checks
     - avoid_double_and_int_checks
 
+    # Never accidentally use dynamic invocations, as it makes type error very hard to find
+    #
+    # Dart SDK: unreleased • (Linter v1.0)
+    # https://dart.dev/tools/linter-rules/avoid_dynamic_calls
+    - avoid_dynamic_calls
+
     # Prevents accidental empty else cases. See samples in documentation
     #
     # https://dart.dev/tools/linter-rules/avoid_empty_else
     # - avoid_empty_else
-
-    # Avoid using FutureOr<void> because the synchronous type void makes no sense since it can't be assigned to a variable
-    #
-    # Definitly never use it as return type of a function.
-    #
-    # Exception: It is ok to use it as parameter (also constructor parameter) to accept both a synchronous and asynchronous callback for flexability in API design
-    #
-    # ```
-    # void executeTask(FutureOr<void> Function() task) async { // ok
-    #   await task();
-    # }
-    #
-    # void main() {
-    #   executeTask(() => print('Sync task')); // sync is allowed
-    #   executeTask(() async => await Future.delayed(Duration(seconds: 1), () => print('Async task'))); // will be awaited
-    # }
-    # ```
-    #
-    # See discusson at https://github.com/dart-lang/sdk/issues/59232
-    #
-    # Dart SDK: >= 3.5.0
-    #
-    # https://dart.dev/tools/linter-rules/avoid_futureor_void
-    - avoid_futureor_void
 
     # It is expected that mutable objects which override hash & equals shouldn't be used as keys for hashmaps.
     # This one use case doesn't make all hash & equals implementations for mutable classes bad.
@@ -181,6 +157,30 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/avoid_function_literals_in_foreach_calls
     - avoid_function_literals_in_foreach_calls
+
+    # Avoid using FutureOr<void> because the synchronous type void makes no sense since it can't be assigned to a variable
+    #
+    # Definitly never use it as return type of a function.
+    #
+    # Exception: It is ok to use it as parameter (also constructor parameter) to accept both a synchronous and asynchronous callback for flexability in API design
+    #
+    # ```
+    # void executeTask(FutureOr<void> Function() task) async { // ok
+    #   await task();
+    # }
+    #
+    # void main() {
+    #   executeTask(() => print('Sync task')); // sync is allowed
+    #   executeTask(() async => await Future.delayed(Duration(seconds: 1), () => print('Async task'))); // will be awaited
+    # }
+    # ```
+    #
+    # See discusson at https://github.com/dart-lang/sdk/issues/59232
+    #
+    # Dart SDK: >= 3.5.0
+    #
+    # https://dart.dev/tools/linter-rules/avoid_futureor_void
+    - avoid_futureor_void
 
     # Don't break value types by implementing them
     # https://dart.dev/tools/linter-rules/avoid_implementing_value_types
@@ -351,17 +351,17 @@ linter:
     # https://dart.dev/tools/linter-rules/collection_methods_unrelated_type
     - collection_methods_unrelated_type
 
-    # False positives:
-    # - https://github.com/dart-lang/linter/issues/1142
-    #
-    # https://dart.dev/tools/linter-rules/comment_references
-    # - comment_references
-
     # Sorting doesn't catch any errors
     #
     # Linter v1.26.0
     # https://dart.dev/tools/linter-rules/combinators_ordering
     # - combinators_ordering
+
+    # False positives:
+    # - https://github.com/dart-lang/linter/issues/1142
+    #
+    # https://dart.dev/tools/linter-rules/comment_references
+    # - comment_references
 
     # Checks that files in conditional imports exist
     #
@@ -1000,13 +1000,6 @@ linter:
     # https://dart.dev/tools/linter-rules/sort_unnamed_constructors_first
     # - sort_unnamed_constructors_first
 
-    # Never forget a return or variable type!
-    #
-    # Dart SDK: >= 3.7.0
-    #
-    # https://dart.dev/tools/linter-rules/strict_top_level_inference
-    - strict_top_level_inference
-
     # This rule is too opinionated and doesn't have a clear benefit
     # The complexity of what "obvious" means is too high
     #
@@ -1029,6 +1022,13 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/specify_nonobvious_property_types
     # - specify_nonobvious_property_types
+
+    # Never forget a return or variable type!
+    #
+    # Dart SDK: >= 3.7.0
+    #
+    # https://dart.dev/tools/linter-rules/strict_top_level_inference
+    - strict_top_level_inference
 
     # First test, then cast
     #
@@ -1066,6 +1066,13 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/unawaited_futures
     # - unawaited_futures
+
+    # Prevents unintended HTML in doc comments which could cause rendering issues
+    #
+    # Dart SDK: >= 3.5.0
+    #
+    # https://dart.dev/tools/linter-rules/unintended_html_in_doc_comment
+    - unintended_html_in_doc_comment
 
     # No await? No async!
     #
@@ -1217,13 +1224,6 @@ linter:
     # https://dart.dev/tools/linter-rules/unnecessary_underscores
     - unnecessary_underscores
 
-    # Prevents unintended HTML in doc comments which could cause rendering issues
-    #
-    # Dart SDK: >= 3.5.0
-    #
-    # https://dart.dev/tools/linter-rules/unintended_html_in_doc_comment
-    - unintended_html_in_doc_comment
-
     # It's just unused code, nothing to worry about
     #
     # Linter v1.28.0
@@ -1280,12 +1280,6 @@ linter:
     # https://dart.dev/tools/linter-rules/use_function_type_syntax_for_parameters
     - use_function_type_syntax_for_parameters
 
-    # Don't use the modulo operator for isEven/isOdd checks
-    #
-    # Linter v0.1.116
-    # https://dart.dev/tools/linter-rules/use_is_even_rather_than_modulo
-    # - use_is_even_rather_than_modulo
-
     # Write `if (nullableBool ?? false)` instead of `if (nullableBool == true)`
     # Not enabled, because `nullableBool == true` is very explicit, whereas `nullableBool ?? false` requires
     # cognitive effort to process
@@ -1295,13 +1289,11 @@ linter:
     # https://dart.dev/tools/linter-rules/use_if_null_to_convert_nulls_to_bools
     # - use_if_null_to_convert_nulls_to_bools
 
-    # Replace const values with predefined constants
-    # `const Duration(seconds: 0)` -> `Duration.zero`
+    # Don't use the modulo operator for isEven/isOdd checks
     #
-    # Dart SDK: 2.13.0 • (Linter v1.0.0)
-    #
-    # https://dart.dev/tools/linter-rules/use_named_constants
-    - use_named_constants
+    # Linter v0.1.116
+    # https://dart.dev/tools/linter-rules/use_is_even_rather_than_modulo
+    # - use_is_even_rather_than_modulo
 
     # Adding a key without using it isn't helpful in applications, only for the Flutter SDK
     # https://github.com/dart-lang/linter/issues/3384
@@ -1318,6 +1310,14 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/use_late_for_private_fields_and_variables
     # - use_late_for_private_fields_and_variables
+
+    # Replace const values with predefined constants
+    # `const Duration(seconds: 0)` -> `Duration.zero`
+    #
+    # Dart SDK: 2.13.0 • (Linter v1.0.0)
+    #
+    # https://dart.dev/tools/linter-rules/use_named_constants
+    - use_named_constants
 
     # Use rethrow to preserve the original stacktrace.
     # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception
@@ -1358,17 +1358,17 @@ linter:
     # https://dart.dev/tools/linter-rules/use_test_throws_matchers
     - use_test_throws_matchers
 
+    # Naming is hard, strict rules don't help
+    #
+    # https://dart.dev/tools/linter-rules/use_to_and_as_if_applicable
+    # - use_to_and_as_if_applicable
+
     # Use the truncating division operator (~/) for integer division
     #
     # Dart SDK: >= 3.5.0
     #
     # https://dart.dev/tools/linter-rules/use_truncating_division
     # - use_truncating_division
-
-    # Naming is hard, strict rules don't help
-    #
-    # https://dart.dev/tools/linter-rules/use_to_and_as_if_applicable
-    # - use_to_and_as_if_applicable
 
     # Catches invalid regular expressions.
     #
