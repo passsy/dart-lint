@@ -5,7 +5,6 @@
 Requires Dart `sdk: '>=3.8.0'`
 
 - Enable [`unnecessary_ignore`](https://dart.dev/tools/linter-rules/unnecessary_ignore.html) for strict mode
-- Disable [`unnecessary_ignore`](https://dart.dev/tools/linter-rules/unnecessary_ignore.html) for package mode
 
 ## 2.8.0
 
