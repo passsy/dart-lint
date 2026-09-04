@@ -972,6 +972,15 @@ linter:
     # https://dart.dev/tools/linter-rules/secure_pubspec_urls
     - secure_pubspec_urls
 
+    # Use the inferred member name when a variable pattern repeats it.
+    # Disabled because the change is style-only and the explicit member name can
+    # be clearer to readers who are less familiar with pattern shorthand.
+    #
+    # Dart SDK: >= 3.11.0
+    #
+    # https://dart.dev/tools/linter-rules/simplify_variable_pattern
+    # - simplify_variable_pattern
+
     # Flutter only, prefer SizedBox over Container which offers a const constructors
     # Dart SDK: >= 2.9.0-4.0.dev • (Linter v0.1.115)
     # https://dart.dev/tools/linter-rules/sized_box_for_whitespace

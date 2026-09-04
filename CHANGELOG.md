@@ -4,6 +4,8 @@
 
 Requires Dart `sdk: '>=3.11.0'`
 
+- Enable [`simplify_variable_pattern`](https://dart.dev/tools/linter-rules/simplify_variable_pattern.html) for strict and package modes
+
 ## 2.11.0
 
 Requires Dart `sdk: '>=3.10.0'`
