@@ -28,33 +28,19 @@ project so the author can open the project once and inspect all new rules togeth
   include chain. Package mode inherits strict rules; do not duplicate inherited
   additions there. Account for its own overrides when a rule changes or disappears.
 
-## Next release: Dart 3.12
+## Next release: Dart 3.13
 
-Start from the Dart 3.11 work in [PR #88](https://github.com/passsy/dart-lint/pull/88), prepared as lint 2.12.0.
-Verify that work has merged and the package was published before treating it as the baseline: a release PR does not prove publication.
-For Dart 3.12 use `dart3.12`; 2.13.0 is the expected package version only if 2.12.0 is the published preceding version and 2.13.0 is unused.
-Discover the 3.12 rule inventory afresh against the 3.11 SDK baseline.
+Start from the Dart 3.12 work on `dart3.12`, prepared as lint 2.13.0.
+Verify that work has merged and the package was published before treating it as the baseline because a release branch does not prove publication.
+For Dart 3.13 use `dart3.13`; 2.14.0 is the expected package version only if 2.13.0 is the published preceding version and 2.14.0 is unused.
+Discover the 3.13 rule inventory afresh against the 3.12 SDK baseline.
 
-Preserve these accepted choices unless the author changes them:
+For Dart 3.13, revisit `var_with_no_type_annotation` against its upstream state before changing or removing it.
+The prepared Dart 3.12 configuration enables it in strict, casual and inherited package mode as a semantics-preserving migration guard.
+Dart 3.13 keeps the rule registered but it becomes a no-op for libraries using the 3.13 language version.
 
-- `simplify_variable_pattern`: enabled in strict and inherited by package mode; disabled in casual because same-name pattern shorthand is a readability and concision preference rather than defect prevention.
-- `unnecessary_unawaited`: enabled in strict and inherited by package mode; disabled
-  in casual. The author values removing redundant, no-op wrappers as clutter
-  reduction at zero cost. Do not disable it merely because it catches no defect.
-- `unnecessary_ignore`: enabled in strict, disabled in casual, explicitly false in
-  package mode because packages may need suppression comments across supported SDKs.
-- `use_null_aware_elements`: disabled while the minimum SDK is below 3.12.0 because
-  [#62623](https://github.com/dart-lang/sdk/issues/62623) drops pattern guards. The
-  fix is included in Dart 3.12.0. Enable strict when the package minimum reaches
-  3.12.0; package mode inherits it and casual remains disabled as a style preference.
-  Running a trial on a newer SDK does not satisfy the package minimum requirement.
-- [#60814](https://github.com/dart-lang/sdk/issues/60814) requests chain-call support
-  and was closed as working as intended. Do not treat it as an outstanding bug or
-  add it as a gate to the agreed 3.12 enablement plan.
-
-After each release, refresh this section for the next SDK and remove completed
-release-specific instructions. Retain accepted policy choices and future revisit
-or enablement gates; do not accumulate past inventories or private trial history.
+After each release, refresh this section for the next SDK and remove completed release-specific instructions.
+Retain future revisit or enablement gates, but do not accumulate stable policy, past inventories or private trial history.
 
 ## Follow the repository's release history
 
