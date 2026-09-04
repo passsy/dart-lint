@@ -1,6 +1,6 @@
 ---
 name: dart-lint-release
-description: Prepare complete releases of passsy/dart-lint, assess every new rule in substantial apps, provide combined project trials with all new rules enabled, and update release metadata. Use when adding SDK lint support or preparing a release of package lint.
+description: Prepare complete releases of passsy/dart-lint, assess every new rule in substantial apps, provide combined project trials, and complete authorized publishing, tagging, and GitHub releases. Use when adding SDK lint support or preparing or delivering a release of package lint.
 ---
 
 # Prepare a dart-lint release
@@ -28,17 +28,27 @@ project so the author can open the project once and inspect all new rules togeth
   include chain. Package mode inherits strict rules; do not duplicate inherited
   additions there. Account for its own overrides when a rule changes or disappears.
 
-## Carry forward the Dart 3.8 decisions
+## Next release: Dart 3.10
 
-For the next SDK release, start from the merged Dart 3.8 work in
-[PR #85](https://github.com/passsy/dart-lint/pull/85), prepared as lint 2.9.0.
+Start from the merged Dart 3.9 work in
+[PR #86](https://github.com/passsy/dart-lint/pull/86), released as lint 2.10.0.
 Verify the current default branch, release tags and pub.dev version independently:
-a merged PR does not prove publication. For Dart 3.9 use `dart3.9`; 2.10.0 is the
-expected package version only if 2.9.0 remains the preceding version and 2.10.0
-is unused. Discover the 3.9 rule inventory afresh against the 3.8 SDK baseline.
+a merged PR does not prove publication. For Dart 3.10 use `dart3.10`; 2.11.0 is the
+expected package version only if 2.10.0 remains the preceding version and 2.11.0
+is unused. Discover the 3.10 rule inventory afresh against the 3.9 SDK baseline.
 
 Preserve these accepted choices unless the author changes them:
 
+- `switch_on_type`: revisit when the minimum SDK reaches 3.10.0. It remains disabled
+  in strict and casual (and therefore package mode) because Dart 3.9 reports false
+  positives for ordinary switches on dynamic values; see
+  [#61355](https://github.com/dart-lang/sdk/issues/61355). Verify the fix in the
+  target SDK and reassess practical value before enabling; this is a revisit point,
+  not an automatic enablement promise. Account for exact-type dispatch versus
+  subtype matching when judging suggested rewrites.
+- `unnecessary_unawaited`: enabled in strict and inherited by package mode; disabled
+  in casual. The author values removing redundant, no-op wrappers as clutter
+  reduction at zero cost. Do not disable it merely because it catches no defect.
 - `unnecessary_ignore`: enabled in strict, disabled in casual, explicitly false in
   package mode because packages may need suppression comments across supported SDKs.
 - `use_null_aware_elements`: disabled while the minimum SDK is below 3.12.0 because
@@ -50,10 +60,9 @@ Preserve these accepted choices unless the author changes them:
   and was closed as working as intended. Do not treat it as an outstanding bug or
   add it as a gate to the agreed 3.12 enablement plan.
 
-The package map conversion (#83) and rule sorting (#84) were separate merged
-prerequisites. Preserve them in the base; do not include them again in SDK releases.
-The remaining guidance applies to every release; this section records the accepted
-3.8 baseline, not the inventory or release status of a future SDK.
+After each release, refresh this section for the next SDK and remove completed
+release-specific instructions. Retain accepted policy choices and future revisit
+or enablement gates; do not accumulate past inventories or private trial history.
 
 ## Follow the repository's release history
 
@@ -62,10 +71,10 @@ Inspect recent SDK branches, their commits and release tags before planning deli
 `git show <version-bump-or-rule-commit>`. Confirm conventions from actual history;
 do not assume a generic release PR workflow.
 
-- Work on `dart{major.minor}` (for example `dart3.8`). Check local and remote refs
+- Work on `dart{major.minor}` (for example `dart3.10`). Check local and remote refs
   before creating it; preserve existing branch work and uncommitted edits. Base the
   release on the current default branch, including merged prerequisite cleanups.
-- Prepare a metadata commit first, named like `Bump for Dart 3.8 version`: package
+- Prepare a metadata commit first, named like `Bump for Dart 3.10 version`: package
   version, SDK constraint, README compatibility row, and changelog release heading.
   Assessment and validation can finish before arranging this commit sequence.
 - Follow with one commit per rule change, named like `Enable unnecessary_ignore
@@ -85,9 +94,8 @@ do not assume a generic release PR workflow.
   release commits.
 - Preserve the individual release commits when integrating the branch. Historical
   tags such as `v2.8.0` point at the final SDK-branch commit, not the later merge
-  commit. Check current conventions before tagging; Git history alone does not
-  establish the pub.dev publication order. A release PR is optional unless requested
-  or required by current repository policy.
+  commit. Follow the publish → tag → GitHub Release sequence below. A release PR is
+  optional unless requested or required by current repository policy.
 
 This describes the prepared history, not additional authorization: create commits,
 push, open PRs, merge, tag or publish only within the user's current delivery grant.
@@ -361,6 +369,35 @@ and report the exact validation gap; do not label the release fully verified.
 Avoid adding permanent dependencies or fixtures just to perform these checks.
 Summarize changed settings, versions, evidence, checks, and any remaining decisions.
 Respect existing authorization; stop before any unauthorized publication action.
+
+## Publish, tag, and create the GitHub Release
+
+Release delivery is not finished at pub.dev publication: create and push the version
+tag **after publishing**, then create the GitHub Release. Perform only the steps
+authorized by the current request; preparing or merging a PR is not permission to
+publish. If the author already completed a step, verify it and continue without
+repeating it.
+
+1. Record the exact validated release commit and package version. When authorized,
+   publish that candidate to pub.dev. Verify the version is actually available and
+   its metadata and public configurations match the candidate. A successful dry run
+   or a merged PR is not publication evidence.
+2. After publication, create an annotated `v<package-version>` tag at that exact
+   candidate commit and push that tag when authorized. Check local and remote tags
+   first. Reuse an existing matching tag, especially one created by the author;
+   never recreate, move, or force-push a published tag. Stop on a mismatch and report
+   it. Verify the remote tag's dereferenced commit, not just its name.
+3. Create the GitHub Release using the existing remote tag. Check for an existing
+   release first to avoid duplicates. With GitHub CLI, use `gh release create
+   v<package-version> --verify-tag --notes-file <notes-file>` so a missing tag cannot
+   be silently created at the default branch. Use only that version's changelog
+   section as release notes, including its minimum SDK requirement; keep private
+   trial evidence out. Match the repository's release naming conventions. Mark the
+   newest stable release as latest; use `--latest=false` when backfilling older
+   versions. Do not create a draft or prerelease for a published stable package.
+4. Verify the published GitHub Release URL, tag, notes, draft/prerelease state and
+   latest designation. Report pub.dev publication, remote tag, and GitHub Release
+   status separately, including any step still awaiting authorization.
 
 ## Combined review handoff
 
