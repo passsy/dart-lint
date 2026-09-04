@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.10.0
+
+Requires Dart `sdk: '>=3.9.0'`
+
 ## 2.9.0
 
 Requires Dart `sdk: '>=3.8.0'`
