@@ -4,6 +4,8 @@
 
 Requires Dart `sdk: '>=3.12.0'`
 
+- Enable [`simple_directive_paths`](https://dart.dev/tools/linter-rules/simple_directive_paths.html) for strict, casual and package modes
+
 ## 2.12.0
 
 Requires Dart `sdk: '>=3.11.0'`

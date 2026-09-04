@@ -972,6 +972,14 @@ linter:
     # https://dart.dev/tools/linter-rules/secure_pubspec_urls
     - secure_pubspec_urls
 
+    # Keeps import, export and part paths minimal so equivalent file references have one obvious spelling.
+    # The automatic fix only removes redundant `./` and resolvable `../` segments.
+    #
+    # Dart SDK: >= 3.12.0
+    #
+    # https://dart.dev/tools/linter-rules/simple_directive_paths
+    - simple_directive_paths
+
     # Use the inferred member name when a variable pattern repeats it.
     # Disabled because the change is style-only and the explicit member name can
     # be clearer to readers who are less familiar with pattern shorthand.
