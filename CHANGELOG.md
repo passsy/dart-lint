@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.9.0
+
+Requires Dart `sdk: '>=3.8.0'`
+
+- Enable [`unnecessary_ignore`](https://dart.dev/tools/linter-rules/unnecessary_ignore.html) for strict mode
+
 ## 2.8.0
 
 Requires Dart `sdk: '>=3.7.0'`
