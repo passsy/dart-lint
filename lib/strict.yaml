@@ -944,6 +944,16 @@ linter:
     # https://dart.dev/tools/linter-rules/recursive_getters
     - recursive_getters
 
+    # Flags deprecated declarations in versions such as 2.0.0 and 0.2.0.
+    # Disabled because a breaking release need not remove every deprecated API.
+    # Compatibility shims and deprecated overrides can remain useful; removing them
+    # solely to satisfy a version-number policy can change behavior unnecessarily.
+    #
+    # Dart SDK: >= 3.10.0
+    #
+    # https://dart.dev/tools/linter-rules/remove_deprecations_in_breaking_versions
+    # - remove_deprecations_in_breaking_versions
+
     # Dartfmt formats differently when adding trailing commas. This lint makes sure there is zero doubt in how code
     # should be formatted.
     #
