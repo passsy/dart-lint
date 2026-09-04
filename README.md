@@ -1,10 +1,10 @@
-[![Pub](https://img.shields.io/pub/v/lint.svg)](https://pub.dartlang.org/packages/lint) 
+[![Pub](https://img.shields.io/pub/v/lint.svg)](https://pub.dartlang.org/packages/lint)
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
 # Lint for Dart/Flutter
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/1096485/66209493-bc0ec900-e6b7-11e9-80c6-222e778f0c8d.png">
+  <img alt="Lint logo" src="https://user-images.githubusercontent.com/1096485/66209493-bc0ec900-e6b7-11e9-80c6-222e778f0c8d.png">
 </p>
 
 `lint` is a hand-picked, open-source, community-driven collection of lint rules for Dart and Flutter projects.
@@ -15,7 +15,7 @@ This package can be used as a replacement for [`package:lints`](https://pub.dev/
 `lint` supports 3 different set of rules:
 - `strict`: tries to be strict but not annoying. Perfect for production app code
 - `casual`: great when prototyping, to be used in code samples, any non-production code
-- `package`: like `strict` but for dart packages, that have a public API 
+- `package`: like `strict` but for dart packages, that have a public API
 
 ## Install
 
@@ -58,9 +58,8 @@ linter:
 
 ## Lint badge
 
-You're using lint in your open-source project? 
+You're using lint in your open-source project?
 Add the badge to your `README.md` show that you honor strict lint rules
-
 
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 ```md
@@ -69,7 +68,7 @@ Add the badge to your `README.md` show that you honor strict lint rules
 
 ## Comparison with other lint packages
 
-A detailed comparison of all linting packages for dart can be found at https://rydmike.com/blog_flutter_linting.html
+A detailed comparison of all linting packages for dart can be found at [rydmike.com/blog_flutter_linting.html](https://rydmike.com/blog_flutter_linting.html)
 
 `lint` is among the strictest but not the strictest. It tires to find the right balance between useful and annoying.
 
@@ -79,6 +78,7 @@ Generally, you can just put `lint: ^2.0.0` in your `pubspec.yaml` and pub get th
 
 | Dart Version | Lint Version                                                        |
 |--------------|---------------------------------------------------------------------|
+| `3.11`       | [`2.12.0`](https://pub.dev/packages/lint/versions/2.12.0/changelog) |
 | `3.10`       | [`2.11.0`](https://pub.dev/packages/lint/versions/2.11.0/changelog) |
 | `3.9`        | [`2.10.0`](https://pub.dev/packages/lint/versions/2.10.0/changelog) |
 | `3.8`        | [`2.9.0`](https://pub.dev/packages/lint/versions/2.9.0/changelog)   |
@@ -97,7 +97,6 @@ Generally, you can just put `lint: ^2.0.0` in your `pubspec.yaml` and pub get th
 | `2.14`       | [`1.7.0`](https://pub.dev/packages/lint/versions/1.7.0/changelog)   |
 | `2.13`       | [`1.6.0`](https://pub.dev/packages/lint/versions/1.6.0/changelog)   |
 | `2.12`       | [`1.5.0`](https://pub.dev/packages/lint/versions/1.5.0/changelog)   |
-    
 
 ## Comparison to discontinued package:pedantic
 
@@ -112,10 +111,10 @@ For developers outside Google, it is the norm to have separate lint rules per pr
 One project might enable more rules then others.
 
 `lint` enables a majority of lint rules, leaving out contradictory and very opinionated rules.
- 
+
 ## License
 
-```
+```text
 Copyright 2022 Pascal Welsch
 
 Licensed under the Apache License, Version 2.0 (the "License");

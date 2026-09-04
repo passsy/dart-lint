@@ -28,24 +28,16 @@ project so the author can open the project once and inspect all new rules togeth
   include chain. Package mode inherits strict rules; do not duplicate inherited
   additions there. Account for its own overrides when a rule changes or disappears.
 
-## Next release: Dart 3.10
+## Next release: Dart 3.12
 
-Start from the merged Dart 3.9 work in
-[PR #86](https://github.com/passsy/dart-lint/pull/86), released as lint 2.10.0.
-Verify the current default branch, release tags and pub.dev version independently:
-a merged PR does not prove publication. For Dart 3.10 use `dart3.10`; 2.11.0 is the
-expected package version only if 2.10.0 remains the preceding version and 2.11.0
-is unused. Discover the 3.10 rule inventory afresh against the 3.9 SDK baseline.
+Start from the Dart 3.11 work in [PR #88](https://github.com/passsy/dart-lint/pull/88), prepared as lint 2.12.0.
+Verify that work has merged and the package was published before treating it as the baseline: a release PR does not prove publication.
+For Dart 3.12 use `dart3.12`; 2.13.0 is the expected package version only if 2.12.0 is the published preceding version and 2.13.0 is unused.
+Discover the 3.12 rule inventory afresh against the 3.11 SDK baseline.
 
 Preserve these accepted choices unless the author changes them:
 
-- `switch_on_type`: revisit when the minimum SDK reaches 3.10.0. It remains disabled
-  in strict and casual (and therefore package mode) because Dart 3.9 reports false
-  positives for ordinary switches on dynamic values; see
-  [#61355](https://github.com/dart-lang/sdk/issues/61355). Verify the fix in the
-  target SDK and reassess practical value before enabling; this is a revisit point,
-  not an automatic enablement promise. Account for exact-type dispatch versus
-  subtype matching when judging suggested rewrites.
+- `simplify_variable_pattern`: enabled in strict and inherited by package mode; disabled in casual because same-name pattern shorthand is a readability and concision preference rather than defect prevention.
 - `unnecessary_unawaited`: enabled in strict and inherited by package mode; disabled
   in casual. The author values removing redundant, no-op wrappers as clutter
   reduction at zero cost. Do not disable it merely because it catches no defect.
@@ -74,14 +66,16 @@ do not assume a generic release PR workflow.
 - Work on `dart{major.minor}` (for example `dart3.10`). Check local and remote refs
   before creating it; preserve existing branch work and uncommitted edits. Base the
   release on the current default branch, including merged prerequisite cleanups.
-- Prepare a metadata commit first, named like `Bump for Dart 3.10 version`: package
-  version, SDK constraint, README compatibility row, and changelog release heading.
+- Structure the release as `1 + N` commits: one metadata commit plus exactly one commit for each of the `N` added or changed rules.
+  This is not a fixed three-commit layout; the number of commits follows the number of rule changes.
+- Prepare a metadata commit first, named like `Bump for Dart 3.10 version`: package version, SDK constraint, README compatibility row, and changelog release heading.
+  Include the release-guidance refresh in this metadata commit instead of creating a separate bookkeeping commit.
   Assessment and validation can finish before arranging this commit sequence.
-- Follow with one commit per rule change, named like `Enable unnecessary_ignore
-  for strict mode` or `Add use_null_aware_elements (disabled)`. Keep a rule's strict,
-  casual and package decisions together. Include its changelog entry in that commit
-  when it changes enabled behavior; newly added disabled entries historically have
-  no changelog bullet. Do not squash the whole SDK update into one release commit.
+- Follow with exactly one commit per added or changed rule, named like `Enable unnecessary_ignore for strict mode` or `Add use_null_aware_elements (disabled)`.
+  Keep a rule's strict, casual and package decisions together, along with every changelog, documentation, test, and configuration change belonging to that rule.
+  Include its changelog entry in that commit when it changes enabled behavior; newly added disabled entries historically have no changelog bullet.
+  This makes each rule independently cherry-pickable.
+  Do not split one rule across commits, group multiple rules into one commit, or squash the whole SDK update into one release commit.
 - Match the existing changelog: short Enable/Disable/Remove bullets with rule links
   and a brief mode qualifier. Keep substantial rationale, issue links and future
   enablement TODOs in the YAML comments. Preserve the existing release heading and
@@ -341,6 +335,10 @@ do not present the release as fully prepared while rules remain unassessed.
   Do not promise changes that are merely queued or overwrite a published entry.
 
 ## Validate and hand off
+
+For every Markdown file changed during a release, keep one sentence per line and never hard-wrap prose at a fixed column such as 80 characters.
+After every Markdown edit, run the system-installed `markdownlint-cli2 --config ~/.markdownlint-cli2.jsonc <changed-markdown-files>` from the repository and fix every reported issue before continuing.
+Always pass the shared config explicitly; do not rely on config auto-discovery from the project directory.
 
 For each rule, inspect the diff for scope, duplicate entries, enabled/disabled
 state, alphabetical neighbors, attached comments, and block spacing. Count disabled

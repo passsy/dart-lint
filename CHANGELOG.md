@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.12.0
+
+Requires Dart `sdk: '>=3.11.0'`
+
 ## 2.11.0
 
 Requires Dart `sdk: '>=3.10.0'`
@@ -96,7 +100,7 @@ Requires Dart `sdk: '>=3.0.0'`
 
 ## 2.1.1
 
-- Disable `avoid_positional_boolean_parameters` due to new false positives in Dart 3.0 
+- Disable `avoid_positional_boolean_parameters` due to new false positives in Dart 3.0
 
 ## 2.1.0
 
@@ -134,7 +138,7 @@ Requires Dart `sdk: '>=2.18.0'`
 - Enable [`unnecessary_null_aware_operator_on_extension_on_nullable`](https://dart-lang.github.io/linter/lints/unnecessary_null_aware_assignments.html)
 - Enable [`unnecessary_to_list_in_spreads`](https://dart-lang.github.io/linter/lints/unnecessary_to_list_in_spreads.html)
 
-## 1.10.0 
+## 1.10.0
 
 Requires Dart `sdk: '>=2.17.0'`
 
@@ -207,7 +211,6 @@ Requires Dart `sdk: '>=2.14.0-2.0.dev <3.0.0'`
 - Enable [`prefer_null_aware_method_calls`](https://dart-lang.github.io/linter/lints/prefer_null_aware_method_calls.html)
 - Enable [`require_trailing_commas`](https://dart-lang.github.io/linter/lints/require_trailing_commas.html)
 
-
 ## 1.6.0
 
 Requires Dart `sdk: >=2.13.0 <3.0.0`
@@ -236,7 +239,7 @@ Release for stable Dart `2.12.0`
 
 Min SDK is `2.12.0-0`
 
-Widen SDK contraints as long as nnbd is still in beta. 
+Widen SDK contraints as long as nnbd is still in beta.
 
 ## 1.5.0
 
@@ -312,11 +315,11 @@ Release for Dart 2.7
 ## 1.0.0
 
 Release for Dart 2.6
- - Enable [`camel_case_extensions`](https://dart-lang.github.io/linter/lints/camel_case_extensions.html)
+- Enable [`camel_case_extensions`](https://dart-lang.github.io/linter/lints/camel_case_extensions.html)
 
 ## 0.3.1
 
-- Add `Example` tab to https://pub.dev/packages/lint
+- Add `Example` tab to [pub.dev/packages/lint](https://pub.dev/packages/lint)
 
 ## 0.3.0
 
@@ -344,7 +347,7 @@ New version schema:
 
 ## 0.2.1
 
-- Release for Dart 2.3 enables 
+- Release for Dart 2.3 enables
   - `prefer_for_elements_to_map_fromIterable`
   - `prefer_if_elements_to_conditional_expressions`
   - `prefer_inlined_adds`
