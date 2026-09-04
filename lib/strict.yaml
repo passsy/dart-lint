@@ -1119,6 +1119,14 @@ linter:
     # https://dart.dev/tools/linter-rules/unnecessary_getters_setters
     - unnecessary_getters_setters
 
+    # Finds suppression comments that no longer suppress a diagnostic.
+    # Removes misleading comments and prevents stale ignores from hiding future diagnostics.
+    #
+    # Dart SDK: >= 3.8.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_ignore
+    - unnecessary_ignore
+
     # Flutter setState is a good example where a lambda should always be used.
     # https://github.com/dart-lang/linter/issues/498
     #
