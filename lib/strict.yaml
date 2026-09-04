@@ -852,7 +852,11 @@ linter:
     # https://dart.dev/tools/linter-rules/prefer_if_null_operators
     - prefer_if_null_operators
 
-    # Terser code
+    # Terser constructors.
+    # Dart 3.12 also preserves public call-site names when private named formals initialize private fields.
+    #
+    # Private named initializing formals require Dart SDK: >= 3.12.0
+    #
     # https://dart.dev/tools/linter-rules/prefer_initializing_formals
     - prefer_initializing_formals
 
