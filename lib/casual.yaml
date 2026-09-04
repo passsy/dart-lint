@@ -1237,6 +1237,16 @@ linter:
     # https://dart.dev/tools/linter-rules/unnecessary_to_list_in_spreads
     - unnecessary_to_list_in_spreads
 
+    # Removes unawaited() around expressions annotated with @awaitNotRequired.
+    # Disabled because removing an explicit fire-and-forget marker does not prevent a defect.
+    # The wrapper may also be needed with older dependency versions without the annotation.
+    # https://github.com/dart-lang/sdk/issues/46218
+    #
+    # Dart SDK: >= 3.9.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_unawaited
+    # - unnecessary_unawaited
+
     # Due to the wildcard variables language feature in Dart 3.7, multiple parameters can now be called _
     #
     # Dart SDK: >= 3.7.0
