@@ -852,7 +852,11 @@ linter:
     # https://dart.dev/tools/linter-rules/prefer_if_null_operators
     - prefer_if_null_operators
 
-    # Terser code
+    # Terser constructors.
+    # Dart 3.12 also preserves public call-site names when private named formals initialize private fields.
+    #
+    # Private named initializing formals require Dart SDK: >= 3.12.0
+    #
     # https://dart.dev/tools/linter-rules/prefer_initializing_formals
     - prefer_initializing_formals
 
@@ -974,6 +978,14 @@ linter:
     # Linter v1.15
     # https://dart.dev/tools/linter-rules/secure_pubspec_urls
     - secure_pubspec_urls
+
+    # Keeps import, export and part paths minimal so equivalent file references have one obvious spelling.
+    # The automatic fix only removes redundant `./` and resolvable `../` segments.
+    #
+    # Dart SDK: >= 3.12.0
+    #
+    # https://dart.dev/tools/linter-rules/simple_directive_paths
+    - simple_directive_paths
 
     # Use the inferred member name when a variable pattern repeats it.
     # The rewrite preserves semantics and removes duplication. Dart 3.11 can
@@ -1369,15 +1381,14 @@ linter:
     # https://dart.dev/tools/linter-rules/use_named_constants
     - use_named_constants
 
-    # Replaces collection null checks with null-aware elements.
-    # Disabled because the automatic fix can drop pattern guards before Dart 3.12.0.
-    # TODO: Enable when the minimum supported Dart SDK reaches 3.12.0.
+    # Replaces collection null checks with shorter null-aware elements.
+    # Dart 3.12.0 fixes the automatic fix dropping pattern guards.
     # https://github.com/dart-lang/sdk/issues/62623
     #
     # Dart SDK: >= 3.8.0
     #
     # https://dart.dev/tools/linter-rules/use_null_aware_elements
-    # - use_null_aware_elements
+    - use_null_aware_elements
 
     # Use rethrow to preserve the original stacktrace.
     # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception
@@ -1434,6 +1445,14 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/valid_regexps
     - valid_regexps
+
+    # Removes redundant `var` from parameters before Dart 3.13 makes that syntax invalid.
+    # This experimental migration lint preserves the parameter's dynamic type and becomes a no-op for Dart 3.13 language libraries.
+    #
+    # Dart SDK: >= 3.12.0
+    #
+    # https://dart.dev/tools/linter-rules/var_with_no_type_annotation
+    - var_with_no_type_annotation
 
     # Don't assign anything to void
     # https://dart.dev/tools/linter-rules/void_checks

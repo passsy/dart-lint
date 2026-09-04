@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.13.0
+
+Requires Dart `sdk: '>=3.12.0'`
+
+- Enable [`simple_directive_paths`](https://dart.dev/tools/linter-rules/simple_directive_paths.html) for strict, casual and package modes
+- Enable [`var_with_no_type_annotation`](https://dart.dev/tools/linter-rules/var_with_no_type_annotation.html) for strict, casual and package modes
+- Enable private named-parameter suggestions from [`prefer_initializing_formals`](https://dart.dev/tools/linter-rules/prefer_initializing_formals.html) for strict and package modes
+- Enable [`use_null_aware_elements`](https://dart.dev/tools/linter-rules/use_null_aware_elements.html) for strict and package modes
+
 ## 2.12.0
 
 Requires Dart `sdk: '>=3.11.0'`
