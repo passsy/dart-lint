@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.10.0
+
+Requires Dart `sdk: '>=3.9.0'`
+
+- Enable [`unnecessary_unawaited`](https://dart.dev/tools/linter-rules/unnecessary_unawaited.html) for strict and package modes
+
 ## 2.9.0
 
 Requires Dart `sdk: '>=3.8.0'`

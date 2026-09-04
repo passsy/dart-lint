@@ -1030,6 +1030,17 @@ linter:
     # https://dart.dev/tools/linter-rules/strict_top_level_inference
     - strict_top_level_inference
 
+    # Prefer object patterns over switching on Type values, which can miss subtypes.
+    # Disabled because Dart 3.9 also reports ordinary dynamic switches.
+    # TODO: Reassess when the minimum SDK reaches Dart 3.10.0, which fixes that false positive.
+    # Exact-type dispatch still needs judgment: object patterns also match subtypes.
+    # https://github.com/dart-lang/sdk/issues/61355
+    #
+    # Dart SDK: >= 3.9.0
+    #
+    # https://dart.dev/tools/linter-rules/switch_on_type
+    # - switch_on_type
+
     # First test, then cast
     #
     # https://dart.dev/tools/linter-rules/test_types_in_equals
@@ -1225,6 +1236,16 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/unnecessary_to_list_in_spreads
     - unnecessary_to_list_in_spreads
+
+    # Removes unawaited() around expressions annotated with @awaitNotRequired.
+    # Disabled because removing an explicit fire-and-forget marker does not prevent a defect.
+    # The wrapper may also be needed with older dependency versions without the annotation.
+    # https://github.com/dart-lang/sdk/issues/46218
+    #
+    # Dart SDK: >= 3.9.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_unawaited
+    # - unnecessary_unawaited
 
     # Due to the wildcard variables language feature in Dart 3.7, multiple parameters can now be called _
     #
