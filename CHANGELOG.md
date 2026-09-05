@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.14.0
+
+Requires Dart `sdk: '>=3.13.0'`
+
+- Disable [`avoid_private_typedef_functions`](https://dart.dev/tools/linter-rules/avoid_private_typedef_functions.html) for strict and package modes
+- Enable [`async_return_with_no_await`](https://dart.dev/tools/linter-rules/async_return_with_no_await.html) for strict, casual and package modes
+- Enable [`empty_container_bodies`](https://dart.dev/tools/linter-rules/empty_container_bodies.html) for strict and package modes
+- Enable [`initialize_in_field_declaration`](https://dart.dev/tools/linter-rules/initialize_in_field_declaration.html) for strict, casual and package modes
+- Enable [`unnecessary_const_in_enum_constructor`](https://dart.dev/tools/linter-rules/unnecessary_const_in_enum_constructor.html) for strict and package modes
+- Enable [`unnecessary_primary_constructor_body`](https://dart.dev/tools/linter-rules/unnecessary_primary_constructor_body.html) for strict, casual and package modes
+- Enable [`unnecessary_type_name_in_constructor`](https://dart.dev/tools/linter-rules/unnecessary_type_name_in_constructor.html) for strict, casual and package modes
+- Enable [`use_declaring_parameters`](https://dart.dev/tools/linter-rules/use_declaring_parameters.html) for strict, casual and package modes
+- Enable [`use_primary_constructors`](https://dart.dev/tools/linter-rules/use_primary_constructors.html) for strict, casual and package modes
+
 ## 2.13.0
 
 Requires Dart `sdk: '>=3.12.0'`

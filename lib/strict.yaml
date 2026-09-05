@@ -80,6 +80,15 @@ linter:
     # https://dart.dev/tools/linter-rules/annotate_redeclares
     - annotate_redeclares
 
+    # Returning a Future from an async function without awaiting it is ambiguous.
+    # Together with `unnecessary_async`, this requires either removing `async` or awaiting the Future explicitly.
+    # https://github.com/dart-lang/sdk/issues/62555
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/async_return_with_no_await
+    - async_return_with_no_await
+
     # All methods should define a return type. dynamic is no exception.
     # Violates Effective Dart "PREFER annotating with dynamic instead of letting inference fail"
     #
@@ -220,10 +229,13 @@ linter:
     # https://dart.dev/tools/linter-rules/avoid_print
     - avoid_print
 
-    # Always prefer function references over typedefs.
-    # Jumping twice in code to see the signature of a lambda sucks. This is different from the flutter analysis_options
+    # Deprecated in Dart 3.13 because private typedefs can improve readability.
+    # Disabled so configurations do not enforce a deprecated preference.
+    #
+    # Dart SDK: >= 3.13.0
+    #
     # https://dart.dev/tools/linter-rules/avoid_private_typedef_functions
-    - avoid_private_typedef_functions
+    # - avoid_private_typedef_functions
 
     # Don't explicitly set defaults
     #
@@ -473,6 +485,14 @@ linter:
     # https://dart.dev/tools/linter-rules/empty_constructor_bodies
     - empty_constructor_bodies
 
+    # Replaces empty class-like declaration bodies with semicolons, matching `empty_constructor_bodies`.
+    # The mechanical rewrite removes an unnecessary body without changing behavior.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/empty_container_bodies
+    - empty_container_bodies
+
     # Don't allow empty if bodies. Works together with curly_braces_in_flow_control_structures
     #
     # https://dart.dev/tools/linter-rules/empty_statements
@@ -526,6 +546,14 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/implicit_reopen
     # - implicit_reopen
+
+    # Keeps primary-constructor-dependent initialization next to the field declaration.
+    # The primary initializer scope preserves the behavior while removing a separate initializer-list entry.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/initialize_in_field_declaration
+    - initialize_in_field_declaration
 
     # Helps to migrate switch cases from Dart 2 to Dart 3
     #
@@ -592,6 +620,15 @@ linter:
     # https://dart.dev/tools/linter-rules/literal_only_boolean_expressions
     # - literal_only_boolean_expressions
 
+    # This is a one-time Flutter ecosystem migration rather than a general code-quality rule.
+    # Dart 3.13.0 also misses export updates that were fixed in Dart 3.13.1.
+    # https://github.com/dart-lang/sdk/issues/63968
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/migrate_design_widgets
+    # - migrate_design_widgets
+
     # Code blocks in documentation comments should specify a language for better readability
     #
     # Dart SDK: >= 3.4.0
@@ -616,6 +653,15 @@ linter:
     # https://dart.dev/tools/linter-rules/no_duplicate_case_values
     - no_duplicate_case_values
 
+    # Disabled because Dart 3.13.0 and 3.13.1 report a false positive for if-case statements with dynamic scrutinees.
+    # The fix has landed on the SDK main branch but not in a stable SDK covered by this package.
+    # https://github.com/dart-lang/sdk/issues/64047
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/no_dynamic_casts
+    # - no_dynamic_casts
+
     # private library prefixes don't exist, don't try to introduce concepts that have no effect
     #
     # Linter v1.15
@@ -632,6 +678,13 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/no_logic_in_create_state
     - no_logic_in_create_state
+
+    # Common intentional raw types would merely become explicit `dynamic` arguments without improving type safety.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/no_raw_types
+    # - no_raw_types
 
     # calling `runtimeType` may be a performance problem
     # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
@@ -1153,6 +1206,14 @@ linter:
     # https://dart.dev/tools/linter-rules/unnecessary_const
     - unnecessary_const
 
+    # Removes redundant `const` keywords from enum-value invocations.
+    # Enum constructors remain implicitly const, so this is a mechanical consistency rule.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_const_in_enum_constructor
+    - unnecessary_const_in_enum_constructor
+
     # Disabled because `final` prevents accidental reassignment
     # https://dart.dev/tools/linter-rules/unnecessary_final
     # - unnecessary_final
@@ -1238,6 +1299,14 @@ linter:
     # https://dart.dev/tools/linter-rules/unnecessary_parenthesis
     - unnecessary_parenthesis
 
+    # Removes empty `this;` or `this {}` bodies from primary constructors.
+    # Metadata, documentation, initializers, and non-empty bodies remain untouched.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_primary_constructor_body
+    - unnecessary_primary_constructor_body
+
     # Use raw string only when needed
     # Dart SDK: >= 2.8.0-dev.11.0 • (Linter v0.1.111)
     # https://dart.dev/tools/linter-rules/unnecessary_raw_strings
@@ -1270,6 +1339,14 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/unnecessary_to_list_in_spreads
     - unnecessary_to_list_in_spreads
+
+    # Uses concise constructor declarations without repeating the enclosing type name.
+    # Keeps in-body constructor syntax consistent with primary constructors.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_type_name_in_constructor
+    - unnecessary_type_name_in_constructor
 
     # Removes unawaited() around expressions annotated with @awaitNotRequired.
     # Removes clutter without changing behavior: the API already declares that awaiting is optional.
@@ -1317,6 +1394,16 @@ linter:
     # Linter v1.19.1
     # https://dart.dev/tools/linter-rules/use_colored_box
     - use_colored_box
+
+    # Combines a primary-constructor parameter and its matching field into one declaring parameter.
+    # Dart 3.13 fixes preserve field documentation and rename dependent references when applying the fix.
+    # https://github.com/dart-lang/sdk/issues/63518
+    # https://github.com/dart-lang/sdk/issues/63525
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/use_declaring_parameters
+    - use_declaring_parameters
 
     # DecoratedBox is not a replacement for Container https://github.com/dart-lang/linter/issues/3286
     #
@@ -1389,6 +1476,15 @@ linter:
     #
     # https://dart.dev/tools/linter-rules/use_null_aware_elements
     - use_null_aware_elements
+
+    # Uses primary constructors when a class or enum has a convertible default constructor.
+    # The rule remains in testing status, but the known generic-class quick-fix bug is covered by the Dart 3.13 target SDK regression test.
+    # https://github.com/dart-lang/sdk/issues/63482
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/use_primary_constructors
+    - use_primary_constructors
 
     # Use rethrow to preserve the original stacktrace.
     # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception

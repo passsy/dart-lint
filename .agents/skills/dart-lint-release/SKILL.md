@@ -28,16 +28,16 @@ project so the author can open the project once and inspect all new rules togeth
   include chain. Package mode inherits strict rules; do not duplicate inherited
   additions there. Account for its own overrides when a rule changes or disappears.
 
-## Next release: Dart 3.13
+## Next release: Dart 3.14
 
-Start from the Dart 3.12 work on `dart3.12`, prepared as lint 2.13.0.
+Start from the Dart 3.13 work on `dart3.13`, prepared as lint 2.14.0.
 Verify that work has merged and the package was published before treating it as the baseline because a release branch does not prove publication.
-For Dart 3.13 use `dart3.13`; 2.14.0 is the expected package version only if 2.13.0 is the published preceding version and 2.14.0 is unused.
-Discover the 3.13 rule inventory afresh against the 3.12 SDK baseline.
+For Dart 3.14 use `dart3.14`; 2.15.0 is the expected package version only if 2.14.0 is the published preceding version and 2.15.0 is unused.
+Discover the 3.14 rule inventory afresh against the 3.13 SDK baseline.
 
-For Dart 3.13, revisit `var_with_no_type_annotation` against its upstream state before changing or removing it.
-The prepared Dart 3.12 configuration enables it in strict, casual and inherited package mode as a semantics-preserving migration guard.
-Dart 3.13 keeps the rule registered but it becomes a no-op for libraries using the 3.13 language version.
+For Dart 3.14, revisit `no_dynamic_casts` against the stable SDK state before enabling it.
+The rule remains disabled while this package supports Dart 3.13 because Dart 3.13.0 and 3.13.1 report a false positive for if-case statements with dynamic scrutinees.
+The upstream fix landed on the SDK main branch in [d908576](https://github.com/dart-lang/sdk/commit/d9085765d55216e763dc873495b3fc2e2021d9b5), but enablement requires verification in the minimum stable SDK plus practical project evidence.
 
 After each release, refresh this section for the next SDK and remove completed release-specific instructions.
 Retain future revisit or enablement gates, but do not accumulate stable policy, past inventories or private trial history.
@@ -154,6 +154,9 @@ For each candidate, before choosing its setting:
    the scope of any sampling, including repetitive low-value suggestions. A clean
    analyzer result after fixes is not evidence that the code is better. No hits
    may mean the project lacks relevant code, not that the rule is good or useless.
+   A low or zero count can also reflect survivorship bias when selected projects already follow the convention or have previously removed violations.
+   Use finding counts to estimate migration cost and pattern coverage, not as direct evidence that a rule is valuable or useless.
+   Check existing conventions, history, and author practice before interpreting sparse findings; mature compliance can support enablement even when the trial produces few diagnostics.
 5. Cross-check relevant reported false-positive patterns against the trial project.
    Reproduce a plausible problem with the target SDK when necessary, distinguishing
    a synthetic reproduction from an occurrence found in real code. If a claimed
