@@ -653,6 +653,15 @@ linter:
     # https://dart.dev/tools/linter-rules/no_duplicate_case_values
     - no_duplicate_case_values
 
+    # Disabled because Dart 3.13.0 and 3.13.1 report a false positive for if-case statements with dynamic scrutinees.
+    # The fix has landed on the SDK main branch but not in a stable SDK covered by this package.
+    # https://github.com/dart-lang/sdk/issues/64047
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/no_dynamic_casts
+    # - no_dynamic_casts
+
     # private library prefixes don't exist, don't try to introduce concepts that have no effect
     #
     # Linter v1.15
