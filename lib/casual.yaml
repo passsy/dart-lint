@@ -676,6 +676,13 @@ linter:
     # https://dart.dev/tools/linter-rules/no_logic_in_create_state
     # - no_logic_in_create_state
 
+    # Common intentional raw types would merely become explicit `dynamic` arguments without improving type safety.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/no_raw_types
+    # - no_raw_types
+
     # calling `runtimeType` may be a performance problem
     # Dart SDK: >= 2.8.0-dev.10.0 • (Linter v0.1.110)
     # https://dart.dev/tools/linter-rules/no_runtimeType_toString
