@@ -1476,6 +1476,15 @@ linter:
     # https://dart.dev/tools/linter-rules/use_null_aware_elements
     # - use_null_aware_elements
 
+    # Uses primary constructors when a class or enum has a convertible default constructor.
+    # The rule remains in testing status, but the known generic-class quick-fix bug is covered by the Dart 3.13 target SDK regression test.
+    # https://github.com/dart-lang/sdk/issues/63482
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/use_primary_constructors
+    - use_primary_constructors
+
     # Use rethrow to preserve the original stacktrace.
     # https://dart.dev/guides/language/effective-dart/usage#do-use-rethrow-to-rethrow-a-caught-exception
     #

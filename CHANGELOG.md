@@ -12,6 +12,7 @@ Requires Dart `sdk: '>=3.13.0'`
 - Enable [`unnecessary_primary_constructor_body`](https://dart.dev/tools/linter-rules/unnecessary_primary_constructor_body.html) for strict, casual and package modes
 - Enable [`unnecessary_type_name_in_constructor`](https://dart.dev/tools/linter-rules/unnecessary_type_name_in_constructor.html) for strict, casual and package modes
 - Enable [`use_declaring_parameters`](https://dart.dev/tools/linter-rules/use_declaring_parameters.html) for strict, casual and package modes
+- Enable [`use_primary_constructors`](https://dart.dev/tools/linter-rules/use_primary_constructors.html) for strict, casual and package modes
 
 ## 2.13.0
 
