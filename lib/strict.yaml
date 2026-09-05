@@ -229,10 +229,13 @@ linter:
     # https://dart.dev/tools/linter-rules/avoid_print
     - avoid_print
 
-    # Always prefer function references over typedefs.
-    # Jumping twice in code to see the signature of a lambda sucks. This is different from the flutter analysis_options
+    # Deprecated in Dart 3.13 because private typedefs can improve readability.
+    # Disabled so configurations do not enforce a deprecated preference.
+    #
+    # Dart SDK: >= 3.13.0
+    #
     # https://dart.dev/tools/linter-rules/avoid_private_typedef_functions
-    - avoid_private_typedef_functions
+    # - avoid_private_typedef_functions
 
     # Don't explicitly set defaults
     #
