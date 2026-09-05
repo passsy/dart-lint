@@ -1201,6 +1201,14 @@ linter:
     # https://dart.dev/tools/linter-rules/unnecessary_const
     # - unnecessary_const
 
+    # Removes redundant `const` keywords from enum-value invocations.
+    # Disabled in casual mode because the mechanical rewrite is only a style preference.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_const_in_enum_constructor
+    # - unnecessary_const_in_enum_constructor
+
     # Disabled because `final` prevents accidental reassignment
     # https://dart.dev/tools/linter-rules/unnecessary_final
     # - unnecessary_final
