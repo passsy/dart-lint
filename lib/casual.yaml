@@ -77,6 +77,15 @@ linter:
     # https://dart.dev/tools/linter-rules/annotate_redeclares
     - annotate_redeclares
 
+    # Returning a Future from an async function without awaiting it is ambiguous.
+    # Together with `unnecessary_async`, this requires either removing `async` or awaiting the Future explicitly.
+    # https://github.com/dart-lang/sdk/issues/62555
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/async_return_with_no_await
+    - async_return_with_no_await
+
     # All methods should define a return type. dynamic is no exception.
     # Violates Effective Dart "PREFER annotating with dynamic instead of letting inference fail"
     #

@@ -154,6 +154,9 @@ For each candidate, before choosing its setting:
    the scope of any sampling, including repetitive low-value suggestions. A clean
    analyzer result after fixes is not evidence that the code is better. No hits
    may mean the project lacks relevant code, not that the rule is good or useless.
+   A low or zero count can also reflect survivorship bias when selected projects already follow the convention or have previously removed violations.
+   Use finding counts to estimate migration cost and pattern coverage, not as direct evidence that a rule is valuable or useless.
+   Check existing conventions, history, and author practice before interpreting sparse findings; mature compliance can support enablement even when the trial produces few diagnostics.
 5. Cross-check relevant reported false-positive patterns against the trial project.
    Reproduce a plausible problem with the target SDK when necessary, distinguishing
    a synthetic reproduction from an occurrence found in real code. If a claimed
