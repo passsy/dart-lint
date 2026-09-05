@@ -1340,6 +1340,14 @@ linter:
     # https://dart.dev/tools/linter-rules/unnecessary_to_list_in_spreads
     - unnecessary_to_list_in_spreads
 
+    # Uses concise constructor declarations without repeating the enclosing type name.
+    # Keeps in-body constructor syntax consistent with primary constructors.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_type_name_in_constructor
+    - unnecessary_type_name_in_constructor
+
     # Removes unawaited() around expressions annotated with @awaitNotRequired.
     # Removes clutter without changing behavior: the API already declares that awaiting is optional.
     #

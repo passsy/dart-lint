@@ -10,6 +10,7 @@ Requires Dart `sdk: '>=3.13.0'`
 - Enable [`initialize_in_field_declaration`](https://dart.dev/tools/linter-rules/initialize_in_field_declaration.html) for strict, casual and package modes
 - Enable [`unnecessary_const_in_enum_constructor`](https://dart.dev/tools/linter-rules/unnecessary_const_in_enum_constructor.html) for strict and package modes
 - Enable [`unnecessary_primary_constructor_body`](https://dart.dev/tools/linter-rules/unnecessary_primary_constructor_body.html) for strict, casual and package modes
+- Enable [`unnecessary_type_name_in_constructor`](https://dart.dev/tools/linter-rules/unnecessary_type_name_in_constructor.html) for strict, casual and package modes
 
 ## 2.13.0
 
