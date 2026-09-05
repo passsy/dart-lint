@@ -544,6 +544,14 @@ linter:
     # https://dart.dev/tools/linter-rules/implicit_reopen
     # - implicit_reopen
 
+    # Keeps primary-constructor-dependent initialization next to the field declaration.
+    # The primary initializer scope preserves the behavior while removing a separate initializer-list entry.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/initialize_in_field_declaration
+    - initialize_in_field_declaration
+
     # Helps to migrate switch cases from Dart 2 to Dart 3
     #
     # Dart SDK: 3.0.0 • (Linter v1.34.0)
