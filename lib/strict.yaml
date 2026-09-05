@@ -1299,6 +1299,14 @@ linter:
     # https://dart.dev/tools/linter-rules/unnecessary_parenthesis
     - unnecessary_parenthesis
 
+    # Removes empty `this;` or `this {}` bodies from primary constructors.
+    # Metadata, documentation, initializers, and non-empty bodies remain untouched.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/unnecessary_primary_constructor_body
+    - unnecessary_primary_constructor_body
+
     # Use raw string only when needed
     # Dart SDK: >= 2.8.0-dev.11.0 • (Linter v0.1.111)
     # https://dart.dev/tools/linter-rules/unnecessary_raw_strings
