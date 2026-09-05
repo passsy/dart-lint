@@ -1393,6 +1393,16 @@ linter:
     # https://dart.dev/tools/linter-rules/use_colored_box
     # - use_colored_box
 
+    # Combines a primary-constructor parameter and its matching field into one declaring parameter.
+    # Dart 3.13 fixes preserve field documentation and rename dependent references when applying the fix.
+    # https://github.com/dart-lang/sdk/issues/63518
+    # https://github.com/dart-lang/sdk/issues/63525
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/use_declaring_parameters
+    - use_declaring_parameters
+
     # DecoratedBox is not a replacement for Container https://github.com/dart-lang/linter/issues/3286
     #
     # Linter v1.15
