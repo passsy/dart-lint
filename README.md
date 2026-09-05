@@ -35,16 +35,18 @@ include: package:lint/strict.yaml # For production apps
 # include: package:lint/package.yaml # Use this for packages with public API
 
 
-# You might want to exclude auto-generated files from dart analysis
-analyzer:
-  exclude:
-    #- '**.freezed.dart'
-    #- '**.g.dart'
+# You might want to exclude auto-generated files from dart analysis.
+# Uncomment the section below and the files you want to exclude.
+# analyzer:
+#   exclude:
+#     - '**.freezed.dart'
+#     - '**.g.dart'
 
 # You can customize the lint rules set to your own liking. A list of all rules
 # can be found at https://dart.dev/tools/linter-rules
-linter:
-  rules:
+# Uncomment the section below and the rules you want to customize.
+# linter:
+#   rules:
     # Util classes are awesome!
     # avoid_classes_with_only_static_members: false
     
