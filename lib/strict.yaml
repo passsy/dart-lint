@@ -485,6 +485,14 @@ linter:
     # https://dart.dev/tools/linter-rules/empty_constructor_bodies
     - empty_constructor_bodies
 
+    # Replaces empty class-like declaration bodies with semicolons, matching `empty_constructor_bodies`.
+    # The mechanical rewrite removes an unnecessary body without changing behavior.
+    #
+    # Dart SDK: >= 3.13.0
+    #
+    # https://dart.dev/tools/linter-rules/empty_container_bodies
+    - empty_container_bodies
+
     # Don't allow empty if bodies. Works together with curly_braces_in_flow_control_structures
     #
     # https://dart.dev/tools/linter-rules/empty_statements
